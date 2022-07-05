@@ -2,13 +2,30 @@
 <html>
 <head>
     <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <title>__:D&D_Builder:__</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/pupils.css'>
+    <script src='scripts/neurons.js'></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+    </style>    
+
 </head>
-<body>
+<body id="index-bg">
     
+    <div id="container">
+        <div id="content">
+            <div id="log">
+                <form id="login" action="/" method="POST" onclick="sendForm()">
+                <label>Email</label>
+                <input id="logger" type="email" name='email'>
+                <label>Contrase&ntilde;a</label>
+                <input id="logger" type="password" name="password">
+                
+                <input id="logger" type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
