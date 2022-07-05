@@ -1,8 +1,8 @@
 body#index-bg{
-    background-image: url("/images/mod-bg2.jpg"); 
+    background-image: url("../images/mod-bg2.jpg"); 
     background-repeat: no-repeat;
     background-size: 100%;
-    
+
 }
 
 #content{
