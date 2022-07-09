@@ -2,7 +2,7 @@ body#index-bg{
     background-image: url("../images/mod-bg2.jpg"); 
     background-repeat: no-repeat;
     background-size: 100%;
-
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #content{
@@ -24,16 +24,32 @@ div#container{
 }
 
 input#logger{
-    margin: 20px;
-    padding: 5px;
+    margin: 30px;
+    padding-left: 15px;
+    height:30px;
+    width: auto;
     background-color: rgba(179, 179, 185, 0.696);
     display: flex;
+    
+}
+
+.labInput{
+    margin-left: 65px;
+    padding-left: 5px;
 
 }
 
-#log{
-    font-family: 'Montserrat Alternates', sans-serif;
+.submit{
+    background-color: rgba(179, 179, 185, 0.696);
+    margin-left:65px;
+    padding:10px;
+    width:100px;
+}
+
+#log{    
+    align-items: center;
+    justify-content: center;
     margin-left: 120px;
     margin-top: 100px;
-
+    
 }

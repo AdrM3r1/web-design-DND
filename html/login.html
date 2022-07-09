@@ -3,8 +3,8 @@
 <head>
     <meta charset='utf-8'>
     <title>__:D&D_Builder:__</title>
-    <link rel='stylesheet' type='text/css' media='screen' href='styles/pupils.css'>
-    <script src='scripts/neurons.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/pupils.css'>
+    <script src='../scripts/neurons.js'></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
     </style>    
@@ -15,13 +15,12 @@
     <div id="container">
         <div id="content">
             <div id="log">
-                <form id="login" action="BRUH" method="POST" onclick="sendForm()">
-                <label>Email</label>
+                <form id="login">
+                <label class="labInput" style="margin-left:90px ;">Email</label>
                 <input id="logger" type="email" name='email'>
-                <label>Contrase&ntilde;a</label>
+                <label class="labInput">Contrase&ntilde;a</label>
                 <input id="logger" type="password" name="password">
-                
-                <input id="logger" type="submit" value="Enviar">
+                <input class="submit"  type="submit" value="Enviar">
                 </form>
             </div>
         </div>
