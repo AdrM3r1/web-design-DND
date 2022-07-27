@@ -1,0 +1,71 @@
+body#index-bg {
+    background-image: url("../images/mod-bg2.jpg"); 
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#content{
+    width: 500px;
+    height: 550px;
+    display:flex;
+    margin: 15px;
+    padding-left:30px;
+    box-shadow: 0 14.5px 20.5px 0 #000000;
+    background-color: rgba(179, 179, 185, 0.45);
+    border-radius: 8% 8% 15% 15% / 8% 8% 15% 15%;
+
+}
+
+div#container{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+}
+
+input#logger{
+    margin: 30px;
+    padding-left: 15px;
+    height:30px;
+    width: auto;
+    background-color: rgba(179, 179, 185, 0.696);
+    display: flex;
+    
+}
+
+.labInput{
+    margin-left: 65px;
+    padding-left: 5px;
+
+}
+
+.submit{
+    background-color: rgba(179, 179, 185, 0.696);
+    margin-left:65px;
+    padding:10px;
+    width:100px;
+}
+
+#log{    
+    align-items: center;
+    justify-content: center;
+    margin-left: 120px;
+    margin-top: 100px;
+    
+}
+
+body#intro{
+    background: #830202;
+    background: -webkit-linear-gradient(0deg, #830202 0%, #c20929 50%, #d77e45 100%);
+    background: linear-gradient(0deg, #830202 0%, #c20929 50%, #d77e45 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+#imgIndex{
+    margin: 0px;
+    padding: 30px;
+    border-radius: 10%;
+    padding-left: 0;
+}
