@@ -1,9 +1,36 @@
+/* IMPORTS ANIMACIONES Y MAS */
+
+@font-face {
+font-family:'Dalelands Uncial';
+    src: url('../styles/DalelandsUncial.ttf');
+}
+
+
+@font-face {
+    font-family:'First Reign';
+        src: url('../styles/FirstReign.otf');
+}
+
+@font-face {
+    font-family:'Zilap';
+        src: url('../styles/Zilap.ttf');
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/*estilos */
+
 body#index-bg {
     background-image: url("../images/mod-bg2.jpg"); 
     background-repeat: no-repeat;
     background-size: 100%;
-    font-family: 'Montserrat Alternates', sans-serif;
-}
+    font-family:'First Reign';
+    font-size: 25px;
+ }
+  
 
 #content{
     width: 500px;
@@ -68,5 +95,15 @@ body#intro{
     height: 510px;
     padding-top: 20px;
     border-radius: 15% 15%; 
-
+    animation: fadeIn 2s; 
+    
 }
+
+.title{
+    font-family: 'Zilap';
+    font-size:80px;
+    width: 800px;
+    display:flex;
+    margin: 70px;
+    padding-left:50px;
+  }
