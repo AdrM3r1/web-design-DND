@@ -58,14 +58,15 @@ input#logger{
 body#intro{
     background: #830202;
     background: -webkit-linear-gradient(0deg, #830202 0%, #c20929 50%, #d77e45 100%);
-    background: linear-gradient(0deg, #830202 0%, #c20929 50%, #d77e45 100%);
-    background-repeat: no-repeat;
+    background: linear-gradient(0deg, #830202 5%, #c20929 55%, #d77e45 90%);
+    background-repeat:no-repeat;
     background-attachment: fixed;
-
 }
+
 #imgIndex{
     margin: 0px;
-    padding: 30px;
-    border-radius: 10%;
-    padding-left: 0;
+    height: 510px;
+    padding-top: 20px;
+    border-radius: 15% 15%; 
+
 }
