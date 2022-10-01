@@ -21,6 +21,24 @@ font-family:'Dalelands Uncial';
     100% { opacity: 1; }
 }
 
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes flash {
+    0% { opacity: 1; } 
+    2% { opacity: 0; }
+    3% { opacity: 0.6; }
+    4% { opacity: 0.2; }
+    6% { opacity: .9; } 
+    16% { opacity: .2; } 
+    26% { opacity: .5; }
+    46% { opacity: .7; }
+    76% { opacity: .8; } 
+    100% { opacity: 1; }
+}
+
 /*estilos */
 
 body#index-bg {
@@ -95,8 +113,7 @@ body#intro{
     height: 510px;
     padding-top: 20px;
     border-radius: 15% 15%; 
-    animation: fadeIn 2s; 
-    
+    animation: fadeIn 3s; 
 }
 
 .title{
@@ -106,4 +123,6 @@ body#intro{
     display:flex;
     margin: 70px;
     padding-left:50px;
+    animation: flash 3s; 
+    animation-delay: 0.6s;
   }
