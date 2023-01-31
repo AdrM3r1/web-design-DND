@@ -1,20 +1,21 @@
 /* IMPORTS ANIMACIONES Y MAS */
 
 @font-face {
-font-family:'Dalelands Uncial';
+font-family:'Dalelands';
     src: url('../styles/DalelandsUncial.ttf');
 }
 
-
 @font-face {
-    font-family:'First Reign';
+    font-family:'Reign';
         src: url('../styles/FirstReign.otf');
 }
 
+
 @font-face {
-    font-family:'Zilap';
-        src: url('../styles/Zilap.ttf');
+    font-family:'Lyric';
+        src: url('../styles/Lyric Poetry.ttf');
 }
+
 
 @keyframes fadeIn {
     0% { opacity: 0; }
@@ -48,7 +49,6 @@ body#index-bg {
     font-family:'First Reign';
     font-size: 25px;
  }
-  
 
 #content{
     width: 500px;
@@ -62,34 +62,32 @@ body#index-bg {
 
 }
 
-div#container{
+#container{
     justify-content: center;
     display: flex;
     align-items: center;
 
 }
 
-input#logger{
-    margin: 30px;
-    padding-left: 15px;
+#logger{
+    margin: 15px 4px 20px;
     height:30px;
-    width: auto;
+    width: 220px;
     background-color: rgba(179, 179, 185, 0.696);
     display: flex;
     
 }
-
-.labInput{
-    margin-left: 65px;
-    padding-left: 5px;
-
-}
-
+ 
 .submit{
-    background-color: rgba(179, 179, 185, 0.696);
-    margin-left:65px;
-    padding:10px;
-    width:100px;
+    font-family:'Reign';
+    font-size: 24px;
+    background-color: rgba(179, 179, 185, 0.8);
+    margin-left:50px;
+    margin-top: 10px;
+    padding:12px;
+    letter-spacing: 3px;
+    width:120px;
+    height:50px;
 }
 
 #log{    
@@ -113,16 +111,34 @@ body#intro{
     height: 510px;
     padding-top: 20px;
     border-radius: 15% 15%; 
-    animation: fadeIn 3s; 
+    animation: fadeIn 1.5s; 
 }
 
 .title{
-    font-family: 'Zilap';
     font-size:80px;
     width: 800px;
     display:flex;
     margin: 70px;
     padding-left:50px;
-    animation: flash 3s; 
+    animation: flash 2s; 
     animation-delay: 0.6s;
+    font-family: 'Lyric';
+
   }
+
+  .enter{
+    font-family:'Dalelands';
+    font-size:40px;
+    background: linear-gradient(0deg, #830202 15%, #c20929 40%, #d77e45 80%);
+    width: auto;
+    height: 100px;
+    margin-left: 275px;
+    margin-top: 110px;
+    padding: 20px;
+    cursor: pointer;
+    animation: fadeIn 3s; 
+  }
+
+  .enter:hover{
+      border: 2px solid black;
+   }
