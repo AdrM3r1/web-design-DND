@@ -1,5 +1,5 @@
 function teleport() {
-	window.location.href = "principal.html";
+	window.location.href = "../html/principal.html";
 }
 
 function cambioLogo() {
