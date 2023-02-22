@@ -146,6 +146,19 @@ body#index-bg {
     background-attachment: fixed;
 }
 
+#website{
+    background:#4a2932 ;
+}
+
+#divisor{
+    background-color: #a51217;
+    height: 100%;
+    width: 75%;
+    z-index: 1000;
+    position: fixed;
+    margin-top: 10px;
+}
+
 #imgIndex {
     margin: 0px;
     height: 510px;
@@ -200,10 +213,11 @@ body#index-bg {
 
 #img_logo {
     position: absolute;
+    margin: 10px 20px;
  }
 
 a{
-    color: black;
+    color: #FFFEBD;
     text-decoration: none;
     text-shadow: 2px 2px 5px gray ;
     display: block;
@@ -213,7 +227,7 @@ a{
     width: 100%;
     float: left;
     padding: 0 15px;
-    margin: 15px 0px 0px 120px;
+    margin: 10px 0px 0px 125px;
 
 }
 
@@ -232,11 +246,11 @@ a{
 #itemNav {
     display: table-cell;    
     padding: 10px;
-    background-color:orangered;
+    background-color:#a34c50 ;
 
  }
 
  #itemNav:hover{
-    background-color:orange;
+    background-color: #4a2932 ;
 
  }
