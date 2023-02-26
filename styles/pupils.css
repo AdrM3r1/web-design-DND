@@ -99,14 +99,12 @@ body#index-bg {
     box-shadow: 0 14.5px 20.5px 0 #000000;
     background-color: rgba(179, 179, 185, 0.45);
     border-radius: 8% 8% 15% 15% / 8% 8% 15% 15%;
-
 }
 
 #container {
     justify-content: center;
     display: flex;
     align-items: center;
-
 }
 
 #logger {
@@ -115,7 +113,6 @@ body#index-bg {
     width: 220px;
     background-color: rgba(179, 179, 185, 0.696);
     display: flex;
- 
 }
 
 .submit {
@@ -135,7 +132,6 @@ body#index-bg {
     justify-content: center;
     margin-left: 120px;
     margin-top: 100px;
-
 }
 
 #intro {
@@ -177,7 +173,6 @@ body#index-bg {
     animation-delay: 0.6s;
     font-family: 'Lyric';
     text-shadow: 2px 3px grey;
-
 }
 
 .enter {
@@ -228,7 +223,6 @@ a{
     float: left;
     padding: 0 15px;
     margin: 10px 0px 0px 125px;
-
 }
 
 #contenedorNav {
@@ -240,17 +234,14 @@ a{
     font-family: 'Dalelands';
     font-size: 30px;
     text-align: center;
-
 }
 
 #itemNav {
     display: table-cell;    
     padding: 10px;
     background-color:#a34c50 ;
-
  }
 
  #itemNav:hover{
     background-color: #4a2932 ;
-
  }
