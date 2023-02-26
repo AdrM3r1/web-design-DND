@@ -17,6 +17,7 @@
     src: url('../styles/Lyric Poetry.ttf');
 }
 
+
 /*ANIMACIONES*/
 @keyframes fadeIn {
     0% {
@@ -149,10 +150,9 @@ body#index-bg {
 #divisor{
     background-color: #a51217;
     height: 100%;
-    width: 75%;
+    width: auto;
     z-index: 1000;
-    position: fixed;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 #imgIndex {

@@ -28,14 +28,3 @@ function getCookie(name) {
 
 	return decodeURI(dc.substring(begin + prefix.length, end));
 } 
-
-/*
-function checkReg() {
-    var myCookie = getCookie("Logged");
-	var reg = document.getElementsByName("reg")
-
-	if (myCookie == "true") {
-		reg[0].textContent = "Login";
-    }
-} 
-*/
