@@ -97,6 +97,32 @@
                                 </p>
                             </div>
                         </div>
+                    
+                        <h2>COIN FLIP</h2>
+
+                        <div>
+
+                            <button style="background-color: transparent;border: none;" id="flip" type="button"><img src="../images/coin.png"></button>
+                            <div><p id="result"></p></div>
+                            <script>
+                              let button = document.getElementById("flip");
+                              let result = document.getElementById("result");
+                          
+                              function fnClick(event) {
+                                let num = Math.random();
+                          
+                                if (num < 0.5) {
+                                  result.innerHTML = "Ha salido 1";
+                                } else {
+                                  result.innerHTML = "Ha salido 2";
+                                }
+                              }
+                              
+                              button.addEventListener("click", fnClick);
+                            </script>
+
+                        </div>
+                    
                     </div>
             
                 </div>
