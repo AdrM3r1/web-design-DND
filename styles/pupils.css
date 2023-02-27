@@ -147,14 +147,6 @@ body#index-bg {
     background:#4a2932 ;
 }
 
-#divisor{
-    background-color: #a51217;
-    height: 100%;
-    width: auto;
-    z-index: 1000;
-    margin-top: 5px;
-}
-
 #imgIndex {
     margin: 0px;
     height: 510px;
@@ -208,7 +200,7 @@ body#index-bg {
 
 #img_logo {
     position: absolute;
-    margin: 10px 20px;
+    margin: 15px 20px;
  }
 
 a{
@@ -221,14 +213,27 @@ a{
 #navigation{
     width: 100%;
     float: left;
-    padding: 0 15px;
-    margin: 10px 0px 0px 125px;
+    background-color: #a51217;
+    height: 100%;
+    margin-top: 5px;
+    padding: 15px ;
 }
+
+#divisor{
+    background-color: #a51217;
+    height: 100%;
+    min-height: 600px;
+    width: 63.9%;
+    margin-top: 25px;
+    padding: 50px;
+    margin-left: 270px;
+   }
 
 #contenedorNav {
     cursor: default;
     display: table;
     position: relative;
+    margin-left: 100px;
     width: 80%;
     height: 20px;
     font-family: 'Dalelands';
@@ -244,4 +249,9 @@ a{
 
  #itemNav:hover{
     background-color: #4a2932 ;
+ }
+ 
+ p,h2{
+    font-family: 'Dalelands';
+    font-size: 22px;
  }
