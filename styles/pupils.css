@@ -210,24 +210,23 @@ a{
     display: block;
 }
 
-#navigation{
+#divisor{
     width: 100%;
     float: left;
     background-color: #a51217;
     height: 100%;
     margin-top: 5px;
     padding: 15px ;
+    min-height: 700px;
 }
 
-#divisor{
-    background-color: #a51217;
-    height: 100%;
-    min-height: 600px;
-    width: 63.9%;
-    margin-top: 25px;
-    padding: 50px;
-    margin-left: 270px;
-   }
+.io{
+    margin-top:80px;
+    width: 85%;
+    margin-left: 80px;
+}
+
+ 
 
 #contenedorNav {
     cursor: default;
