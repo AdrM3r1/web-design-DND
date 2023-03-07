@@ -250,7 +250,13 @@ a{
     background-color: #4a2932 ;
  }
  
- p,h2{
+ .textcont{
+    font-family: 'Dalelands';
+    font-size: 20px;
+    color: #FFFEBD;
+ }
+
+ h2{
     font-family: 'Dalelands';
     font-size: 20px;
  }
