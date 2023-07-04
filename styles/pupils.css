@@ -81,15 +81,23 @@
     }
 }
 
+#result{
+    font-family:"Dalelands";
+    font-size: 20px;
+    float: right;
+    padding: 40px;
+
+}
+
 /* Responsive */
 
 @media only screen and not (max-width: 490px) {
     body#index-bg {
-        background-image: url("../images/mod-bg2.jpg");
-        background-repeat: no-repeat;
+        background:  #4a2932;
         background-size: 100%;
         font-family: 'Reign';
         font-size: 25px;
+        color: #FFFEBD;
     }
     
     #indexcontent {
@@ -99,7 +107,7 @@
         margin: 15px;
         padding-left: 30px;
         box-shadow: 0 14.5px 20.5px 0 #000000;
-        background-color: rgba(179, 179, 185, 0.45);
+        background-color: rgba(165, 18, 23, 0.75);
         border-radius: 8% 8% 15% 15% / 8% 8% 15% 15%;
     }
     
@@ -236,14 +244,14 @@
         margin: 15px 4px 20px;
         height: 30px;
         width: 220px;
-        background-color: rgba(179, 179, 185, 0.696);
+        background-color: rgba(165, 18, 23, 0.696);
         display: flex;
     }
     
     .submit {
         font-family: 'Reign';
         font-size: 24px;
-        background-color: rgba(179, 179, 185, 0.8);
+        background-color: rgba(165, 18, 23, 0.8);
         margin-left: 50px;
         margin-top: 10px;
         padding: 12px;
@@ -259,14 +267,13 @@
         margin-top: 100px;
     }
 }
-
-@media only screen and not (max-width: 720px) {
+ @media only screen and not (max-width: 720px) {
     body#index-bg {
-        background-image: url("../images/mod-bg2.jpg");
-        background-repeat: no-repeat;
+        background:  #4a2932;
         background-size: 100%;
         font-family: 'Reign';
         font-size: 25px;
+        color: #FFFEBD;
     }
     
     #indexcontent {
@@ -276,7 +283,7 @@
         margin: 15px;
         padding-left: 30px;
         box-shadow: 0 14.5px 20.5px 0 #000000;
-        background-color: rgba(179, 179, 185, 0.45);
+        background-color: rgba(165, 18, 23, 0.75);
         border-radius: 8% 8% 15% 15% / 8% 8% 15% 15%;
     }
     
@@ -413,14 +420,14 @@
         margin: 15px 4px 20px;
         height: 30px;
         width: 220px;
-        background-color: rgba(179, 179, 185, 0.696);
+        background-color: rgba(165, 18, 23, 0.696);
         display: flex;
     }
     
     .submit {
         font-family: 'Reign';
         font-size: 24px;
-        background-color: rgba(179, 179, 185, 0.8);
+        background-color: rgba(165, 18, 23, 0.8);
         margin-left: 50px;
         margin-top: 10px;
         padding: 12px;
@@ -439,11 +446,11 @@
 
 @media only screen and not (max-width: 870px) {
     body#index-bg {
-        background-image: url("../images/mod-bg2.jpg");
-        background-repeat: no-repeat;
+        background:  #4a2932;
         background-size: 100%;
         font-family: 'Reign';
         font-size: 25px;
+        color: #FFFEBD;
     }
     
     #indexcontent {
@@ -453,7 +460,7 @@
         margin: 15px;
         padding-left: 30px;
         box-shadow: 0 14.5px 20.5px 0 #000000;
-        background-color: rgba(179, 179, 185, 0.45);
+        background-color: rgba(165, 18, 23, 0.75);
         border-radius: 8% 8% 15% 15% / 8% 8% 15% 15%;
     }
     
@@ -590,14 +597,14 @@
         margin: 15px 4px 20px;
         height: 30px;
         width: 220px;
-        background-color: rgba(179, 179, 185, 0.696);
+        background-color: rgba(165, 18, 23, 0.696);
         display: flex;
     }
     
     .submit {
         font-family: 'Reign';
         font-size: 24px;
-        background-color: rgba(179, 179, 185, 0.8);
+        background-color: rgba(165, 18, 23, 0.8);
         margin-left: 50px;
         margin-top: 10px;
         padding: 12px;
@@ -611,16 +618,17 @@
         justify-content: center;
         margin-left: 120px;
         margin-top: 100px;
+        color: black;
     }
 }
 
 @media only screen and not (max-width: 1180px) {
     body#index-bg {
-        background-image: url("../images/mod-bg2.jpg");
-        background-repeat: no-repeat;
+        background:  #4a2932;
         background-size: 100%;
         font-family: 'Reign';
         font-size: 25px;
+        color: #FFFEBD;
     }
     
     #indexcontent {
@@ -630,7 +638,7 @@
         margin: 15px;
         padding-left: 30px;
         box-shadow: 0 14.5px 20.5px 0 #000000;
-        background-color: rgba(179, 179, 185, 0.45);
+        background-color: rgba(165, 18, 23, 0.75);
         border-radius: 8% 8% 15% 15% / 8% 8% 15% 15%;
     }
     
@@ -771,14 +779,14 @@
         margin: 15px 4px 20px;
         height: 30px;
         width: 220px;
-        background-color: rgba(179, 179, 185, 0.696);
+        background-color: rgba(165, 18, 23, 0.696);
         display: flex;
     }
     
     .submit {
         font-family: 'Reign';
         font-size: 24px;
-        background-color: rgba(179, 179, 185, 0.8);
+        background-color: rgba(165, 18, 23, 0.8);
         margin-left: 50px;
         margin-top: 10px;
         padding: 12px;
@@ -792,6 +800,7 @@
         justify-content: center;
         margin-left: 120px;
         margin-top: 100px;
+        color: #FFFEBD;
     }
     
 }

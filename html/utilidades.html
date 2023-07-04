@@ -31,6 +31,12 @@
                     </ul>
 
                     <div class="io">
+                        <h2>HOJA PARA PERSONAJES </h2>
+
+                        <div>
+                             <a href="../docs/BLANK_DnD.pdf" target="_blank">HOJA DE DND EN BLANCO</a>
+                            </div><br>
+
                         <h2>DADOS DE ROL</h2>
                         <!--dados-->
                         <div>
@@ -115,41 +121,34 @@
                         <div>
 
                             <button style="background-color: transparent;border: none;" id="flip" type="button"><img
-                                    src="../images/coin.png"></button>
-                            <div>
-                                <p id="result"></p>
-                            </div>
-                            <script>
-                                let button = document.getElementById("flip");
-                                let result = document.getElementById("result");
+                                    src="../images/coin.png"><p id="result"></p></button>
+                           
+                                <script>
+                                    let button = document.getElementById("flip");
+                                    let result = document.getElementById("result");
 
-                                function fnClick(event) {
-                                    let num = Math.random();
+                                    function fnClick(event) {
+                                        let num = Math.random();
 
-                                    if (num < 0.5) {
-                                        result.innerHTML = "Ha salido 1";
-                                    } else {
-                                        result.innerHTML = "Ha salido 2";
+                                        if (num < 0.5) {
+                                            result.innerHTML = "Ha salido 1";
+                                        } else {
+                                            result.innerHTML = "Ha salido 2";
+                                        }
                                     }
-                                }
 
-                                button.addEventListener("click", fnClick);
-                            </script>
+                                    button.addEventListener("click", fnClick);
+                                </script>
                         </div>
                         
                         <br>
 
-                        <h2>DND EN BLANCO</h2>
-
-                        <div>
-                            <br>
-                            <a href="../docs/BLANK_DnD.pdf" target="_blank">HOJA DE DND EN BLANCO</a>
 
                         </div>
 
-
+                        <br> <br>
                     </div>
-
+                    <br> <br>
                 </div>
             </div>
         </div>
