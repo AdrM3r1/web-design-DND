@@ -5,9 +5,10 @@ function teleport() {
 function cambioLogo() {
 	var nav = document.getElementById('img_logo');
 	var img = document.createElement('img');
-	img.src = "../images/logo/beholder" + Math.round((Math.random() * 3) + 1) + ".png";
-	img.height = "120";
+	if(window.screen.width < 720){
+	img.src = "../images/logo/beholder" + Math.round((Math.random() * 6) + 1) + ".png";
 	nav.appendChild(img);
+	}else{img = ""}
 }
 
 function getCookie(name) {

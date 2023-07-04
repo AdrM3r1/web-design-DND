@@ -81,182 +81,723 @@
     }
 }
 
-/*ESTILOS */
+/* Responsive */
 
-body#index-bg {
-    background-image: url("../images/mod-bg2.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    font-family: 'Reign';
-    font-size: 25px;
+@media only screen and not (max-width: 490px) {
+    body#index-bg {
+        background-image: url("../images/mod-bg2.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        font-family: 'Reign';
+        font-size: 25px;
+    }
+    
+    #indexcontent {
+        width: 500px;
+        height: 550px;
+        display: flex;
+        margin: 15px;
+        padding-left: 30px;
+        box-shadow: 0 14.5px 20.5px 0 #000000;
+        background-color: rgba(179, 179, 185, 0.45);
+        border-radius: 8% 8% 15% 15% / 8% 8% 15% 15%;
+    }
+    
+    #container {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    
+    #intro {
+        background: #830202;
+        background: -webkit-linear-gradient(0deg, #830202 0%, #c20929 50%, #d77e45 100%);
+        background: linear-gradient(0deg, #830202 5%, #c20929 55%, #d77e45 90%);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+    #imgIndex {
+        margin: 0px;
+        height: 510px;
+        padding-top: 20px;
+        border-radius: 15% 15%;
+        animation: fadeIn 1.5s;
+    }
+    
+    .title {
+        font-size: 80px;
+        width: 800px;
+        display: flex;
+        margin: 70px;
+        padding-left: 50px;
+        animation: flash 2s;
+        animation-delay: 0.6s;
+        font-family: 'Lyric';
+        text-shadow: 2px 3px grey;
+    }
+    
+    .enter {
+        font-family: 'Dalelands';
+        font-size: 40px;
+        background: linear-gradient(0deg, #830202 15%, #c20929 40%, #d77e45 80%);
+        width: auto;
+        height: 100px;
+        margin-left: 275px;
+        margin-top: 110px;
+        padding: 20px;
+        cursor: pointer;
+        animation: fadeIn 5s;
+        box-shadow: 1px 1px #000000;
+        transition: box-shadow 0.5s ease-in-out;
+    }
+    
+    .enter:hover {
+        box-shadow: 4px 4px 10px 4px #000000;
+        transition: box-shadow 0.5s ease-in-out;
+    }
+    
+    .content {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 490px;
+    }
+    
+    #img_logo {
+        position: absolute;
+        margin: 15px 20px;
+     }
+    
+    #divisor{
+        background-color: #a51217;
+        margin-top: 5px;
+        margin-left: 8px;
+        padding: 15px ;
+        min-height: 550px;
+        width: 90%;
+    }
+    
+    #contenedorNav {
+        cursor: default;
+        display: table;
+        position: relative;
+        width: 70%;
+        height: 20px;
+        font-family: 'Dalelands';
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    #itemNav {
+        display: table-cell;    
+        padding: 10px;
+        background-color:#a34c50 ;
+     }
+    
+     #itemNav:hover{
+        background-color: #4a2932 ;
+     }
+     
+     /*GENERICOS y VALORES DEBILES*/
+    
+    
+     #website{
+        background:#4a2932 ;
+    }
+    
+     a{
+        color: #FFFEBD;
+        text-decoration: none;
+        text-shadow: 2px 2px 5px gray ;
+        display: block;
+    }
+    
+    .textcont{
+        font-family: 'Dalelands';
+        font-size: 18px;
+        color: #FFFEBD;
+     }
+    
+     .io{
+        margin-top:80px;
+        width: 90%;
+        margin-left: 20px;
+    }
+    
+    h2{
+        font-family: 'Dalelands';
+        font-size: 20px;
+     }
+    
+    /*WEB DE LOGING*/
+    
+    #logger {
+        margin: 15px 4px 20px;
+        height: 30px;
+        width: 220px;
+        background-color: rgba(179, 179, 185, 0.696);
+        display: flex;
+    }
+    
+    .submit {
+        font-family: 'Reign';
+        font-size: 24px;
+        background-color: rgba(179, 179, 185, 0.8);
+        margin-left: 50px;
+        margin-top: 10px;
+        padding: 12px;
+        letter-spacing: 3px;
+        width: 120px;
+        height: 50px;
+    }
+    
+    #log {
+        align-items: center;
+        justify-content: center;
+        margin-left: 120px;
+        margin-top: 100px;
+    }
 }
 
-#indexcontent {
-    width: 500px;
-    height: 550px;
-    display: flex;
-    margin: 15px;
-    padding-left: 30px;
-    box-shadow: 0 14.5px 20.5px 0 #000000;
-    background-color: rgba(179, 179, 185, 0.45);
-    border-radius: 8% 8% 15% 15% / 8% 8% 15% 15%;
+@media only screen and not (max-width: 720px) {
+    body#index-bg {
+        background-image: url("../images/mod-bg2.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        font-family: 'Reign';
+        font-size: 25px;
+    }
+    
+    #indexcontent {
+        width: 500px;
+        height: 550px;
+        display: flex;
+        margin: 15px;
+        padding-left: 30px;
+        box-shadow: 0 14.5px 20.5px 0 #000000;
+        background-color: rgba(179, 179, 185, 0.45);
+        border-radius: 8% 8% 15% 15% / 8% 8% 15% 15%;
+    }
+    
+    #container {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    
+    #intro {
+        background: #830202;
+        background: -webkit-linear-gradient(0deg, #830202 0%, #c20929 50%, #d77e45 100%);
+        background: linear-gradient(0deg, #830202 5%, #c20929 55%, #d77e45 90%);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+    #imgIndex {
+        margin: 0px;
+        height: 510px;
+        padding-top: 20px;
+        border-radius: 15% 15%;
+        animation: fadeIn 1.5s;
+    }
+    
+    .title {
+        font-size: 80px;
+        width: 800px;
+        display: flex;
+        margin: 70px;
+        padding-left: 50px;
+        animation: flash 2s;
+        animation-delay: 0.6s;
+        font-family: 'Lyric';
+        text-shadow: 2px 3px grey;
+    }
+    
+    .enter {
+        font-family: 'Dalelands';
+        font-size: 40px;
+        background: linear-gradient(0deg, #830202 15%, #c20929 40%, #d77e45 80%);
+        width: auto;
+        height: 100px;
+        margin-left: 275px;
+        margin-top: 110px;
+        padding: 20px;
+        cursor: pointer;
+        animation: fadeIn 5s;
+        box-shadow: 1px 1px #000000;
+        transition: box-shadow 0.5s ease-in-out;
+    }
+    
+    .enter:hover {
+        box-shadow: 4px 4px 10px 4px #000000;
+        transition: box-shadow 0.5s ease-in-out;
+    }
+    
+    .content {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 650px;
+    }
+    
+    #img_logo {
+        position: absolute;
+        margin: 15px 20px;
+     }
+    
+    #divisor{
+        background-color: #a51217;
+        margin-top: 5px;
+        padding: 15px ;
+        min-height: 550px;
+        width: 95%;
+    }
+    
+    #contenedorNav {
+        cursor: default;
+        display: table;
+        position: relative;
+        margin-left: 100px;
+        width: 70%;
+        height: 20px;
+        font-family: 'Dalelands';
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    #itemNav {
+        display: table-cell;    
+        padding: 10px;
+        background-color:#a34c50 ;
+     }
+    
+     #itemNav:hover{
+        background-color: #4a2932 ;
+     }
+     
+     /*GENERICOS y VALORES DEBILES*/
+    
+    
+     #website{
+        background:#4a2932 ;
+    }
+    
+     a{
+        color: #FFFEBD;
+        text-decoration: none;
+        text-shadow: 2px 2px 5px gray ;
+        display: block;
+    }
+    
+    .textcont{
+        font-family: 'Dalelands';
+        font-size: 20px;
+        color: #FFFEBD;
+     }
+    
+     .io{
+        margin-top:80px;
+        width: 85%;
+        margin-left: 80px;
+    }
+    
+    h2{
+        font-family: 'Dalelands';
+        font-size: 20px;
+     }
+    
+    /*WEB DE LOGING*/
+    
+    #logger {
+        margin: 15px 4px 20px;
+        height: 30px;
+        width: 220px;
+        background-color: rgba(179, 179, 185, 0.696);
+        display: flex;
+    }
+    
+    .submit {
+        font-family: 'Reign';
+        font-size: 24px;
+        background-color: rgba(179, 179, 185, 0.8);
+        margin-left: 50px;
+        margin-top: 10px;
+        padding: 12px;
+        letter-spacing: 3px;
+        width: 120px;
+        height: 50px;
+    }
+    
+    #log {
+        align-items: center;
+        justify-content: center;
+        margin-left: 120px;
+        margin-top: 100px;
+    }
 }
 
-#container {
-    justify-content: center;
-    display: flex;
-    align-items: center;
+@media only screen and not (max-width: 870px) {
+    body#index-bg {
+        background-image: url("../images/mod-bg2.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        font-family: 'Reign';
+        font-size: 25px;
+    }
+    
+    #indexcontent {
+        width: 500px;
+        height: 550px;
+        display: flex;
+        margin: 15px;
+        padding-left: 30px;
+        box-shadow: 0 14.5px 20.5px 0 #000000;
+        background-color: rgba(179, 179, 185, 0.45);
+        border-radius: 8% 8% 15% 15% / 8% 8% 15% 15%;
+    }
+    
+    #container {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    
+    #intro {
+        background: #830202;
+        background: -webkit-linear-gradient(0deg, #830202 0%, #c20929 50%, #d77e45 100%);
+        background: linear-gradient(0deg, #830202 5%, #c20929 55%, #d77e45 90%);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+    #imgIndex {
+        margin: 0px;
+        height: 510px;
+        padding-top: 20px;
+        border-radius: 15% 15%;
+        animation: fadeIn 1.5s;
+    }
+    
+    .title {
+        font-size: 80px;
+        width: 800px;
+        display: flex;
+        margin: 70px;
+        padding-left: 50px;
+        animation: flash 2s;
+        animation-delay: 0.6s;
+        font-family: 'Lyric';
+        text-shadow: 2px 3px grey;
+    }
+    
+    .enter {
+        font-family: 'Dalelands';
+        font-size: 40px;
+        background: linear-gradient(0deg, #830202 15%, #c20929 40%, #d77e45 80%);
+        width: auto;
+        height: 100px;
+        margin-left: 275px;
+        margin-top: 110px;
+        padding: 20px;
+        cursor: pointer;
+        animation: fadeIn 5s;
+        box-shadow: 1px 1px #000000;
+        transition: box-shadow 0.5s ease-in-out;
+    }
+    
+    .enter:hover {
+        box-shadow: 4px 4px 10px 4px #000000;
+        transition: box-shadow 0.5s ease-in-out;
+    }
+    
+    .content {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 840px;
+    }
+    
+    #img_logo {
+        position: absolute;
+        margin: 15px 20px;
+     }
+    
+    #divisor{
+        background-color: #a51217;
+        margin-top: 5px;
+        padding: 15px ;
+        min-height: 550px;
+        width: 95%;
+    }
+    
+    #contenedorNav {
+        cursor: default;
+        display: table;
+        position: relative;
+        margin-left: 100px;
+        width: 80%;
+        height: 20px;
+        font-family: 'Dalelands';
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    #itemNav {
+        display: table-cell;    
+        padding: 10px;
+        background-color:#a34c50 ;
+     }
+    
+     #itemNav:hover{
+        background-color: #4a2932 ;
+     }
+     
+     /*GENERICOS y VALORES DEBILES*/
+    
+    
+     #website{
+        background:#4a2932 ;
+    }
+    
+     a{
+        color: #FFFEBD;
+        text-decoration: none;
+        text-shadow: 2px 2px 5px gray ;
+        display: block;
+    }
+    
+    .textcont{
+        font-family: 'Dalelands';
+        font-size: 20px;
+        color: #FFFEBD;
+     }
+    
+     .io{
+        margin-top:80px;
+        width: 85%;
+        margin-left: 80px;
+    }
+    
+    h2{
+        font-family: 'Dalelands';
+        font-size: 20px;
+     }
+    
+    /*WEB DE LOGING*/
+    
+    #logger {
+        margin: 15px 4px 20px;
+        height: 30px;
+        width: 220px;
+        background-color: rgba(179, 179, 185, 0.696);
+        display: flex;
+    }
+    
+    .submit {
+        font-family: 'Reign';
+        font-size: 24px;
+        background-color: rgba(179, 179, 185, 0.8);
+        margin-left: 50px;
+        margin-top: 10px;
+        padding: 12px;
+        letter-spacing: 3px;
+        width: 120px;
+        height: 50px;
+    }
+    
+    #log {
+        align-items: center;
+        justify-content: center;
+        margin-left: 120px;
+        margin-top: 100px;
+    }
 }
 
-#logger {
-    margin: 15px 4px 20px;
-    height: 30px;
-    width: 220px;
-    background-color: rgba(179, 179, 185, 0.696);
-    display: flex;
+@media only screen and not (max-width: 1180px) {
+    body#index-bg {
+        background-image: url("../images/mod-bg2.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        font-family: 'Reign';
+        font-size: 25px;
+    }
+    
+    #indexcontent {
+        width: 500px;
+        height: 550px;
+        display: flex;
+        margin: 15px;
+        padding-left: 30px;
+        box-shadow: 0 14.5px 20.5px 0 #000000;
+        background-color: rgba(179, 179, 185, 0.45);
+        border-radius: 8% 8% 15% 15% / 8% 8% 15% 15%;
+    }
+    
+    #container {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    
+    #intro {
+        background: #830202;
+        background: -webkit-linear-gradient(0deg, #830202 0%, #c20929 50%, #d77e45 100%);
+        background: linear-gradient(0deg, #830202 5%, #c20929 55%, #d77e45 90%);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+    #imgIndex {
+        margin: 0px;
+        height: 510px;
+        padding-top: 20px;
+        border-radius: 15% 15%;
+        animation: fadeIn 1.5s;
+    }
+    
+    .title {
+        font-size: 80px;
+        width: 800px;
+        display: flex;
+        margin: 70px;
+        padding-left: 50px;
+        animation: flash 2s;
+        animation-delay: 0.6s;
+        font-family: 'Lyric';
+        text-shadow: 2px 3px grey;
+    }
+    
+    .enter {
+        font-family: 'Dalelands';
+        font-size: 40px;
+        background: linear-gradient(0deg, #830202 15%, #c20929 40%, #d77e45 80%);
+        width: auto;
+        height: 100px;
+        margin-left: 275px;
+        margin-top: 110px;
+        padding: 20px;
+        cursor: pointer;
+        animation: fadeIn 5s;
+        box-shadow: 1px 1px #000000;
+        transition: box-shadow 0.5s ease-in-out;
+    }
+    
+    .enter:hover {
+        box-shadow: 4px 4px 10px 4px #000000;
+        transition: box-shadow 0.5s ease-in-out;
+    }
+    
+    .content {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1150px;
+    }
+    
+    .row {
+         margin: 0px;
+    }
+    
+    #img_logo {
+        position: absolute;
+        margin: 15px 20px;
+     }
+    
+    #divisor{
+        background-color: #a51217;
+        margin-top: 5px;
+        padding: 15px ;
+        min-height: 550px;
+        width: 95%;
+    }
+    
+    #contenedorNav {
+        cursor: default;
+        display: table;
+        position: relative;
+        margin-left: 100px;
+        width: 80%;
+        height: 20px;
+        font-family: 'Dalelands';
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    #itemNav {
+        display: table-cell;    
+        padding: 10px;
+        background-color:#a34c50 ;
+     }
+    
+     #itemNav:hover{
+        background-color: #4a2932 ;
+     }
+     
+     /*GENERICOS y VALORES DEBILES*/
+    
+    
+     #website{
+        background:#4a2932 ;
+    }
+    
+     a{
+        color: #FFFEBD;
+        text-decoration: none;
+        text-shadow: 2px 2px 5px gray ;
+        display: block;
+    }
+    
+    .textcont{
+        font-family: 'Dalelands';
+        font-size: 20px;
+        color: #FFFEBD;
+     }
+    
+     .io{
+        margin-top:80px;
+        width: 85%;
+        margin-left: 80px;
+    }
+    
+    h2{
+        font-family: 'Dalelands';
+        font-size: 20px;
+     }
+    
+    /*WEB DE LOGING*/
+    
+    #logger {
+        margin: 15px 4px 20px;
+        height: 30px;
+        width: 220px;
+        background-color: rgba(179, 179, 185, 0.696);
+        display: flex;
+    }
+    
+    .submit {
+        font-family: 'Reign';
+        font-size: 24px;
+        background-color: rgba(179, 179, 185, 0.8);
+        margin-left: 50px;
+        margin-top: 10px;
+        padding: 12px;
+        letter-spacing: 3px;
+        width: 120px;
+        height: 50px;
+    }
+    
+    #log {
+        align-items: center;
+        justify-content: center;
+        margin-left: 120px;
+        margin-top: 100px;
+    }
+    
 }
 
-.submit {
-    font-family: 'Reign';
-    font-size: 24px;
-    background-color: rgba(179, 179, 185, 0.8);
-    margin-left: 50px;
-    margin-top: 10px;
-    padding: 12px;
-    letter-spacing: 3px;
-    width: 120px;
-    height: 50px;
-}
-
-#log {
-    align-items: center;
-    justify-content: center;
-    margin-left: 120px;
-    margin-top: 100px;
-}
-
-#intro {
-    background: #830202;
-    background: -webkit-linear-gradient(0deg, #830202 0%, #c20929 50%, #d77e45 100%);
-    background: linear-gradient(0deg, #830202 5%, #c20929 55%, #d77e45 90%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-#website{
-    background:#4a2932 ;
-}
-
-#imgIndex {
-    margin: 0px;
-    height: 510px;
-    padding-top: 20px;
-    border-radius: 15% 15%;
-    animation: fadeIn 1.5s;
-}
-
-.title {
-    font-size: 80px;
-    width: 800px;
-    display: flex;
-    margin: 70px;
-    padding-left: 50px;
-    animation: flash 2s;
-    animation-delay: 0.6s;
-    font-family: 'Lyric';
-    text-shadow: 2px 3px grey;
-}
-
-.enter {
-    font-family: 'Dalelands';
-    font-size: 40px;
-    background: linear-gradient(0deg, #830202 15%, #c20929 40%, #d77e45 80%);
-    width: auto;
-    height: 100px;
-    margin-left: 275px;
-    margin-top: 110px;
-    padding: 20px;
-    cursor: pointer;
-    animation: fadeIn 5s;
-    box-shadow: 1px 1px #000000;
-    transition: box-shadow 0.5s ease-in-out;
-}
-
-.enter:hover {
-    box-shadow: 4px 4px 10px 4px #000000;
-    transition: box-shadow 0.5s ease-in-out;
-}
-
-.content {
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1150px;
-}
-
-.row {
-     margin: 0px;
-}
-
-#img_logo {
-    position: absolute;
-    margin: 15px 20px;
- }
-
-a{
-    color: #FFFEBD;
-    text-decoration: none;
-    text-shadow: 2px 2px 5px gray ;
-    display: block;
-}
-
-#divisor{
-    width: 100%;
-    float: left;
-    background-color: #a51217;
-    height: 100%;
-    margin-top: 5px;
-    padding: 15px ;
-    min-height: 600px;
-}
-
-.io{
-    margin-top:80px;
-    width: 85%;
-    margin-left: 80px;
-}
-
- 
-
-#contenedorNav {
-    cursor: default;
-    display: table;
-    position: relative;
-    margin-left: 100px;
-    width: 80%;
-    height: 20px;
-    font-family: 'Dalelands';
+.titulo{
     font-size: 30px;
+    font-family: "Dalelands";
     text-align: center;
 }
-
-#itemNav {
-    display: table-cell;    
-    padding: 10px;
-    background-color:#a34c50 ;
- }
-
- #itemNav:hover{
-    background-color: #4a2932 ;
- }
- 
- .textcont{
-    font-family: 'Dalelands';
-    font-size: 20px;
-    color: #FFFEBD;
- }
-
- h2{
-    font-family: 'Dalelands';
-    font-size: 20px;
- }
