@@ -2,178 +2,170 @@
 <html>
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>
-        <| DND BUILDER |>
-    </title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../styles/pupils.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../styles/diceroll.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../styles/bootstrap.css'>
-    <script src="../lib/jquery-3.4.1.min.js"></script>
-    <script src='../scripts/dentrites.js'></script>
-    <script src='../scripts/bootstrap.bundle.js'></script>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>
+    <| DND BUILDER |>
+  </title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='../styles/pupils.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='../styles/diceroll.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='../styles/bootstrap.css'>
+  <script src="../lib/jquery-3.4.1.min.js"></script>
+  <script src='../scripts/dentrites.js'></script>
+  <script src='../scripts/bootstrap.bundle.js'></script>
 
 
 </head>
 
 
 <body id="website" onload="cambioLogo()">
-    <div>
-        <h1 class="titulo">The Iris Of The Beholder</h1>
-    </div>
-        <div class="content">
-            <!--content start-->
-            <div class="row">
-                <div id="img_logo"> </div>
-                <div id="divisor">
-                    <ul id="contenedorNav" role="menubar">
-                        <li id="itemNav" role="menuitem"><a href="info.html"> Informacion</a></li>
-                        <li id="itemNav" role="menuitem"><a href="utilidades.html">Herramientas</a></li>
-                        <li id="itemNav" role="menuitem" name="reg"><a href="login.html">Acceder</a></li>
-                    </ul>
+  <div>
+    <h1 class="titulo">The Iris Of The Beholder</h1>
+  </div>
+  <div class="content">
+    <!--content start-->
+    <div class="row">
+      <div id="img_logo"> </div>
+      <div id="divisor">
+        <ul id="contenedorNav" role="menubar">
+          <li id="itemNav" role="menuitem"><a href="info.html"> Informacion</a></li>
+          <li id="itemNav" role="menuitem"><a href="utilidades.html">Herramientas</a></li>
+          <li id="itemNav" role="menuitem" name="reg"><a href="registro.html">Registrate</a></li>
+        </ul>
 
-                    <div class="io">
-                        <h2>HOJA PARA PERSONAJES </h2>
+        <div class="io">
+          <h2>HOJA PARA PERSONAJES </h2>
 
-                        <div>
-                             <a href="../docs/BLANK_DnD.pdf" target="_blank">HOJA DE DND EN BLANCO</a>
-                            </div><br>
+          <div>
+            <a href="../docs/BLANK_DnD.pdf" target="_blank">HOJA DE DND EN BLANCO</a>
+          </div><br>
 
-                        <h2>DADOS DE ROL</h2>
-                        <!--dados-->
-                        <div>
-                            <!-- STOCK: AVAILABLE DICE -->
-                            <div id="stock">
-                                <div class="die-stock" data-type="4"><img src="/images/icon-add.png" class="icon-add"
-                                        alt="+" /></div>
-                                <div class="die-stock" data-type="6"><img src="/images/icon-add.png" class="icon-add"
-                                        alt="+" /></div>
-                                <div class="die-stock" data-type="8"><img src="/images/icon-add.png" class="icon-add"
-                                        alt="+" /></div>
-                                <div class="die-stock" data-type="10"><img src="/images/icon-add.png" class="icon-add"
-                                        alt="+" /></div>
-                                <div class="die-stock" data-type="12"><img src="/images/icon-add.png" class="icon-add"
-                                        alt="+" /></div>
-                                <div class="die-stock" data-type="20"><img src="/images/icon-add.png" class="icon-add"
-                                        alt="+" /></div>
-                                <div class="die-stock" data-type="100"><img src="/images/icon-add.png" class="icon-add"
-                                        alt="+" /></div>
+          <h2>DADOS DE ROL</h2>
+          <!--dados-->
+          <div>
+            <!-- STOCK: AVAILABLE DICE -->
+            <div id="stock">
+              <div class="die-stock" data-type="4"><img src="/images/icon-add.png" class="icon-add" alt="+" /></div>
+              <div class="die-stock" data-type="6"><img src="/images/icon-add.png" class="icon-add" alt="+" /></div>
+              <div class="die-stock" data-type="8"><img src="/images/icon-add.png" class="icon-add" alt="+" /></div>
+              <div class="die-stock" data-type="10"><img src="/images/icon-add.png" class="icon-add" alt="+" /></div>
+              <div class="die-stock" data-type="12"><img src="/images/icon-add.png" class="icon-add" alt="+" /></div>
+              <div class="die-stock" data-type="20"><img src="/images/icon-add.png" class="icon-add" alt="+" /></div>
+              <div class="die-stock" data-type="100"><img src="/images/icon-add.png" class="icon-add" alt="+" /></div>
 
-                                <div id="sound-toggle"></div>
-                                <div id="help-button"></div>
-                            </div>
-                        </div>
-                        <!-- RESULT DISPLAY: result of single or multi die rolls -->
-                        <div id="total">
-                            <div class="rotatable" title="Click to select all dice!">
-                                <div id="total-value">?</div>
-                            </div>
-                            <div class="die-buttons">
-                                <div class="btn-roll-selected" title="Roll all (or all selected) dice!"></div>
-                                <div class="btn-remove-selected" title="Remove all (or all selected) dice from table!">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- TABLE: DICE SELECTED FOR GAME -->
-                        <div id="table"></div>
-
-                        <!-- TEMPLATES -->
-                        <div id="templates">
-
-                            <div class="die">
-                                <div class="rotatable" title="Click to select/deselect!">
-                                    <div class="die-image"></div>
-                                    <div class="die-value"></div>
-                                </div>
-                                <div class="die-buttons">
-                                    <div class="btn-roll"
-                                        title="Roll this die! (If this die is selected: Roll all selected dice!)"></div>
-                                    <div class="btn-remove" title="Remove this die from table!"></div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- HELP MODAL -->
-                        <div id="help">
-                            <div>
-                                <img src="/images/d20.png" alt="" />
-                                <br />
-                                <p><strong>dice-or-die: </strong>Well, it's a dice rolling simulation.
-                                    Add dice to the "table" by clicking the type of die you need
-                                    at the top of the page. Roll a single die by hovering over it
-                                    and clicking the "roll" button (circular arrow symbol). Roll
-                                    multiple dice by selecting all the dice you want to roll
-                                    (<i>click on them!</i>), then roll one of them - this will roll all
-                                    selected dice. See the total value in the circle above your dice.</p>
-                                <br />
-                                <p>
-                                    Visit at Github:
-                                    <a href="https://github.com/bkis/dice-or-die" title="visit bkis/dice-or-die on GitHub"
-                                        target="_blank" rel="noopener noreferrer">
-                                        bkis/dice-or-die
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <h2>COIN FLIP</h2>
-
-                        <div>
-
-                            <button style="background-color: transparent;border: none;" id="flip" type="button"><img
-                                    src="../images/coin.png"><p id="result"></p></button>
-
-                                <script>
-                                    let button = document.getElementById("flip");
-                                    let result = document.getElementById("result");
-
-                                    function fnClick(event) {
-                                        let num = Math.random();
-
-                                        if (num < 0.5) {
-                                            result.innerHTML = "Ha salido 1";
-                                        } else {
-                                            result.innerHTML = "Ha salido 2";
-                                        }
-                                    }
-
-                                    button.addEventListener("click", fnClick);
-                                </script>
-                        </div>
-
-                        <br>
-
-                        <div>
-                            <a href="https://chicken-dinner.com/5e/5e-point-buy.html"> Calculadora puntos</a>
-                            <br>
-                            <a href="https://koboldplus.club/#/encounter-builder">Constructor peleas</a>
-                            <br>
-                            <a href="https://nivel20.com/games/dnd-5/creatures">Lista de monstruos</a>
-                            <br>
-                            <a href="https://es.fantasynamegenerators.com/">Generador de nombre fantastico</a>
-                            <br>
-                            <a href="https://rolladvantage.com/tokenstamp/">Creador de Tokens</a>
-                            <br>
-                            <a href="https://tarrasque.io/signin?referrer=/b">Mesa de juego virtual</a>
-
-                     </div>
-                        </div>
-
-                        <br> <br>
-                    </div>
-                    <br> <br>
-                </div>
+              <div id="sound-toggle"></div>
+              <div id="help-button"></div>
             </div>
+          </div>
+          <!-- RESULT DISPLAY: result of single or multi die rolls -->
+          <div id="total">
+            <div class="rotatable" title="Click to select all dice!">
+              <div id="total-value">?</div>
+            </div>
+            <div class="die-buttons">
+              <div class="btn-roll-selected" title="Roll all (or all selected) dice!"></div>
+              <div class="btn-remove-selected" title="Remove all (or all selected) dice from table!">
+              </div>
+            </div>
+          </div>
+
+          <!-- TABLE: DICE SELECTED FOR GAME -->
+          <div id="table"></div>
+
+          <!-- TEMPLATES -->
+          <div id="templates">
+
+            <div class="die">
+              <div class="rotatable" title="Click to select/deselect!">
+                <div class="die-image"></div>
+                <div class="die-value"></div>
+              </div>
+              <div class="die-buttons">
+                <div class="btn-roll" title="Roll this die! (If this die is selected: Roll all selected dice!)"></div>
+                <div class="btn-remove" title="Remove this die from table!"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- HELP MODAL -->
+          <div id="help">
+            <div>
+              <img src="/images/d20.png" alt="" />
+              <br />
+              <p><strong>dice-or-die: </strong>Well, it's a dice rolling simulation.
+                Add dice to the "table" by clicking the type of die you need
+                at the top of the page. Roll a single die by hovering over it
+                and clicking the "roll" button (circular arrow symbol). Roll
+                multiple dice by selecting all the dice you want to roll
+                (<i>click on them!</i>), then roll one of them - this will roll all
+                selected dice. See the total value in the circle above your dice.</p>
+              <br />
+              <p>
+                Visit at Github:
+                <a href="https://github.com/bkis/dice-or-die" title="visit bkis/dice-or-die on GitHub" target="_blank" rel="noopener noreferrer">
+                  bkis/dice-or-die
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <h2>COIN FLIP</h2>
+
+          <div>
+
+            <button style="background-color: transparent;border: none;" id="flip" type="button"><img src="../images/coin.png">
+              <p id="result"></p>
+            </button>
+
+            <script>
+              let button = document.getElementById("flip");
+              let result = document.getElementById("result");
+
+              function fnClick(event) {
+                let num = Math.random();
+
+                if (num < 0.5) {
+                  result.innerHTML = "Ha salido 1";
+                } else {
+                  result.innerHTML = "Ha salido 2";
+                }
+              }
+
+              button.addEventListener("click", fnClick);
+            </script>
+          </div>
+
+          <br>
+
+          <div>
+            <a href="https://chicken-dinner.com/5e/5e-point-buy.html"> Calculadora puntos</a>
+            <br>
+            <a href="https://koboldplus.club/#/encounter-builder">Constructor peleas</a>
+            <br>
+            <a href="https://nivel20.com/games/dnd-5/creatures">Lista de monstruos</a>
+            <br>
+            <a href="https://es.fantasynamegenerators.com/">Generador de nombre fantastico</a>
+            <br>
+            <a href="https://rolladvantage.com/tokenstamp/">Creador de Tokens</a>
+            <br>
+            <a href="https://tarrasque.io/signin?referrer=/b">Mesa de juego virtual</a>
+
+          </div>
         </div>
 
-        <!-- JS'S-->
-        <script src='../scripts/diceroll.js'></script>
-        <script src='../scripts/dentrites.js'></script>
+        <br> <br>
+      </div>
+      <br> <br>
+    </div>
+  </div>
+  </div>
 
-    </body>
+  <!-- JS'S-->
+  <script src='../scripts/diceroll.js'></script>
+  <script src='../scripts/dentrites.js'></script>
+
+</body>
 
 </html>
