@@ -240,7 +240,7 @@
     
     /*WEB DE LOGING*/
     
-    #logger {
+    .logger {
         margin: 15px 4px 20px;
         height: 30px;
         width: 220px;
@@ -415,8 +415,7 @@
      }
     
     /*WEB DE LOGING*/
-    
-    #logger {
+    .logger {
         margin: 15px 4px 20px;
         height: 30px;
         width: 220px;
@@ -593,7 +592,7 @@
     
     /*WEB DE LOGING*/
     
-    #logger {
+    .logger {
         margin: 15px 4px 20px;
         height: 30px;
         width: 220px;
@@ -775,7 +774,7 @@
     
     /*WEB DE LOGING*/
     
-    #logger {
+    .logger {
         margin: 15px 4px 20px;
         height: 30px;
         width: 220px;
