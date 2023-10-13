@@ -96,7 +96,7 @@
         background:  #4a2932;
         background-size: 100%;
         font-family: 'Reign';
-        font-size: 25px;
+        font-size: 20px;
         color: #FFFEBD;
     }
     
@@ -246,17 +246,18 @@
         width: 220px;
         background-color: rgba(165, 18, 23, 0.696);
         display: flex;
+        font-family: 'Dalelands';
     }
     
-    .submit {
+    .submitButton {
         font-family: 'Reign';
         font-size: 24px;
         background-color: rgba(165, 18, 23, 0.8);
-        margin-left: 50px;
-        margin-top: 10px;
+        margin-left: 5px;
+        margin-top: 5px;
         padding: 12px;
-        letter-spacing: 3px;
-        width: 120px;
+        letter-spacing: 2px;
+        width: 100px;
         height: 50px;
     }
     
@@ -272,7 +273,7 @@
         background:  #4a2932;
         background-size: 100%;
         font-family: 'Reign';
-        font-size: 25px;
+        font-size: 20px;
         color: #FFFEBD;
     }
     
@@ -421,17 +422,18 @@
         width: 220px;
         background-color: rgba(165, 18, 23, 0.696);
         display: flex;
+        font-family: 'Dalelands';
     }
     
-    .submit {
+    .submitButton {
         font-family: 'Reign';
         font-size: 24px;
         background-color: rgba(165, 18, 23, 0.8);
-        margin-left: 50px;
-        margin-top: 10px;
+        margin-left: 5px;
+        margin-top: 5px;
         padding: 12px;
-        letter-spacing: 3px;
-        width: 120px;
+        letter-spacing: 2px;
+        width: 100px;
         height: 50px;
     }
     
@@ -448,7 +450,7 @@
         background:  #4a2932;
         background-size: 100%;
         font-family: 'Reign';
-        font-size: 25px;
+        font-size: 20px;
         color: #FFFEBD;
     }
     
@@ -598,17 +600,18 @@
         width: 220px;
         background-color: rgba(165, 18, 23, 0.696);
         display: flex;
+        font-family: 'Dalelands';
     }
     
-    .submit {
+    .submitButton {
         font-family: 'Reign';
         font-size: 24px;
         background-color: rgba(165, 18, 23, 0.8);
-        margin-left: 50px;
-        margin-top: 10px;
+        margin-left: 5px;
+        margin-top: 5px;
         padding: 12px;
-        letter-spacing: 3px;
-        width: 120px;
+        letter-spacing: 2px;
+        width: 100px;
         height: 50px;
     }
     
@@ -626,7 +629,7 @@
         background:  #4a2932;
         background-size: 100%;
         font-family: 'Reign';
-        font-size: 25px;
+        font-size: 20px;
         color: #FFFEBD;
     }
     
@@ -700,10 +703,6 @@
         margin-left: auto;
         margin-right: auto;
         width: 1150px;
-    }
-    
-    .row {
-         margin: 0px;
     }
     
     #img_logo {
@@ -780,17 +779,18 @@
         width: 220px;
         background-color: rgba(165, 18, 23, 0.696);
         display: flex;
+        font-family: 'Dalelands';
     }
     
     .submit {
         font-family: 'Reign';
         font-size: 24px;
         background-color: rgba(165, 18, 23, 0.8);
-        margin-left: 50px;
-        margin-top: 10px;
+        margin-left: 5px;
+        margin-top: 5px;
         padding: 12px;
-        letter-spacing: 3px;
-        width: 120px;
+        letter-spacing: 2px;
+        width: 100px;
         height: 50px;
     }
     
@@ -809,3 +809,4 @@
     font-family: "Dalelands";
     text-align: center;
 }
+

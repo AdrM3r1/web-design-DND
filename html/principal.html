@@ -28,14 +28,15 @@
   </div>
   <div class="content">
     <!--content start-->
-    <div class="row">
-      <p>
+    <div class="row-cols-auto">
       <div id="img_logo"> </div>
       <div id="divisor">
         <ul id="contenedorNav" role="menubar">
-          <li id="itemNav" role="menuitem"><a href="info.html"> Informacion</a></li>
-          <li id="itemNav" role="menuitem"><a href="utilidades.html">Herramientas</a></li>
-          <li id="itemNav" role="menuitem" name="reg"><a href="registro.html">Registrate</a></li>
+          <li class="itemNav" role="menuitem"><a href="info.html"> Informacion</a></li>
+          <li class="itemNav" role="menuitem"><a href="utilidades.html">Herramientas</a></li>
+          <li class="itemNav" role="menuitem" name="reg"><a href="registro.html">Registrate</a></li>
+          <li class="itemNav" role="menuitem"><a href="modal_login.html" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">Login</a></li>
         </ul>
 
         <div class="io">
@@ -55,6 +56,47 @@
 
       </div>
     </div>
+  </div>
+  
+<!-- Modal HTML -->
+
+<div id="exampleModal" class="modal fade">
+	<div class="modal-dialog modal-login">
+		<div class="modal-content">
+			<div class="modal-header">
+ 				
+				<h4 class="modal-title">Login</h4>	
+                <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+				<form action="#" method="post">
+					<div class="form-group">
+						<input type="text" class="form-control" name="username" placeholder="Usuario" required="required">		
+					</div>
+                    <br>
+					<div class="form-group">
+						<input type="password" class="form-control" name="password" placeholder="Password" required="required">	
+					</div>
+                    <br>        
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Login</button>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<a href="#">¿Olvidaste la contraseña?</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+  <!--breadcrums-->
+  <div>
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page"><a href="principal.html">Home</a></li>
+      </ol>
+    </nav>
   </div>
 
 
