@@ -38,7 +38,7 @@
           <li class="itemNav" role="menuitem"><a href="info.html"> Informacion</a></li>
           <li class="itemNav" role="menuitem"><a href="utilidades.html">Herramientas</a></li>
           <li class="itemNav" role="menuitem" name="reg"><a href="registro.html">Registrate</a></li>
-          <li class="itemNav" role="menuitem"><a href="modal_login.html" data-bs-toggle="modal"
+          <li class="itemNav" role="menuitem"><a style="cursor: pointer;" data-bs-toggle="modal"
               data-bs-target="#exampleModal">Login</a></li>
 
         </ul>
@@ -46,8 +46,34 @@
         <div class="io">
           <h2>HOJA PARA PERSONAJES </h2>
 
-          <div>
-            <a href="../docs/BLANK_DnD_5e.pdf" target="_blank">HOJA DE DND EN BLANCO</a>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <p>Hojas para imprimir</p>
+                <ul>
+                  <li>
+                    <a href="../docs/DnD-3.5_Esp.pdf" target="_blank">Hoja de personaje 3.5 (ESP)</a>
+                  </li>
+                  <br>
+                  <li>
+                    <a href="../docs/DnD-5e_Esp.pdf" target="_blank">Hoja de personaje 5e (ESP)</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <p>Hojas editables e imprimibles</p>
+                <ul>
+                  <li>
+                    <a href="../docs/DnD_3.5_CharacterSheet-Fillable.pdf" target="_blank">Hoja de personaje 3.5
+                      (ESP)</a>
+                  </li>
+                  <br>
+                  <li>
+                    <a href="../docs/DnD_5E_CharacterSheet-Fillable.pdf" target="_blank">Hoja de personaje 5e (ENG)</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div><br>
 
           <h2>DADOS DE ROL</h2>
@@ -148,27 +174,157 @@
             </script>
           </div>
 
-          <br>
+          <br><br>
+        
 
-          <div>
-            <a href="https://chicken-dinner.com/5e/5e-point-buy.html"> Calculadora puntos</a>
-            <br>
-            <a href="https://koboldplus.club/#/encounter-builder">Constructor peleas</a>
-            <br>
-            <a href="https://nivel20.com/games/dnd-5/creatures">Lista de monstruos</a>
-            <br>
-            <a href="https://es.fantasynamegenerators.com/">Generador de nombre fantastico</a>
-            <br>
-            <a href="https://rolladvantage.com/tokenstamp/">Creador de Tokens</a>
-            <br>
-            <a href="https://tarrasque.io/signin?referrer=/b">Mesa de juego virtual</a>
-
+        <h2>ENLACES</h2>
+      
+      <div class="col-lg-12">
+        <div class="accordion" id="acordeonInfoDnd">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                data-bs-target="#PrimerApartado">
+                Webs para empezar a jugar</button>
+            </h2>
+            <div id="PrimerApartado" class="accordion-collapse collapse" data-bs-parent="#acordeonInfoDnd">
+              <div class="card-body">
+                <!--webs prepara tu personaje-->
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <p>Todo para tu PJ</p>
+                      <ul>
+                        <li><a href="https://chicken-dinner.com/5e/5e-point-buy.html" target="_blank"> Calculadora puntos</a></li>
+                        <li><a href="https://es.fantasynamegenerators.com/" target="_blank">Generador de nombre de fantasia</a></li>
+                        <li><a href="http://dnd5e.wikidot.com/" target="_blank">Guia principal DnD (ENG)</a></li>
+                        <li><a href="https://forgottenrealms.fandom.com/wiki/Main_Page" target="_blank">Guia DnD (ESP)</a></li>
+                        <li><a href="https://immadon.mforos.com/1384897-dungeons-dragons/" target="_blank"> Web de contenidos DnD</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-5">
+                      <p>Mapas</p>
+                      <ul>
+                        <li><a href="https://tarrasque.io/" target="_blank">Web para jugar DnD online</a></li>
+                        <li><a href="https://rolladvantage.com/tokenstamp/" target="_blank">Creador de Tokens</a></li>
+                        <li><a href="https://deepnight.net/tools/rpg-map/" target="_blank">Software gratuito para crear mapas</a></li>
+                        <li><a href="https://og.myth-weavers.com/generate_dungeon.php" target="_blank">Generador aleatorio de mazmorras</a></li>
+                        <li><a href="https://davesmapper.com/" target="_blank">Generador aleatorio de mapas</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-3">
+                      <p>Contenido adicional</p>
+                      <ul>
+                        <li><a href="https://donjon.bin.sh/5e/" target="_blank">Mega web de DnD y rol</a></li>
+                        <li><a href="https://www.forgotten-adventures.net/product-category/map-making/" target="_blank">Assets gratis para mapas</a></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" >
+              <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                data-bs-target="#SegundoApartado">
+                Webs algo mas avanzadas</button>
+            </h2>
+            <div id="SegundoApartado" class="accordion-collapse collapse" data-bs-parent="#acordeonInfoDnd">
+              <div class="card-body">
+                <!--webs mas detalladas-->
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <p>Criaturas</p>
+                      <ul>
+                        <li><a href= "https://dr-eigenvalue.github.io/bestiary/" target="_blank">Bestiario (ESP)</a></li>
+                        <li><a href="https://nivel20.com/games/dnd-5/creatures" target="_blank">Monstruos y criaturas (ENG)</a></li>
+                        <li><a href="https://koboldplus.club/#/encounter-builder" target="_blank">Constructor peleas</a></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-4">
+                      <p>Personajes</p>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-4">
+                      <p>Mapmaking</p>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" >
+              <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                data-bs-target="#TercerApartado">
+                Contenido adicional</button>
+            </h2>
+            <div id="TercerApartado" class="accordion-collapse collapse" data-bs-parent="#acordeonInfoDnd">
+              <div class="card-body">
+                <!--contenido tiendas,dados, youtubes y eso-->
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <p>Mapmaking</p>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-4">
+                      <p>Personajes</p>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-4">
+                      <p>Mapmaking</p>
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
 
         <br> <br>
       </div>
-      <br> <br>
     </div>
   </div>
   </div>
