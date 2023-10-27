@@ -21,7 +21,7 @@
 
 </head>
 
-<body id="website" onload="cambioLogo()">
+<body id="website">
     <div>
         <h1 class="titulo">The Iris Of The Beholder </h1>
     </div>
@@ -34,10 +34,10 @@
                 <ul id="contenedorNav" role="menubar">
                     <li class="itemNav" role="menuitem"><a href="info.html"> Informacion</a></li>
                     <li class="itemNav" role="menuitem"><a href="utilidades.html">Herramientas</a></li>
-                    <li class="itemNav" role="menuitem" name="reg"><a href="registro.html">Registrate</a></li>
-                    <li class="itemNav" role="menuitem"><a style="cursor: pointer;" data-bs-toggle="modal"
+                    <li class="itemNav" role="menuitem" id="reg"><a href="registro.html">Registrate</a></li>
+                    <li class="itemNav" role="menuitem" id="log"><a style="cursor: pointer;" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">Login</a></li>
-
+                    <li class="itemNav" role="menuitem" id="user"><a href="usuario.html">(Usuario)</a></li>
                 </ul>
 
                 <div class="io">
@@ -70,7 +70,7 @@
                     <!--Pequeño carrusel de imagenes-->
                     <div style="padding: 5px;" class="row justify-content-md-center">
                         <div id="carDnDinfo" class="col-md-8 carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
+                            <div class="carousel-inner shadow p-3 mb-5 bg-body-tertiary rounded">
                                 <div class="carousel-item active" data-bs-interval="6000">
                                     <img src="/images/galeria/800/WallpaperDog-21_1200x800.png" class="d-block w-100"
                                         title="Aventureros enfrentandose a vampiros">
@@ -291,7 +291,7 @@
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <p class="textcont"> <br>
+                                                    <p class="textcont "> <br>
                                                         En 2003 se publicó una «revisión» de la tercera edición,
                                                         conocida
                                                         con el nombre
@@ -326,7 +326,7 @@
                                     <div class="card-body">
                                         <div class="container">
                                             <div class="row">
-                                                <div class="col-md-12">
+                                                <div class="col-md-12 ">
                                                     <p class="textcont"> <br>El 16 de agosto de 2007 Wizards of the
                                                         Coast anunció la salida,
                                                         para junio de
@@ -475,6 +475,12 @@
             </ol>
         </nav>
     </div>
+
+    <script>
+        cambioLogo();
+        detectUrl();
+    </script>
+
 </body>
 
 </html>

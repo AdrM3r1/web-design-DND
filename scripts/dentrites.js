@@ -1,10 +1,17 @@
+const c_name = "userIsRegistered";
+const c_value = false;
+const pathname = window.location.pathname;
+
+
 function cambioLogo() {
 	var nav = document.getElementById('img_logo');
 	var img = document.createElement('img');
+	document.getElementById('user').hidden = true;
 	if (window.screen.width > 720) {
 		img.src = "../images/logo/beholder" + Math.round((Math.random() * 6) + 1) + ".png";
 		nav.appendChild(img);
 	}
+	getCookie();
 }
 
 function ajaxCall() {
@@ -29,8 +36,16 @@ function ajaxCall() {
 		data: userData,
 		success: function (msg) {
 			if (msg) {
-				alert("Somebody" + userName + " was added in list !");
-				location.reload(true);
+				createCookie();
+				Swal.fire({
+					position: 'top-end',
+					icon: 'success',
+					title: "Bienvenido " +userName,
+					showConfirmButton: false,
+					timer: 1200,
+				  }).then(function () {
+					window.location.href = "../html/usuario.html";
+				  })
 			} else {
 				alert("Cannot add to list !");
 			}
@@ -40,10 +55,8 @@ function ajaxCall() {
 }
 
 
-function createCookie(name, value, days) {
-	var name = 'registered';
-	var value = true;
-	var days = 2;
+function createCookie(c_name, c_value, days) {
+	var days = 1;
     var expires;
     if (days) {
         var date = new Date();
@@ -53,12 +66,11 @@ function createCookie(name, value, days) {
     else {
         expires = "";
     }
-    document.cookie = name + "=" + value + expires + "; path=/";
+	c_value = true;
+    document.cookie = c_name + "=" + c_value + expires + "; path=/";
 }
 
 function getCookie() {
-	var c_name = 'registered';
-	var c_value = true;
     if (document.cookie.length > 0) {
         c_start = document.cookie.indexOf(c_name + "=");
         if (c_start != -1) {
@@ -68,10 +80,29 @@ function getCookie() {
                 c_end = document.cookie.length;
             }
 			if(c_value == true){
-				document.getElementById('reg').hidden = true
+				document.getElementById('reg').hidden = true;
+				document.getElementById('log').hidden = true;
+				document.getElementById('user').hidden = false;
 			}
             return unescape(document.cookie.substring(c_start, c_end));
         }
     }
     return "";
+}
+
+function detectUrl(){
+	if (pathname.includes("usuario") && c_value == false){
+		window.stop();
+		Swal.fire({
+			position: 'top-end',
+			icon: 'error',
+			title: "Error ",
+			text: "No tiene permisos para ver esta pagina",
+			showConfirmButton: false,
+			timer: 1200,
+		  }).then(function () {
+			window.location.href = "../html/principal.html";
+		  })
+
+	}
 }

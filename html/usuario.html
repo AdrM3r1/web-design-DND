@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        <| DND BUILDER |>
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!--Estilos dados-->
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/diceroll.css'>
+    <!--estilo y js inicio-->
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/pupils.css'>
+    <script src='../scripts/dentrites.js'></script>
+    <!--JQuery-->
+    <script src="../lib/jquery-3.4.1.min.js"></script>
+    <!--Bootstrap-->
+    <script src='../scripts/bootstrap.bundle.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/bootstrap.css'>
+    <!--Sweet alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</head>
+
+<body id="website">
+    <div>
+        <h1 class="titulo">The Iris Of The Beholder </h1>
+    </div>
+
+    <div class="content">
+        <!--content start-->
+        <div class="row-cols-auto">
+            <div id="img_logo"> </div>
+            <div id="divisor">
+                <ul id="contenedorNav" role="menubar">
+                    <li class="itemNav" role="menuitem"><a href="info.html"> Informacion</a></li>
+                    <li class="itemNav" role="menuitem"><a href="utilidades.html">Herramientas</a></li>
+                    <li class="itemNav" role="menuitem" id="reg"><a href="registro.html">Registrate</a></li>
+                    <li class="itemNav" role="menuitem" id="log"><a style="cursor: pointer;" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Login</a></li>
+                    <li class="itemNav" role="menuitem" id="user"><a href="usuario.html">(Usuario)</a></li>
+                </ul>
+
+                <div class="io">
+                    <div class="container">
+                        <div class="row justify-content-md-start">
+
+                            <!--Loading-->
+                            <div class="d-flex justify-content-center fade">
+                                <div class="spinner-border" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </div>
+                            <!--Loading-->
+
+                            <div class="col-md-12">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        cambioLogo();
+          detectUrl();
+
+    </script>
+</body>
+
+</html>

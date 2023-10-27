@@ -22,7 +22,7 @@
 
 </head>
 
-<body id="website" onload="cambioLogo()">
+<body id="website" >
   <div>
     <h1 class="titulo">The Iris Of The Beholder</h1>
   </div>
@@ -34,15 +34,16 @@
         <ul id="contenedorNav" role="menubar">
           <li class="itemNav" role="menuitem"><a href="info.html"> Informacion</a></li>
           <li class="itemNav" role="menuitem"><a href="utilidades.html">Herramientas</a></li>
-          <li class="itemNav" role="menuitem" name="reg"><a href="registro.html">Registrate</a></li>
-          <li class="itemNav" role="menuitem"><a style="cursor: pointer;" data-bs-toggle="modal"
+          <li class="itemNav" role="menuitem" id="reg"><a href="registro.html">Registrate</a></li>
+          <li class="itemNav" role="menuitem" id="log"><a style="cursor: pointer;" data-bs-toggle="modal"
               data-bs-target="#exampleModal">Login</a></li>
+          <li class="itemNav" role="menuitem" id="user"><a href="usuario.html">(Usuario)</a></li>
         </ul>
 
         <div class="io">
           <div class="container col-md-12 ">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-              <div class="col-md-6">
+              <div class="col-md-6 shadow p-3 mb-5 bg-body-tertiary rounded">
                 <img src="/images/galeria/dmplayers.jpg" class="rounded d-block mx-md-auto img-fluid"
                  loading="lazy">
 
@@ -71,7 +72,7 @@
                   tu mano.
                 </p>
               </div>
-              <div class="col-md-5 ">
+              <div class="col-md-5 shadow p-3 mb-5 bg-body-tertiary rounded">
                 <img src="/images/galeria/dmsession.jpg" class="rounded d-block mx-md-auto img-fluid"
                  loading="lazy">
               </div>
@@ -124,6 +125,10 @@
       </nav>
     </div>
 
+<script>
+  cambioLogo();
+  detectUrl();
+</script>
 
 </body>
 
