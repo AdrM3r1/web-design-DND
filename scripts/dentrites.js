@@ -1,5 +1,5 @@
 const c_name = "userIsRegistered";
-const c_value = false;
+var c_value = false;
 const pathname = window.location.pathname;
 
 
@@ -66,7 +66,7 @@ function createCookie(c_name, c_value, days) {
     else {
         expires = "";
     }
-	c_value = true;
+	this.c_value = true;
     document.cookie = c_name + "=" + c_value + expires + "; path=/";
 }
 
@@ -79,7 +79,7 @@ function getCookie() {
             if (c_end == -1) {
                 c_end = document.cookie.length;
             }
-			if(c_value == true){
+			if(this.c_value == true){
 				document.getElementById('reg').hidden = true;
 				document.getElementById('log').hidden = true;
 				document.getElementById('user').hidden = false;
@@ -91,7 +91,7 @@ function getCookie() {
 }
 
 function detectUrl(){
-	if (pathname.includes("usuario") && c_value == false){
+	if (pathname.includes("usuario") && this.c_value == false){
 		window.stop();
 		Swal.fire({
 			position: 'top-end',
