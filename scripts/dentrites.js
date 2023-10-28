@@ -1,5 +1,4 @@
 const c_name = "userIsRegistered";
-var c_value = false;
 const pathname = window.location.pathname;
 
 
@@ -11,7 +10,6 @@ function cambioLogo() {
 		img.src = "../images/logo/beholder" + Math.round((Math.random() * 6) + 1) + ".png";
 		nav.appendChild(img);
 	}
-	getCookie();
 }
 
 function ajaxCall() {
@@ -40,12 +38,12 @@ function ajaxCall() {
 				Swal.fire({
 					position: 'top-end',
 					icon: 'success',
-					title: "Bienvenido " +userName,
+					title: "Bienvenido " + userName,
 					showConfirmButton: false,
 					timer: 1200,
-				  }).then(function () {
+				}).then(function () {
 					window.location.href = "../html/usuario.html";
-				  })
+				})
 			} else {
 				alert("Cannot add to list !");
 			}
@@ -54,44 +52,42 @@ function ajaxCall() {
 	});
 }
 
-
-function createCookie(c_name, c_value, days) {
-	var days = 1;
-    var expires;
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toGMTString();
-    }
-    else {
-        expires = "";
-    }
-	this.c_value = true;
-    document.cookie = c_name + "=" + c_value + expires + "; path=/";
+function createCookie() {
+	let cvalue = true;
+	let exdays = 2;
+	const d = new Date();
+	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	let expires = "expires=" + d.toUTCString();
+	document.cookie = c_name + "=" + cvalue + ";" + expires + ";path=/";
 }
 
 function getCookie() {
-    if (document.cookie.length > 0) {
-        c_start = document.cookie.indexOf(c_name + "=");
-        if (c_start != -1) {
-            c_start = c_start + c_name.length + 1;
-            c_end = document.cookie.indexOf(";", c_start);
-            if (c_end == -1) {
-                c_end = document.cookie.length;
-            }
-			if(this.c_value == true){
-				document.getElementById('reg').hidden = true;
-				document.getElementById('log').hidden = true;
-				document.getElementById('user').hidden = false;
-			}
-            return unescape(document.cookie.substring(c_start, c_end));
-        }
-    }
-    return "";
+	let name = c_name + "=";
+	let ca = document.cookie.split(';');
+	let x;
+	for (let i = 0; i < ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0 && c.substring(name.length, c.length) == "true") {
+			x = true;
+			document.getElementById('reg').hidden = true
+			document.getElementById('log').hidden = true
+			document.getElementById('user').hidden = false
+
+			detectUrl(x);
+		}else{
+			x = false;
+			detectUrl(x);
+		}
+	}
+	return "";
 }
 
-function detectUrl(){
-	if (pathname.includes("usuario") && this.c_value == false){
+function detectUrl(x) {
+	let cookValue = x;
+	if (pathname.includes("usuario") && cookValue == false) {
 		window.stop();
 		Swal.fire({
 			position: 'top-end',
@@ -100,9 +96,8 @@ function detectUrl(){
 			text: "No tiene permisos para ver esta pagina",
 			showConfirmButton: false,
 			timer: 1200,
-		  }).then(function () {
+		}).then(function () {
 			window.location.href = "../html/principal.html";
-		  })
-
+		})
 	}
 }
