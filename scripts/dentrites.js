@@ -74,9 +74,6 @@ function getCookie() {
 			document.getElementById('reg').hidden = true;
 			document.getElementById('log').hidden = true;
 			document.getElementById('user').hidden = false;
-
-			x = true;
-			detectUrl(x);
 			break;
 		} else {
 			x = false;
