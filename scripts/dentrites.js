@@ -59,33 +59,34 @@ function createCookie() {
 	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
 	let expires = "expires=" + d.toUTCString();
 	document.cookie = c_name + "=" + cvalue + ";" + expires + ";path=/";
+	document.cookie = "penis" + "=" + cvalue + ";" + expires + ";path=/";
 }
 
 function getCookie() {
 	let name = c_name + "=";
 	let ca = document.cookie.split(';');
 	let x;
-	for (let i = 0; i < ca.length; i++) {
-		let c = ca[i];
-		for (var j = 0; j < ca.length; j++) {
-			if (c.includes(c_name)) {
-//comprueba si la cookie de c_name esta creada o no
-				if (c.indexOf(name) == 0 && c.substring(name.length, c.length) == "true") {
-					x = true;
-					document.getElementById('reg').hidden = true
-					document.getElementById('log').hidden = true
-					document.getElementById('user').hidden = false
 
-					detectUrl(x);
-				} 
-			}else {
-				x = false;
-				detectUrl(x);
-			}
+	for (let i = 0; i < ca.length; i++) {
+		let c = ca[i].trim();
+
+		if (c.includes(name) && c.substring(name.length) === "true") {
+			document.getElementById('reg').hidden = true;
+			document.getElementById('log').hidden = true;
+			document.getElementById('user').hidden = false;
+
+			x = true;
+			detectUrl(x);
+			break;
+		} else {
+			x = false;
+			detectUrl(x);
 		}
-		return "";
 	}
+
+	return "";
 }
+
 function detectUrl(x) {
 	let cookValue = x;
 	if (pathname.includes("usuario") && cookValue == false) {
