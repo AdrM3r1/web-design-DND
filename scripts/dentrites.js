@@ -68,7 +68,7 @@ function getCookie() {
 	for (let i = 0; i < ca.length; i++) {
 		let c = ca[i];
 		for (var j = 0; j < ca.length; j++) {
-			if (c[i].includes(c_name)) {
+			if (c.includes(c_name)) {
 //comprueba si la cookie de c_name esta creada o no
 				if (c.indexOf(name) == 0 && c.substring(name.length, c.length) == "true") {
 					x = true;
