@@ -65,7 +65,7 @@ function createCookie() {
 function getCookie() {
 	let name = c_name + "=";
 	let ca = document.cookie.split(';');
-	let x;
+	let x = true;
 
 	for (let i = 0; i < ca.length; i++) {
 		let c = ca[i].trim();
