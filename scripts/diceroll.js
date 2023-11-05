@@ -11,7 +11,7 @@
 
 
 //// GENERAL CONSTANTS
-const imgDirPath = "../images/diceroll/";
+const imgDirPath = "./images/diceroll/";
 const imgNamePrefix = "d";
 const imgNameSuffix = ".png";
 
@@ -72,7 +72,7 @@ var total = 0;
 var currentRollId = "";
 var sound = false;
 var rollSound = document.createElement("audio");
-rollSound.src = "../sounds/roll.ogg";
+rollSound.src = "./sounds/roll.ogg";
 rollSound.load();
 
 // fnc to toggle sound on/off

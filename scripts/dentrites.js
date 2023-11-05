@@ -7,7 +7,7 @@ function cambioLogo() {
 	var img = document.createElement('img');
 	document.getElementById('user').hidden = true;
 	if (window.screen.width > 720) {
-		img.src = "../images/logo/beholder" + Math.round((Math.random() * 6) + 1) + ".png";
+		img.src = "./images/logo/beholder" + Math.round((Math.random() * 6) + 1) + ".png";
 		nav.appendChild(img);
 	}
 }
@@ -56,7 +56,7 @@ function detectUrl(x) {
 			showConfirmButton: false,
 			timer: 1200,
 		}).then(function () {
-			window.location.href = "../html/principal.html";
+			window.location.href = "./html/principal.html";
 		})
 	}
 }
