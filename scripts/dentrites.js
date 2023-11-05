@@ -12,45 +12,6 @@ function cambioLogo() {
 	}
 }
 
-function ajaxCall() {
-	let userName = document.getElementById("userName").value;
-	let userEmail = document.getElementById("userEmail").value;
-	let userPassword = document.getElementById("userPassword").value;
-	let userData = { 'nick': userName, 'email': userEmail, 'password': userPassword }
-	/*if (userName == "" || userEmail == "" || userPassword == "") {
-		Swal.fire({
-			position: 'top-end',
-			icon: 'error',
-			title: 'rellene todos los campos',
-			showConfirmButton: false,
-			timer: 1200
-		})
-	}else{
-	*/
-	$.ajax({
-		type: 'POST',
-		dataType: 'json',
-		url: '',
-		data: userData,
-		success: function (msg) {
-			if (msg) {
-				createCookie();
-				Swal.fire({
-					position: 'top-end',
-					icon: 'success',
-					title: "Bienvenido " + userName,
-					showConfirmButton: false,
-					timer: 1200,
-				}).then(function () {
-					window.location.href = "../html/usuario.html";
-				})
-			} else {
-				alert("Cannot add to list !");
-			}
-		},
-		data: userData
-	});
-}
 
 function createCookie() {
 	let cvalue = true;
