@@ -11,7 +11,7 @@
 
 
 //// GENERAL CONSTANTS
-const imgDirPath = "/images/diceroll/";
+const imgDirPath = "../images/diceroll/";
 const imgNamePrefix = "d";
 const imgNameSuffix = ".png";
 
