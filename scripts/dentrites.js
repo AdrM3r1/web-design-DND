@@ -20,7 +20,6 @@ function createCookie() {
 	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
 	let expires = "expires=" + d.toUTCString();
 	document.cookie = c_name + "=" + cvalue + ";" + expires + ";path=/";
-	document.cookie = "penis" + "=" + cvalue + ";" + expires + ";path=/";
 }
 
 function getCookie() {
