@@ -85,7 +85,9 @@
             <button id="retorno" class="submitButton" type="button" value="volver">Volver</button>
             
             </form>
-
+            <div class="form-group">
+              <a href="../html/recuPass.html">¿Olvidaste la contraseña?</a>
+            </div>
       </div>
     </div>
   </div>
