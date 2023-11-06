@@ -56,16 +56,16 @@ function getCookie() {
 			x = false;
 		}
 	}
-
+	detectUrl(x)
 	return "";
 }
 
 function detectUrl(x) {
 	let cookValue = x;
-	if (pathname.includes("usuario") && cookValue == false) {
+	if (pathname.includes("usuario") && cookValue != true) {
 		window.stop();
 		Swal.fire({
-			position: 'top-end',
+			position: 'center',
 			icon: 'error',
 			title: "Error ",
 			text: "No tiene permisos para ver esta pagina",

@@ -22,10 +22,9 @@ if (isset($_POST)) {
 
     if ($count_user == 0 && $count_email == 0) {
         if ($user_Password == $user_Cpass) {
-            $hash = password_hash($user_Password, PASSWORD_DEFAULT);
-
+            
             // Password Hashing is used here.
-            $sql = "INSERT INTO users_(nick, mail, pass) VALUES('$user_Name', '$user_Email','$hash')";
+            $sql = "INSERT INTO users_(nick, mail, pass) VALUES('$user_Name', '$user_Email','$user_Password')";
 
             $result = mysqli_query($conn, $sql);
 
@@ -48,21 +47,45 @@ if (isset($_POST)) {
             }
         } else {
             echo '<script>
-                    alert("Passwords do not match")
-                    window.location.href = "../html/registro.php";
+            Swal.fire({
+                position: "center",
+                icon: "warning",
+                title: "Advertencia",
+                text:"Las contraseñas no coinciden",
+                showConfirmButton: false,
+                timer: 2000,
+              }).then(function () {
+                window.location.href = "../html/registro.php";
+            })
                 </script>';
         }
     } else {
         if ($count_user > 0) {
             echo '<script>
-                    window.location.href = "../html/registro.php";
-                    alert("Username already exists!!")
+            Swal.fire({
+                position: "center",
+                icon: "warning",
+                title: "Advertencia",
+                text:"El nombre de usuario / nick ya existe",
+                showConfirmButton: false,
+                timer: 2000,
+              }).then(function () {
+                window.location.href = "../html/registro.php";
+            })
                 </script>';
         }
         if ($count_email > 0) {
             echo '<script>
-                    window.location.href = "../html/registro.php";
-                    alert("Email already exists!!")
+            Swal.fire({
+                position: "center",
+                icon: "warning",
+                title: "Advertencia",
+                text:"La direccion de correo ya esta registrada",
+                showConfirmButton: false,
+                timer: 2000,
+              }).then(function () {
+                window.location.href = "../html/registro.php";
+            })
                 </script>';
         }
     }

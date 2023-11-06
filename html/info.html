@@ -37,7 +37,7 @@
                     <li class="itemNav" role="menuitem" id="reg"><a href="registro.php">Registrate</a></li>
                     <li class="itemNav" role="menuitem" id="log"><a style="cursor: pointer;" data-bs-toggle="modal"
                             data-bs-target="#loginModal">Login</a></li>
-                    <li class="itemNav" role="menuitem" id="user"><a href="usuario.html">(Usuario)</a></li>
+                    <li class="itemNav" role="menuitem" id="user"><a href="usuario.html">Mi cuenta</a></li>
                 </ul>
 
                 <div class="io">
@@ -88,8 +88,8 @@
                                         title="Combate contra un dragon">
                                 </div>
                                 <div class="carousel-item" data-bs-interval="6000">
-                                    <img src="..../images/galeria/800/DND-serie-animada_1200x800.png" class="d-block w-100"
-                                        title="Popurri de personajes de la serie animada">
+                                    <img src="../images/galeria/800/DND-serie-animada_1200x800.png"
+                                        class="d-block w-100" title="Popurri de personajes de la serie animada">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carDnDinfo"
@@ -441,19 +441,19 @@
                     <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="post">
+                    <form action="../php/login.php" method="post">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="username" placeholder="Usuario"
+                            <input type="text" class="form-control" name="nick" placeholder="Nick"
                                 required="required">
                         </div>
                         <br>
                         <div class="form-group">
-                            <input type="password" class="form-control" name="password" placeholder="Password"
+                            <input type="password" class="form-control" name="pass" placeholder="Password"
                                 required="required">
                         </div>
                         <br>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Login</button>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-lg">Login</button>
                         </div>
                     </form>
                 </div>

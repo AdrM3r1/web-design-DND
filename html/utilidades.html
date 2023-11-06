@@ -40,7 +40,7 @@
           <li class="itemNav" role="menuitem" id="reg"><a href="registro.php">Registrate</a></li>
           <li class="itemNav" role="menuitem" id="log"><a style="cursor: pointer;" data-bs-toggle="modal"
               data-bs-target="#loginModal">Login</a></li>
-          <li class="itemNav" role="menuitem" id="user"><a href="usuario.html">(Usuario)</a></li>
+          <li class="itemNav" role="menuitem" id="user"><a href="usuario.html">Mi cuenta</a></li>
         </ul>
 
         <div class="io">
@@ -81,17 +81,23 @@
           <div>
             <!-- STOCK: AVAILABLE DICE -->
             <div id="stock">
-              <div class="die-stock" data-type="4"><img src="../images/diceroll/icon-add.png" class="icon-add" alt="+" />
+              <div class="die-stock" data-type="4"><img src="../images/diceroll/icon-add.png" class="icon-add"
+                  alt="+" />
               </div>
-              <div class="die-stock" data-type="6"><img src="../images/diceroll/icon-add.png" class="icon-add" alt="+" />
+              <div class="die-stock" data-type="6"><img src="../images/diceroll/icon-add.png" class="icon-add"
+                  alt="+" />
               </div>
-              <div class="die-stock" data-type="8"><img src="../images/diceroll/icon-add.png" class="icon-add" alt="+" />
+              <div class="die-stock" data-type="8"><img src="../images/diceroll/icon-add.png" class="icon-add"
+                  alt="+" />
               </div>
-              <div class="die-stock" data-type="10"><img src="../images/diceroll/icon-add.png" class="icon-add" alt="+" />
+              <div class="die-stock" data-type="10"><img src="../images/diceroll/icon-add.png" class="icon-add"
+                  alt="+" />
               </div>
-              <div class="die-stock" data-type="12"><img src="../images/diceroll/icon-add.png" class="icon-add" alt="+" />
+              <div class="die-stock" data-type="12"><img src="../images/diceroll/icon-add.png" class="icon-add"
+                  alt="+" />
               </div>
-              <div class="die-stock" data-type="20"><img src="../images/diceroll/icon-add.png" class="icon-add" alt="+" />
+              <div class="die-stock" data-type="20"><img src="../images/diceroll/icon-add.png" class="icon-add"
+                  alt="+" />
               </div>
               <div class="die-stock" data-type="100"><img src="../images/diceroll/icon-add.png" class="icon-add"
                   alt="+" /></div>
@@ -426,17 +432,17 @@
           <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
         <div class="modal-body">
-          <form action="#" method="post">
+          <form action="../php/login.php" method="post">
             <div class="form-group">
-              <input type="text" class="form-control" name="username" placeholder="Usuario" required="required">
+              <input type="text" class="form-control" name="nick" placeholder="Nick" required="required">
             </div>
             <br>
             <div class="form-group">
-              <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+              <input type="password" class="form-control" name="pass" placeholder="Password" required="required">
             </div>
             <br>
-            <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Login</button>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary btn-lg">Login</button>
             </div>
           </form>
         </div>
