@@ -102,7 +102,7 @@
     
     #indexcontent {
         width: 500px;
-        height: 550px;
+        height: 575px;
         display: flex;
         margin: 15px;
         padding-left: 30px;
@@ -251,14 +251,14 @@
     
     .submitButton {
         font-family: 'Reign';
-        font-size: 24px;
+        font-size: 20px;
         background-color: rgba(165, 18, 23, 0.8);
         margin-left: 5px;
         margin-top: 5px;
-        padding: 12px;
+        padding: 0px;
         letter-spacing: 2px;
         width: 100px;
-        height: 50px;
+        height: 40px;
     }
     
     #log {
@@ -279,7 +279,7 @@
     
     #indexcontent {
         width: 500px;
-        height: 550px;
+        height: 575px;
         display: flex;
         margin: 15px;
         padding-left: 30px;
@@ -427,14 +427,14 @@
     
     .submitButton {
         font-family: 'Reign';
-        font-size: 24px;
+        font-size: 20px;
         background-color: rgba(165, 18, 23, 0.8);
         margin-left: 5px;
         margin-top: 5px;
-        padding: 12px;
+        padding: 0px;
         letter-spacing: 2px;
         width: 100px;
-        height: 50px;
+        height: 40px;
     }
     
     #log {
@@ -456,7 +456,7 @@
     
     #indexcontent {
         width: 500px;
-        height: 550px;
+        height: 575px;
         display: flex;
         margin: 15px;
         padding-left: 30px;
@@ -605,14 +605,14 @@
     
     .submitButton {
         font-family: 'Reign';
-        font-size: 24px;
+        font-size: 20px;
         background-color: rgba(165, 18, 23, 0.8);
         margin-left: 5px;
         margin-top: 5px;
-        padding: 12px;
+        padding: 0px;
         letter-spacing: 2px;
         width: 100px;
-        height: 50px;
+        height: 40px;
     }
     
     #log {
@@ -635,7 +635,7 @@
     
     #indexcontent {
         width: 500px;
-        height: 550px;
+        height: 575px;
         display: flex;
         margin: 15px;
         padding-left: 30px;

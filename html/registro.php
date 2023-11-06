@@ -1,3 +1,7 @@
+<?php 
+    include("../php/config.php");
+    ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -25,10 +29,12 @@
   <div id="container">
     <div id="indexcontent">
       <div id="log">
-        <h3 style="color:black;margin: 0px 70px 20px;text-decoration: underline;text-decoration-thickness:2px;">Registro
+        <h3 style="color:black;margin: 0px 55px 10px;text-decoration: underline;text-decoration-thickness:2px;">Registro
+          <span class="tooltip-arrow" data-bs-toggle="tooltip" data-bs-placement="right"
+            title="Enviar se desbloqueara cuando los campos esten rellenos">*</span>
         </h3>
 
-        <form method="post" id="login" name="registro_form" action="javascript:ajaxCall()">
+        <form action="../php/procesoRegistro.php" method="post" id="login">
           <label style="margin-left:85px ;" class="labInput">
             <center>Nick</center>
           </label>
@@ -37,18 +43,23 @@
           <input class="logger" id="userEmail" type="email" name='email'>
           <label style="margin-left: 55px;" class="labInput">Contrase&ntilde;a</label>
           <input class="logger" id="userPassword" type="password" name="password">
+          <label style="margin-left: 25px;" class="labInput">Confirma Contrase&ntilde;a</label>
+          <input class="logger" id="userCpass" type="password" name="cpass">
+
           <button id="Enviar" class="submitButton" type="submit">Enviar</button>
+
           <button id="retorno" class="submitButton" type="button" value="volver">Volver</button>
         </form>
-        <div style="margin:10px 12px;font-size: 16px;font-family: 'Dalelands'">
-          <a style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#exampleModal">¿Ya estas registrado?</a>
+
+        <div style="margin:10px 12px;font-size: 16px;font-family: 'Dalelands'"><br>
+          <a style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#loginModal">¿Ya estas registrado?</a>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Modal HTML -->
-  <div id="exampleModal" class="modal fade">
+  <div id="loginModal" class="modal fade">
     <div class="modal-dialog modal-login">
       <div class="modal-content">
         <div class="modal-header">
@@ -80,6 +91,10 @@
 </body>
 
 <script>
+  $(document).ready(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip();
+  });
+
   $('#retorno').click(function () {
     Swal.fire({
       position: 'top-end',
@@ -92,46 +107,36 @@
     })
   })
 
+  {
+    const btn = document.getElementById("Enviar");
+    const name = document.getElementById("userName");
+    const email = document.getElementById("userEmail");
+    const pass = document.getElementById("userPassword");
+    const CPass = document.getElementById("userCpass");
+    deactivate()
 
-  function ajaxCall() {
-	var userName = document.getElementById("userName").value;
-	var userEmail = document.getElementById("userEmail").value;
-	var userPassword = document.getElementById("userPassword").value;
-	var userData = { 'nick': userName, 'email': userEmail, 'password': userPassword }
-	if (userName != "" && userEmail != "" && userPassword != "") {
-    $.ajax({
-      type: 'POST',
-			dataType: 'json',
-			url: 'newUserRegistered.php',
-			data: userData,
-			success: function (msg) {
-				if (msg) {
-          createCookie();
-					Swal.fire({
-            position: 'top-end',
-						icon: 'success',
-						title: "Bienvenido " + userName,
-						showConfirmButton: false,
-						timer: 1200,
-					}).then(function () {
-            window.location.href = "../html/usuario.html";
-					})
-				} else {
-          alert("Cannot add to list !");
-				}
-			},
-			data: userData
-		});
-  } else {
-    Swal.fire({
-			position: 'top-end',
-			icon: 'error',
-			title: 'rellene todos los campos',
-			showConfirmButton: false,
-			timer: 1200
-		})
-	}
-}
+    function activate() {
+      btn.disabled = false;
+    }
+
+    function deactivate() {
+      btn.disabled = true;
+    }
+
+    function check() {
+      if (name.value != '' && email.value != '' && pass.value != '') {
+        activate()
+      } else {
+        deactivate()
+      }
+    }
+    name.addEventListener('input', check)
+    email.addEventListener('input', check)
+    pass.addEventListener('input', check)
+    CPass.addEventListener('input',check)
+
+  }
+
 </script>
 
 </html>

@@ -12,6 +12,23 @@ function cambioLogo() {
 	}
 }
 
+function checkForm(){
+	var userName = document.getElementById("userName").value;
+	var userEmail = document.getElementById("userEmail").value;
+	var userPassword = document.getElementById("userPassword").value;
+	if (userName == "" && userEmail == "" && userPassword == "") {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'error',
+          title: 'rellene todos los campos',
+          showConfirmButton: false,
+          timer: 1200
+
+        }).then(function () {
+                window.stop();
+              })
+            }
+}
 
 function createCookie() {
 	let cvalue = true;
@@ -37,7 +54,6 @@ function getCookie() {
 			break;
 		} else {
 			x = false;
-			detectUrl(x);
 		}
 	}
 
