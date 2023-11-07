@@ -127,7 +127,7 @@
 
 .form-control {
   background: #bcb2b2;
-  font-family: 'Dalelands'
+  font-family: 'Rostock'
 }
 
 [data-bs-theme=dark] {
@@ -5486,7 +5486,7 @@ textarea.form-control-lg {
   overflow-x: hidden;
   overflow-y: auto;
   outline: 0;
-  font-family: 'Dalelands';
+  font-family: 'Rostock';
   
 }
 

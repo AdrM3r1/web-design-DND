@@ -1,0 +1,285 @@
+/* IMPORTS ANIMACIONES Y MAS */
+
+/*FUENTES*/
+ @font-face {
+    font-family: 'Alice'; 
+    src: url('../styles/fonts/Alice_in_Wonderland.ttf');
+} 
+
+@font-face {
+    font-family: 'Rostock';
+    src: url('../styles/fonts/Rostock_Kaligraph.ttf');
+}
+
+
+@font-face {
+    font-family: 'Vinque'; 
+    src: url('../styles/fonts/vinque.otf');
+}
+
+
+/*ANIMACIONES*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+
+    2% {
+        opacity: 0;
+    }
+
+    3% {
+        opacity: 0.6;
+    }
+
+    4% {
+        opacity: 0.2;
+    }
+
+    6% {
+        opacity: .9;
+    }
+
+    16% {
+        opacity: .2;
+    }
+
+    26% {
+        opacity: .5;
+    }
+
+    46% {
+        opacity: .7;
+    }
+
+    76% {
+        opacity: .8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#result {
+    font-family: "Rostock";
+    font-size: 20px;
+    float: right;
+    padding: 40px;
+
+}
+
+/* Responsive */
+
+
+body#index-bg {
+    background: #4a2932;
+    background-size: 100%;
+    font-family: 'Rostock';
+    font-size: 20px;
+    color: #FFFEBD;
+}
+
+#indexcontent {
+    width: 500px;
+    height: 575px;
+    display: flex;
+    margin: 15px;
+    padding-left: 30px;
+    box-shadow: 0 14.5px 20.5px 0 #000000;
+    background-color: rgba(165, 18, 23, 0.75);
+    border-radius: 8% 8% 15% 15% / 8% 8% 15% 15%;
+}
+
+#container {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+#intro {
+    background: #830202;
+    background: -webkit-linear-gradient(0deg, #830202 0%, #c20929 50%, #d77e45 100%);
+    background: linear-gradient(0deg, #830202 5%, #c20929 55%, #d77e45 90%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#imgIndex {
+    margin: 0px;
+    height: 510px;
+    padding-top: 20px;
+    border-radius: 15% 15%;
+    animation: fadeIn 1.5s;
+}
+
+.title {
+    font-size: 80px;
+    width: 800px;
+    display: flex;
+    margin: 70px;
+    padding-left: 50px;
+    animation: flash 2s;
+    animation-delay: 0.6s;
+    font-family: 'Alice';
+    text-shadow: 2px 3px grey;
+}
+
+.enter {
+    font-family: 'Rostock';
+    font-size: 40px;
+    background: linear-gradient(0deg, #830202 15%, #c20929 40%, #d77e45 80%);
+    width: auto;
+    height: 100px;
+    margin-left: 275px;
+    margin-top: 110px;
+    padding: 20px;
+    cursor: pointer;
+    animation: fadeIn 5s;
+    box-shadow: 1px 1px #000000;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.enter:hover {
+    box-shadow: 4px 4px 10px 4px #000000;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.content {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1150px;
+}
+
+#img_logo {
+    position: absolute;
+    margin: 15px 20px;
+}
+
+#divisor {
+    background-color: #a51217;
+    margin-top: 5px;
+    padding: 15px;
+    min-height: 550px;
+    width: 95%;
+}
+
+#contenedorNav {
+    cursor: default;
+    display: table;
+    position: relative;
+    margin-left: 100px;
+    width: 80%;
+    height: 20px;
+    font-family: 'Rostock';
+    font-size: 30px;
+    text-align: center;
+}
+
+#itemNav {
+    display: table-cell;
+    padding: 10px;
+    background-color: #a34c50;
+}
+
+#itemNav:hover {
+    background-color: #4a2932;
+}
+
+/*GENERICOS y VALORES DEBILES*/
+
+
+#website {
+    background: #4a2932;
+}
+
+a {
+    color: #FFFEBD;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px gray;
+    display: block;
+}
+
+.textcont {
+    font-family: 'Rostock';
+    font-size: 20px;
+    color: #FFFEBD;
+}
+
+.io {
+    margin-top: 80px;
+    width: 85%;
+    margin-left: 80px;
+}
+
+h2 {
+    font-family: 'Rostock';
+    font-size: 20px;
+}
+
+/*WEB DE LOGING*/
+
+.logger {
+    margin: 15px 4px 20px;
+    height: 30px;
+    width: 220px;
+    background-color: rgba(165, 18, 23, 0.696);
+    display: flex;
+    font-family: 'Rostock';
+}
+
+.submit {
+    font-family: 'Rostock';
+    font-size: 24px;
+    background-color: rgba(165, 18, 23, 0.8);
+    margin-left: 5px;
+    margin-top: 5px;
+    padding: 12px;
+    letter-spacing: 2px;
+    width: 100px;
+    height: 50px;
+}
+
+#log {
+    align-items: center;
+    justify-content: center;
+    margin-left: 120px;
+    margin-top: 100px;
+    color: #FFFEBD;
+}
+
+.titulo {
+    font-size: 30px;
+    font-family: "Rostock";
+    text-align: center;
+}
+
+a,h1,h2,h3,h4,h5,h6 {
+    font-family: "Vinque";
+}
+
+input,label,p,span,li{
+    font-family: "Rostock";
+
+}

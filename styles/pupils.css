@@ -2,20 +2,19 @@
 
 /*FUENTES*/
 @font-face {
-    font-family: 'Dalelands';
-    src: url('../styles/DalelandsUncial.ttf');
+    font-family: 'Rostock';
+    src: url('../styles/fonts/Rostock_Kaligraph.ttf');
 }
 
 @font-face {
-    font-family: 'Reign';
-    src: url('../styles/FirstReign.otf');
+    font-family: 'Vinque'; 
+    src: url('../styles/fonts/vinque.otf');
 }
-
 
 @font-face {
-    font-family: 'Lyric';
-    src: url('../styles/Lyric Poetry.ttf');
-}
+    font-family: 'Alice'; 
+    src: url('../styles/fonts/Alice_in_Wonderland.ttf');
+} 
 
 
 /*ANIMACIONES*/
@@ -82,7 +81,7 @@
 }
 
 #result{
-    font-family:"Dalelands";
+    font-family:"Rostock";
     font-size: 20px;
     float: right;
     padding: 40px;
@@ -95,7 +94,7 @@
     body#index-bg {
         background:  #4a2932;
         background-size: 100%;
-        font-family: 'Reign';
+        font-family: 'Rostock';
         font-size: 20px;
         color: #FFFEBD;
     }
@@ -141,12 +140,12 @@
         padding-left: 50px;
         animation: flash 2s;
         animation-delay: 0.6s;
-        font-family: 'Lyric';
+        font-family: 'Alice';
         text-shadow: 2px 3px grey;
     }
     
     .enter {
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
         font-size: 40px;
         background: linear-gradient(0deg, #830202 15%, #c20929 40%, #d77e45 80%);
         width: auto;
@@ -192,7 +191,7 @@
         position: relative;
         width: 70%;
         height: 20px;
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
         font-size: 20px;
         text-align: center;
     }
@@ -222,7 +221,7 @@
     }
     
     .textcont{
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
         font-size: 18px;
         color: #FFFEBD;
      }
@@ -234,7 +233,7 @@
     }
     
     h2{
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
         font-size: 20px;
      }
     
@@ -246,11 +245,11 @@
         width: 220px;
         background-color: rgba(165, 18, 23, 0.696);
         display: flex;
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
     }
     
     .submitButton {
-        font-family: 'Reign';
+        font-family: 'Rostock';
         font-size: 20px;
         background-color: rgba(165, 18, 23, 0.8);
         margin-left: 5px;
@@ -272,7 +271,7 @@
     body#index-bg {
         background:  #4a2932;
         background-size: 100%;
-        font-family: 'Reign';
+        font-family: 'Rostock';
         font-size: 20px;
         color: #FFFEBD;
     }
@@ -318,12 +317,12 @@
         padding-left: 50px;
         animation: flash 2s;
         animation-delay: 0.6s;
-        font-family: 'Lyric';
+        font-family: 'Alice';
         text-shadow: 2px 3px grey;
     }
     
     .enter {
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
         font-size: 40px;
         background: linear-gradient(0deg, #830202 15%, #c20929 40%, #d77e45 80%);
         width: auto;
@@ -369,7 +368,7 @@
         margin-left: 100px;
         width: 70%;
         height: 20px;
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
         font-size: 20px;
         text-align: center;
     }
@@ -399,7 +398,7 @@
     }
     
     .textcont{
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
         font-size: 20px;
         color: #FFFEBD;
      }
@@ -411,7 +410,7 @@
     }
     
     h2{
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
         font-size: 20px;
      }
     
@@ -422,11 +421,11 @@
         width: 220px;
         background-color: rgba(165, 18, 23, 0.696);
         display: flex;
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
     }
     
     .submitButton {
-        font-family: 'Reign';
+        font-family: 'Rostock';
         font-size: 20px;
         background-color: rgba(165, 18, 23, 0.8);
         margin-left: 5px;
@@ -449,7 +448,7 @@
     body#index-bg {
         background:  #4a2932;
         background-size: 100%;
-        font-family: 'Reign';
+        font-family: 'Rostock';
         font-size: 20px;
         color: #FFFEBD;
     }
@@ -495,12 +494,12 @@
         padding-left: 50px;
         animation: flash 2s;
         animation-delay: 0.6s;
-        font-family: 'Lyric';
+        font-family: 'Alice';
         text-shadow: 2px 3px grey;
     }
     
     .enter {
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
         font-size: 40px;
         background: linear-gradient(0deg, #830202 15%, #c20929 40%, #d77e45 80%);
         width: auto;
@@ -546,7 +545,7 @@
         margin-left: 100px;
         width: 80%;
         height: 20px;
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
         font-size: 30px;
         text-align: center;
     }
@@ -576,7 +575,7 @@
     }
     
     .textcont{
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
         font-size: 20px;
         color: #FFFEBD;
      }
@@ -588,7 +587,7 @@
     }
     
     h2{
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
         font-size: 20px;
      }
     
@@ -600,11 +599,11 @@
         width: 220px;
         background-color: rgba(165, 18, 23, 0.696);
         display: flex;
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
     }
     
     .submitButton {
-        font-family: 'Reign';
+        font-family: 'Rostock';
         font-size: 20px;
         background-color: rgba(165, 18, 23, 0.8);
         margin-left: 5px;
@@ -628,7 +627,7 @@
     body#index-bg {
         background:  #4a2932;
         background-size: 100%;
-        font-family: 'Reign';
+        font-family: 'Rostock';
         font-size: 20px;
         color: #FFFEBD;
     }
@@ -674,12 +673,12 @@
         padding-left: 50px;
         animation: flash 2s;
         animation-delay: 0.6s;
-        font-family: 'Lyric';
+        font-family: 'Alice';
         text-shadow: 2px 3px grey;
     }
     
     .enter {
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
         font-size: 40px;
         background: linear-gradient(0deg, #830202 15%, #c20929 40%, #d77e45 80%);
         width: auto;
@@ -725,7 +724,7 @@
         margin-left: 100px;
         width: 80%;
         height: 20px;
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
         font-size: 30px;
         text-align: center;
     }
@@ -755,7 +754,7 @@
     }
     
     .textcont{
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
         font-size: 20px;
         color: #FFFEBD;
      }
@@ -767,7 +766,7 @@
     }
     
     h2{
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
         font-size: 20px;
      }
     
@@ -779,11 +778,11 @@
         width: 220px;
         background-color: rgba(165, 18, 23, 0.696);
         display: flex;
-        font-family: 'Dalelands';
+        font-family: 'Rostock';
     }
     
     .submit {
-        font-family: 'Reign';
+        font-family: 'Rostock';
         font-size: 24px;
         background-color: rgba(165, 18, 23, 0.8);
         margin-left: 5px;
@@ -806,7 +805,14 @@
 
 .titulo{
     font-size: 30px;
-    font-family: "Dalelands";
+    font-family: "Rostock";
     text-align: center;
 }
 
+a,h1,h2,h3,h4,h5,h6 {
+    font-family: "Vinque";
+}
+
+input,label,p,span,li{
+    font-family: "Rostock";
+}
