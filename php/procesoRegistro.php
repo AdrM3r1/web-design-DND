@@ -20,6 +20,10 @@ if (isset($_POST)) {
     $result = mysqli_query($conn, $sql);
     $count_email = mysqli_num_rows($result);
 
+    $cookie_name = "nick";
+    $cookie_value = $user_Name;
+    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");;
+
     if ($count_user == 0 && $count_email == 0) {
         if ($user_Password == $user_Cpass) {
             
@@ -38,8 +42,8 @@ if (isset($_POST)) {
                 showConfirmButton: false,
                 timer: 2000,
               }).then(function () {
-                window.location.href = "../html/usuario.html";
                 createCookie();
+                window.location.href = "../html/usuario.php";
               })
                     
                         

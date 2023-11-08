@@ -40,28 +40,21 @@
                     <li class="itemNav" role="menuitem" id="reg"><a href="registro.php">Registrate</a></li>
                     <li class="itemNav" role="menuitem" id="log"><a style="cursor: pointer;" data-bs-toggle="modal"
                             data-bs-target="#loginModal">Login</a></li>
-                    <li class="itemNav" role="menuitem" id="user"><a href="usuario.html">Mi cuenta</a></li>
+                    <li class="itemNav" role="menuitem" id="user"><a href="usuario.php">Mi cuenta</a></li>
+                    <a onclick="logOut()" style="cursor: pointer;font-size: 14px; margin-left: 12px;" id="logout">Cerrar sesion</a>
+
                 </ul>
 
                 <div class="io">
                     <div class="container">
                         <div class="row justify-content-md-start">
-
-                            <!--Loading-->
-                            <div class="d-flex justify-content-center fade">
-                                <div class="spinner-border" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                            </div>
-                            <!--Loading-->
-
                             <div class="col-md-12">
-
+                                
                             </div>
-
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>

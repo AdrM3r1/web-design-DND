@@ -8,22 +8,24 @@
     if (isset($_POST)) {
         $user_Name = $_POST["nick"];
         $user_Password = $_POST["pass"];
-
         $sql = "select * from users_ where nick = '$user_Name' and pass = '$user_Password'";  
         $result = mysqli_query($conn, $sql);  
         $count = mysqli_num_rows($result);  
-        
+        $cookie_name = "nick";
+        $cookie_value = $user_Name;
+        setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");;
+
         if($count == 1){  
             echo '<script>
             Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "Bienvenido '.$user_Name.'",
-                showConfirmButton: false,
-                timer: 2000,
-              }).then(function () {
-                window.location.href = "../html/usuario.html";
+              position: "center",
+              icon: "success",
+              title: "Bienvenido '.$user_Name.'",
+              showConfirmButton: false,
+              timer: 2000,
+            }).then(function () {
                 createCookie();
+                window.location.href = "../html/usuario.php";
             })
                 </script>';
         }  
@@ -74,7 +76,7 @@
 
         <form action="login.php" method="post">
               <div class="form-group">
-                <input type="text" class="form-control" name="nick" placeholder="Nick" required="required">
+                <input id="nick" type="text" class="form-control" name="nick" placeholder="Nick" required="required">
               </div>
               <br>
               <div class="form-group">

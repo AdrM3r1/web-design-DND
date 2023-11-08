@@ -37,7 +37,9 @@
           <li class="itemNav" role="menuitem" id="reg"><a href="registro.php">Registrate</a></li>
           <li class="itemNav" role="menuitem" id="log"><a style="cursor: pointer;" data-bs-toggle="modal"
               data-bs-target="#loginModal">Login</a></li>
-          <li class="itemNav" role="menuitem" id="user"><a href="usuario.html">Mi cuenta</a></li>
+          <li class="itemNav" role="menuitem" id="user"><a href="usuario.php">Mi cuenta</a></li>
+          <a onclick="logOut()" style="cursor: pointer;font-size: 14px; margin-left: 12px;" id="logout">Cerrar sesion</a>
+
         </ul>
 
         <div class="io">
@@ -95,7 +97,7 @@
           <div class="modal-body">
             <form action="../php/login.php" method="post">
               <div class="form-group">
-                <input type="text" class="form-control" name="nick" placeholder="Nick" required="required">
+                <input id="nick" type="text" class="form-control" name="nick" placeholder="Nick" required="required">
               </div>
               <br>
               <div class="form-group">
