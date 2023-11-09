@@ -42,22 +42,58 @@
                             data-bs-target="#loginModal">Login</a></li>
                     <li class="itemNav" role="menuitem" id="user"><a href="usuario.php">Mi cuenta</a></li>
                     <a onclick="logOut()" style="cursor: pointer;font-size: 14px; margin-left: 12px;" id="logout">Cerrar sesion</a>
-
                 </ul>
-
                 <div class="io">
                     <div class="container">
                         <div class="row justify-content-md-start">
                             <div class="col-md-12">
-                                
+                                    <h4>Lista de Personajes</h4><button> Crear nuevo personaje</button> 
+
+<?php 
+    include("../php/config.php");
+
+    $sql = "Select * from personajes_ where asociadoa= '$_COOKIE[nick]';";
+    $result = mysqli_query($conn, $sql);
+?>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Clase</th>
+      <th scope="col">Nivel</th>
+    </tr>
+  </thead>
+  <tbody>
+
+<?php 
+    $result = mysqli_query($conn, $sql);  
+    $count = mysqli_num_rows($result);  
+    if($count !=0){
+    while ($row = mysqli_fetch_array($result)) {
+    echo "<tr>";
+    echo "<th scope='row'></th>";
+    echo "<td>".$row['nombre']."</td>";
+    echo "<td>".$row['clase']."</td>";
+    echo "<td>".$row['nivel']."</td>";
+    echo "</tr>";
+    }
+    }else{
+        echo "<h6>Actualmente no tienes ningun personaje</h6>";
+    }
+    
+?>
+
+</tbody>
+</table>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
-    </div>
 
     <div>
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
