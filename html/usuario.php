@@ -47,7 +47,8 @@
                     <div class="container">
                         <div class="row justify-content-md-start">
                             <div class="col-md-12">
-                                    <h4>Lista de Personajes</h4><button> Crear nuevo personaje</button> 
+                                    <h4>Lista de Personajes</h4>
+    <button onclick=""> Crear nuevo personaje</button> 
 
 <?php 
     include("../php/config.php");
@@ -59,10 +60,11 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col"></th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Clase</th>
-      <th scope="col">Nivel</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Clase</th>
+        <th scope="col">Raza</th>
+        <th scope="col">Nivel</th>
+        <th scope="col">Accion</th>
     </tr>
   </thead>
   <tbody>
@@ -72,15 +74,16 @@
     $count = mysqli_num_rows($result);  
     if($count !=0){
     while ($row = mysqli_fetch_array($result)) {
-    echo "<tr>";
-    echo "<th scope='row'></th>";
+    echo "<tr class='character'>";
     echo "<td>".$row['nombre']."</td>";
     echo "<td>".$row['clase']."</td>";
+    echo "<td>".$row['raza']."</td>";
     echo "<td>".$row['nivel']."</td>";
+    echo "<th scope='row'><a href='' style='cursor: pointer'>Edit</a></th>";
     echo "</tr>";
     }
     }else{
-        echo "<h6>Actualmente no tienes ningun personaje</h6>";
+        echo "<h6 style='color:#FFFEBD' >Actualmente no tienes ningun personaje</h6>";
     }
     
 ?>
