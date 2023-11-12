@@ -1,6 +1,58 @@
 <!DOCTYPE html>
 <html>
 
+<?php 
+include ("../php/config.php");
+// if (isset($_POST)) {
+//     //WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP
+//     $user_Name = $_POST["nick"];
+//     $user_Email = $_POST["email"];
+//     $user_Password = $_POST["password"];
+//     $user_Cpass = $_POST["cpass"];
+
+//     $sql = "Select * from users_ where nick='$user_Name'";
+//     $result = mysqli_query($conn, $sql);
+//     $count_user = mysqli_num_rows($result);
+
+//     $sql = "Select * from users_ where mail='$user_Email'";
+//     $result = mysqli_query($conn, $sql);
+//     $count_email = mysqli_num_rows($result);
+
+//     $cookie_name = "nick";
+//     $cookie_value = $user_Name;
+//     setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");;
+
+//     if ($count_user == 0 && $count_email == 0) {
+//         if ($user_Password == $user_Cpass) {
+            
+//             // Password Hashing is used here.
+//             $sql = "INSERT INTO users_(nick, mail, pass) VALUES('$user_Name', '$user_Email','$user_Password')";
+
+//             $result = mysqli_query($conn, $sql);
+
+//             if ($result) { 
+//             echo' <script>
+//             Swal.fire({
+//                 position: "center",
+//                 icon: "success",
+//                 title: "Personaje creado",
+//                 text:"Bienvenido '.$user_Name.'",
+//                 showConfirmButton: false,
+//                 timer: 2000,
+//               }).then(function () {
+//                 window.location.href = "usuario.php";
+//               })
+                    
+                        
+//                   </script>';
+//             }
+//           }
+//         }
+//     } 
+        //WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP
+
+    ?>
+
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -41,17 +93,19 @@
         <div class="io">
           <h4>Crea tu personaje <a href="" style="cursor: pointer; display: inline-block;" data-bs-toggle="modal"
               data-bs-target="#RecoModal">&#10068;</a></h4>
+        <form action="charCreator.php" method="post" id="PJcreator">
           <div class="container col-md-12">
             <div class="row justify-content-md-start">
-              <hr>
+              <hr>        
               <div class="col-md-12">
                 NAME &nbsp;<input style="width:300px" type="text">
                 CLASS &nbsp;<input style="width:200px" type="text">
                 RACE &nbsp;<input style="width:200px" type="text"><br><br>
                 ALINGMENT &nbsp;<input style="width:200px" type="text">
-                ARMOR CLASS &nbsp;<input style="width:60px" type="number">
+                ARMOR CLASS &nbsp;<input style="width:70px" type="number">
                 INITIATIVE &nbsp;<input style="width:60px" type="number">
                 SPEED &nbsp;<input style="width:60px" type="number">
+                LEVEL &nbsp;<input style="width:60px" type="number">
                 <br><br>
               </div>
               <hr>
@@ -342,9 +396,10 @@
 <!-- asegurarse de que cuando vayas a editar llegen los campos marcados y que hagas un update a la bbdd  -->
 <!-- el borrado deberia poder hacerse desde editar, creo que tambien deberia ser tambien desde usuario pero ok-->
 
+  <button id="Enviar" class="submitButton" type="submit">Enviar</button>
+  <button id="retorno" class="submitButton" type="button" value="volver">Volver</button>
 
-
-
+</form>
             </div>
           </div>
         </div>
@@ -404,6 +459,13 @@
   <script>
     getCookie();
   </script>
+
+<script>
+      $('#retorno').click(function () {
+      window.location.href = "usuario.php";
+    })
+
+</script>
 </body>
 
 </html>

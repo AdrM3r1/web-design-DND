@@ -34,7 +34,7 @@
             title="Enviar se desbloqueara cuando los campos esten rellenos">*</span>
         </h3>
 
-        <form action="../php/procesoRegistro.php" method="post" id="login">
+        <form action="../php/procesoRegistro.php" method="post" id="registro">
           <label style="margin-left:85px ;" class="labInput">
             <center>Nick</center>
           </label>
