@@ -54,7 +54,7 @@
                 SPEED &nbsp;<input style="width:60px" type="number">
                 <br><br>
               </div>
-            <hr>
+              <hr>
               <div class="col-md-3">
                 TEMPORARY HIT POINTS&nbsp;
                 <input style="width:100px" type="number">
@@ -68,13 +68,14 @@
 
               <div class="col-md-3">
                 DEATH SAVES<br>
-                SUCESS &nbsp;   <input type="checkbox"> <input type="checkbox"> <input type="checkbox"><br>
+                SUCESS &nbsp; <input type="checkbox"> <input type="checkbox"> <input type="checkbox"><br>
                 FAILS &nbsp;<input type="checkbox"> <input type="checkbox"> <input type="checkbox">
               </div>
-              
-              <!-- division --><hr>
-               <div class="col-md-2">
-                STRENGTH 
+
+              <!-- division -->
+              <hr>
+              <div class="col-md-2">
+                STRENGTH
                 <br><input style="width:70px" type="number"> <br>
                 +<input style="width:45px" type="number">
               </div>
@@ -122,7 +123,7 @@
                 &nbsp;<input style="width:80px" type="number"><br><br>
               </div>
 
-            <h5 style="padding:0px;margin:10px">SAVING THROWS</h5>
+              <h5 style="padding:0px;margin:10px">SAVING THROWS</h5>
               <hr>
 
               <div class="col-md-2">
@@ -140,60 +141,61 @@
               <div class="col-md-2">
                 <input type="checkbox">INTELLIGENCE <br><input style="width:50px" type="number"><br>
               </div>
-              
+
               <div class="col-md-2">
                 <input type="checkbox">WISDOM <br><input style="width:50px" type="number"><br>
-              </div> 
-              
-              <div class="col-md-2">          
+              </div>
+
+              <div class="col-md-2">
                 <input type="checkbox">CHARISMA<br><input style="width:50px" type="number"><br><br>
-              </div>  
-                <!-- division -->
-              
-              <h4>Skills</h4><hr>
+              </div>
+              <!-- division -->
 
-              <div class="col-md-4">    
-              <input type="checkbox">ACROBATICS (Dex) <br><input style="width:50px" type="number"><br>
-              <input type="checkbox">ANIMAL HANDLING (Wis)<br> <input style="width:50px" type="number"><br>
-              <input type="checkbox">ARCANA (Int)<br> <input style="width:50px" type="number"><br>
-              <input type="checkbox">ATHLETICS (Str)<br> <input style="width:50px" type="number"><br>
-              <input type="checkbox">DECEPTION (Cha)<br> <input style="width:50px" type="number"><br>
-              <input type="checkbox">HISTORY (Int)<br> <input style="width:50px" type="number"><br>
+              <h4>Skills</h4>
+              <hr>
+
+              <div class="col-md-4">
+                <input type="checkbox">ACROBATICS (Dex) <br><input style="width:50px" type="number"><br>
+                <input type="checkbox">ANIMAL HANDLING (Wis)<br> <input style="width:50px" type="number"><br>
+                <input type="checkbox">ARCANA (Int)<br> <input style="width:50px" type="number"><br>
+                <input type="checkbox">ATHLETICS (Str)<br> <input style="width:50px" type="number"><br>
+                <input type="checkbox">DECEPTION (Cha)<br> <input style="width:50px" type="number"><br>
+                <input type="checkbox">HISTORY (Int)<br> <input style="width:50px" type="number"><br>
               </div>
 
               <div class="col-md-4">
-              <input type="checkbox">INSIGHT (Wis)<br> <input style="width:50px" type="number"><br>
-              <input type="checkbox">INTIMIDATION (Cha)<br> <input style="width:50px" type="number"><br>
-              <input type="checkbox">INVESTIGATION (Int)<br> <input style="width:50px" type="number"><br>
-              <input type="checkbox">MEDICINE (Wis)<br> <input style="width:50px" type="number"><br>
-              <input type="checkbox">NATURE (Int)<br> <input style="width:50px" type="number"><br>
-              <input type="checkbox">PERCEPTION (Wis)<br> <input style="width:50px" type="number"><br>
+                <input type="checkbox">INSIGHT (Wis)<br> <input style="width:50px" type="number"><br>
+                <input type="checkbox">INTIMIDATION (Cha)<br> <input style="width:50px" type="number"><br>
+                <input type="checkbox">INVESTIGATION (Int)<br> <input style="width:50px" type="number"><br>
+                <input type="checkbox">MEDICINE (Wis)<br> <input style="width:50px" type="number"><br>
+                <input type="checkbox">NATURE (Int)<br> <input style="width:50px" type="number"><br>
+                <input type="checkbox">PERCEPTION (Wis)<br> <input style="width:50px" type="number"><br>
               </div>
 
               <div class="col-md-4">
-              <input type="checkbox">PERFORMANCE (Cha)<br> <input style="width:50px" type="number"><br>
-              <input type="checkbox">PERSUASION (Cha)<br> <input style="width:50px" type="number"><br>
-              <input type="checkbox">RELIGION (Int)<br> <input style="width:50px" type="number"><br>
-              <input type="checkbox">SLEIGHT OF HAND (Dex)<br> <input style="width:50px" type="number"><br>
-              <input type="checkbox">STEALTH (Dex)<br> <input style="width:50px" type="number"><br>
-              <input type="checkbox">SURVIVAL (Wis)<br> <input style="width:50px" type="number"><br><br>
+                <input type="checkbox">PERFORMANCE (Cha)<br> <input style="width:50px" type="number"><br>
+                <input type="checkbox">PERSUASION (Cha)<br> <input style="width:50px" type="number"><br>
+                <input type="checkbox">RELIGION (Int)<br> <input style="width:50px" type="number"><br>
+                <input type="checkbox">SLEIGHT OF HAND (Dex)<br> <input style="width:50px" type="number"><br>
+                <input type="checkbox">STEALTH (Dex)<br> <input style="width:50px" type="number"><br>
+                <input type="checkbox">SURVIVAL (Wis)<br> <input style="width:50px" type="number"><br><br>
               </div>
-            <!-- division -->
-            <hr>
-              <div class="col-md-4"> 
+              <!-- division -->
+              <hr>
+              <div class="col-md-4">
                 PASSIVE WISDOM (PERCEPTION)
                 <input style="width:75px" type="number">
               </div>
 
-              <div class="col-md-5"> 
+              <div class="col-md-5">
                 OTHER PROFICIENCIES & LANGUAGES
                 <textarea style="width:100%"></textarea><br><br>
               </div>
               <hr>
-             <!-- division -->
+              <!-- division -->
 
               <div class="col-md-12">
-               MONEY<br>
+                MONEY<br>
                 ELECTRUM &nbsp;<input style="width:70px" type="number">
                 PLATINUM &nbsp;<input style="width:70px" type="number">
                 GOLD &nbsp;<input style="width:70px" type="number">
@@ -201,7 +203,7 @@
                 COPPER &nbsp;<input style="width:70px" type="number"><br><br>
               </div>
               <hr>
-              
+
               <div class="col-md-6">
                 ATTACKS & SPELLCASTING
                 <textarea style="width:100%"></textarea>
@@ -228,91 +230,117 @@
                 BONDS
                 <textarea style="width:100%"></textarea>
               </div>
-              
+
               <div class="col-md-4">
                 FLAWS
                 <textarea style="width:100%"></textarea>
               </div>
-             
+
               <div class="col-md-4">
                 FEATURES & TRAITS
                 <textarea style="width:100%"></textarea><br><br>
               </div>
 
-              <br><br> <!-- division -->
+              <!-- division -->
 
               <hr>
-              
-            <div class="col-md-5">
-              CHARACTER APPEARANCE
-              <textarea style="width:100%"></textarea>
-            </div>
-            
-            <div class="col-md-4">
-              ALLIES & ORGANIZATIONS
-              <textarea style="width:100%"></textarea>
-            </div>
 
-            <div class="col-md-3">
-            SYMBOL
-            <textarea style="width:100%"></textarea>
-            </div>
+              <div class="col-md-5">
+                CHARACTER APPEARANCE
+                <textarea style="width:100%"></textarea>
+              </div>
 
-            <div class="col-md-5">
-              ADDITIONAL FEATURES & TRAITS  
-              <textarea style="width:100%"></textarea>          
-            </div>
+              <div class="col-md-4">
+                ALLIES & ORGANIZATIONS
+                <textarea style="width:100%"></textarea>
+              </div>
 
-            <div class="col-md-5">
-            TREASURE
-            <textarea style="width:100%"></textarea><br><br>
-            </div>
- 
-          <!-- division -->
-            
-            <hr>
+              <div class="col-md-3">
+                SYMBOL
+                <textarea style="width:100%"></textarea>
+              </div>
 
-            <div class="col-md-7">
-              CANTRIPS
-            <textarea style="width:85%"></textarea></div>
-            
-            <div class="col-md-6"><br>
-            SPELLS LV1 <br>SLOTS<input type="number" style="width:10%"> / <input type="number" style="width:10%">
-            <textarea style="width:100%"></textarea></div>
-            
-            <div class="col-md-6"><br>
-            SPELLS LV2 <br>SLOTS<input type="number" style="width:10%"> / <input type="number" style="width:10%">
-            <textarea style="width:100%"></textarea></div>
-            
-            <div class="col-md-6"><br>
-            SPELLS LV3 <br>SLOTS<input type="number" style="width:10%"> / <input type="number" style="width:10%">
-            <textarea style="width:100%"></textarea></div>
+              <div class="col-md-5">
+                ADDITIONAL FEATURES & TRAITS
+                <textarea style="width:100%"></textarea>
+              </div>
 
-            <div class="col-md-6"><br>
-            SPELLS LV4 <br>SLOTS<input type="number" style="width:10%"> / <input type="number" style="width:10%">
-            <textarea style="width:100%"></textarea></div>
+              <div class="col-md-5">
+                TREASURE
+                <textarea style="width:100%"></textarea><br><br>
+              </div>
 
-            <div class="col-md-6"><br>
-            SPELLS LV5 <br>SLOTS<input type="number" style="width:10%"> / <input type="number" style="width:10%">
-            <textarea style="width:100%"></textarea></div>
+              <!-- division -->
 
-            <div class="col-md-6"><br>
-            SPELLS LV6 <br>SLOTS<input type="number" style="width:10%"> / <input type="number" style="width:10%">
-            <textarea style="width:100%"></textarea></div>
+              <hr>
 
-            <div class="col-md-6"><br>
-            SPELLS LV7 <br>SLOTS<input type="number" style="width:10%"> / <input type="number" style="width:10%">
-            <textarea style="width:100%"></textarea></div>
+              <div class="col-md-6">
+                CANTRIPS
+                <textarea style="width:100%"></textarea>
+              </div>
 
-            <div class="col-md-6"><br>
-            SPELLS LV8 <br>SLOTS<input type="number" style="width:10%"> / <input type="number" style="width:10%">
-            <textarea style="width:100%"></textarea></div>
+              <div class="col-md-2">
+                SPELLCASTING ABILITY<br><input style="width:55px" type="text"><br>
+              </div>
 
-            <div class="col-md-6"><br>
-            SPELLS LV9 <br>SLOTS<input type="number" style="width:10%"> / <input type="number" style="width:10%">
-            <textarea style="width:100%"></textarea><br><br></div>
+              <div class="col-md-2">
+                SPELL SAVE <br> DC <br><input style="width:55px" type="number"><br>
+              </div>
+
+              <div class="col-md-2">
+                SPELL ATTACK BONUS<br><input style="width:55px" type="number"><br>
+              </div>
+
+              <div class="col-md-6"><br>
+                SPELLS LV1 <br>SLOTS<input type="number" style="width:10%"> / <input type="number" style="width:10%">
+                <textarea style="width:100%"></textarea>
+              </div>
+
+              <div class="col-md-6"><br>
+                SPELLS LV2 <br>SLOTS<input type="number" style="width:10%"> / <input type="number" style="width:10%">
+                <textarea style="width:100%"></textarea>
+              </div>
+
+              <div class="col-md-6"><br>
+                SPELLS LV3 <br>SLOTS<input type="number" style="width:10%"> / <input type="number" style="width:10%">
+                <textarea style="width:100%"></textarea>
+              </div>
+
+              <div class="col-md-6"><br>
+                SPELLS LV4 <br>SLOTS<input type="number" style="width:10%"> / <input type="number" style="width:10%">
+                <textarea style="width:100%"></textarea>
+              </div>
+
+              <div class="col-md-6"><br>
+                SPELLS LV5 <br>SLOTS<input type="number" style="width:10%"> / <input type="number" style="width:10%">
+                <textarea style="width:100%"></textarea>
+              </div>
+
+              <div class="col-md-6"><br>
+                SPELLS LV6 <br>SLOTS<input type="number" style="width:10%"> / <input type="number" style="width:10%">
+                <textarea style="width:100%"></textarea>
+              </div>
+
+              <div class="col-md-6"><br>
+                SPELLS LV7 <br>SLOTS<input type="number" style="width:10%"> / <input type="number" style="width:10%">
+                <textarea style="width:100%"></textarea>
+              </div>
+
+              <div class="col-md-6"><br>
+                SPELLS LV8 <br>SLOTS<input type="number" style="width:10%"> / <input type="number" style="width:10%">
+                <textarea style="width:100%"></textarea>
+              </div>
+
+              <div class="col-md-6"><br>
+                SPELLS LV9 <br>SLOTS<input type="number" style="width:10%"> / <input type="number" style="width:10%">
+                <textarea style="width:100%"></textarea><br><br>
+              </div>
 
 
+<!-- poner botones de formulario comienzo de formulario y cierre, probar quecuando guarde lo mande ala bbdd-->
+<!-- la bbdd tiene que pillar los valores de los todos los campos incluso los checkbox-->
+<!-- asegurarse de que cuando vayas a editar llegen los campos marcados y que hagas un update a la bbdd  -->
+<!-- el borrado deberia poder hacerse desde editar, creo que tambien deberia ser tambien desde usuario pero ok-->
 
 
 
