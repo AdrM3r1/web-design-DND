@@ -79,7 +79,7 @@
                                         echo "<td>".$row['clase']."</td>";
                                         echo "<td>".$row['raza']."</td>";
                                         echo "<td>".$row['nivel']."</td>";
-                                        echo "<th scope='row'><a href='' style='cursor: pointer'>Edit</a></th>";
+                                        echo "<th scope='row'><a href='charEditor.php' style='cursor: pointer'>Edit</a></th>";
                                         echo "</tr>";
                                         }
                                         }else{
