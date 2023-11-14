@@ -27,7 +27,6 @@ if (isset($_POST)) {
     if ($count_user == 0 && $count_email == 0) {
         if ($user_Password == $user_Cpass) {
             
-            // Password Hashing is used here.
             $sql = "INSERT INTO users_(nick, mail, pass) VALUES('$user_Name', '$user_Email','$user_Password')";
 
             $result = mysqli_query($conn, $sql);

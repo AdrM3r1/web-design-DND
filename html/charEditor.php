@@ -1,58 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-<?php 
-include ("../php/config.php");
-// if (isset($_POST)) {
-//     //WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP
-//     $user_Name = $_POST["nick"];
-//     $user_Email = $_POST["email"];
-//     $user_Password = $_POST["password"];
-//     $user_Cpass = $_POST["cpass"];
-
-//     $sql = "Select * from users_ where nick='$user_Name'";
-//     $result = mysqli_query($conn, $sql);
-//     $count_user = mysqli_num_rows($result);
-
-//     $sql = "Select * from users_ where mail='$user_Email'";
-//     $result = mysqli_query($conn, $sql);
-//     $count_email = mysqli_num_rows($result);
-
-//     $cookie_name = "nick";
-//     $cookie_value = $user_Name;
-//     setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");;
-
-//     if ($count_user == 0 && $count_email == 0) {
-//         if ($user_Password == $user_Cpass) {
-            
-//             // Password Hashing is used here.
-//             $sql = "INSERT INTO users_(nick, mail, pass) VALUES('$user_Name', '$user_Email','$user_Password')";
-
-//             $result = mysqli_query($conn, $sql);
-
-//             if ($result) { 
-//             echo' <script>
-//             Swal.fire({
-//                 position: "center",
-//                 icon: "success",
-//                 title: "Personaje creado",
-//                 text:"Bienvenido '.$user_Name.'",
-//                 showConfirmButton: false,
-//                 timer: 2000,
-//               }).then(function () {
-//                 window.location.href = "usuario.php";
-//               })
-                    
-                        
-//                   </script>';
-//             }
-//           }
-//         }
-//     } 
-        //WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP
-
-    ?>
-
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -93,7 +41,7 @@ include ("../php/config.php");
         <div class="io">
           <h4>Crea tu personaje <a href="" style="cursor: pointer; display: inline-block;" data-bs-toggle="modal"
               data-bs-target="#RecoModal">&#10068;</a></h4>
-          <form action="charCreator.php" method="post" id="PJcreator">
+          <form action="../php/charEdition.php" method="post" id="PJeditor">
             <div class="container col-md-12">
               <div class="row justify-content-md-start">
                 <hr>
@@ -226,7 +174,7 @@ include ("../php/config.php");
                   <input name="athletics" id="athletics" type="checkbox">ATHLETICS (Str)<br> 
                   <input name="athleticsPlus" id="athleticsPlus" style="width:50px" type="number"><br>
                   <input name="deception" id="deception" type="checkbox">DECEPTION (Cha)<br> 
-                  <input name="deception" id="deceptionPlus" style="width:50px" type="number"><br>
+                  <input name="deceptionPlus" id="deceptionPlus" style="width:50px" type="number"><br>
                   <input name="history" id="history" type="checkbox">HISTORY (Int)<br> 
                   <input name="historyPlus" id="historyPlus" style="width:50px" type="number"><br>
                 </div>

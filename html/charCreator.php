@@ -1,58 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-<?php 
-include ("../php/config.php");
-// if (isset($_POST)) {
-//     //WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP
-//     $user_Name = $_POST["nick"];
-//     $user_Email = $_POST["email"];
-//     $user_Password = $_POST["password"];
-//     $user_Cpass = $_POST["cpass"];
-
-//     $sql = "Select * from users_ where nick='$user_Name'";
-//     $result = mysqli_query($conn, $sql);
-//     $count_user = mysqli_num_rows($result);
-
-//     $sql = "Select * from users_ where mail='$user_Email'";
-//     $result = mysqli_query($conn, $sql);
-//     $count_email = mysqli_num_rows($result);
-
-//     $cookie_name = "nick";
-//     $cookie_value = $user_Name;
-//     setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");;
-
-//     if ($count_user == 0 && $count_email == 0) {
-//         if ($user_Password == $user_Cpass) {
-            
-//             // Password Hashing is used here.
-//             $sql = "INSERT INTO users_(nick, mail, pass) VALUES('$user_Name', '$user_Email','$user_Password')";
-
-//             $result = mysqli_query($conn, $sql);
-
-//             if ($result) { 
-//             echo' <script>
-//             Swal.fire({
-//                 position: "center",
-//                 icon: "success",
-//                 title: "Personaje creado",
-//                 text:"Bienvenido '.$user_Name.'",
-//                 showConfirmButton: false,
-//                 timer: 2000,
-//               }).then(function () {
-//                 window.location.href = "usuario.php";
-//               })
-                    
-                        
-//                   </script>';
-//             }
-//           }
-//         }
-//     } 
-        //WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP
-
-    ?>
-
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -93,7 +41,7 @@ include ("../php/config.php");
         <div class="io">
           <h4>Crea tu personaje <a href="" style="cursor: pointer; display: inline-block;" data-bs-toggle="modal"
               data-bs-target="#RecoModal">&#10068;</a></h4>
-          <form action="charCreator.php" method="post" id="PJcreator">
+          <form action="../php/charCreation.php" method="post" id="PJcreator">
             <div class="container col-md-12">
               <div class="row justify-content-md-start">
                 <hr>
@@ -105,7 +53,7 @@ include ("../php/config.php");
                   ARMOR CLASS &nbsp;<input name="armorClass" id="armorClass" style="width:70px" type="number">
                   INITIATIVE &nbsp;<input name="initiative" id="initiative" style="width:60px" type="number">
                   SPEED &nbsp;<input name="speed" id="speed" style="width:60px" type="number">
-                  LEVEL &nbsp;<input name="level" id="level" style="width:60px" type="number">
+                  LEVEL &nbsp;<input name="nivel" id="nivel" style="width:60px" type="number">
                   <br><br>
                 </div>
                 <hr>
@@ -183,33 +131,33 @@ include ("../php/config.php");
                 <hr>
 
                 <div class="col-md-2">
-                  <input name="svStrength" id="svStrength" type="checkbox">STRENGH <br>
-                  <input name="svStrengthPlus" id="svStrengthPlus" style="width:50px" type="number"><br>
+                  <input name="svStrengthPlus" id="svStrengthPlus" type="checkbox">STRENGH <br>
+                  <input name="svStrength" id="svStrength" style="width:50px" type="number"><br>
                 </div>
 
                 <div class="col-md-2">
-                  <input name="svDexterity" id="svDexterity" type="checkbox">DEXTERITY <br>
-                  <input name="svDexterityPlus" id="svDexterityPlus" style="width:50px" type="number"><br>
+                  <input name="svDexterityPlus" id="svDexterityPlus" type="checkbox">DEXTERITY <br>
+                  <input name="svDexterity" id="svDexterity" style="width:50px" type="number"><br>
                 </div>
 
                 <div class="col-md-2">
-                  <input name="svConstitution" id="svConstitution" type="checkbox">CONSTITUTION <br>
-                  <input name="svConstitutionPlus" id="svConstitutionPlus" style="width:50px" type="number"><br>
+                  <input name="svConstitutionPlus" id="svConstitutionPlus" type="checkbox">CONSTITUTION <br>
+                  <input name="svConstitution" id="svConstitution" style="width:50px" type="number"><br>
                 </div>
 
                 <div class="col-md-2">
-                  <input name="svIntelligence" id="svIntelligence" type="checkbox">INTELLIGENCE <br>
-                  <input name="svIntelligencePlus" id="svIntelligencePlus" style="width:50px" type="number"><br>
+                  <input name="svIntelligencePlus" id="svIntelligencePlus" type="checkbox">INTELLIGENCE <br>
+                  <input name="svIntelligence" id="svIntelligence" style="width:50px" type="number"><br>
                 </div>
 
                 <div class="col-md-2">
-                  <input name="svWisdom" id="svWisdom" type="checkbox">WISDOM <br>
-                  <input name="svWisdomPlus" id="svWisdomPlus" style="width:50px" type="number"><br>
+                  <input name="svWisdomPlus" id="svWisdomPlus" type="checkbox">WISDOM <br>
+                  <input name="svWisdom" id="svWisdom" style="width:50px" type="number"><br>
                 </div>
 
                 <div class="col-md-2">
-                  <input name="svCharisma" id="svCharisma" type="checkbox">CHARISMA<br>
-                  <input name="svCharismaPlus" id="svCharismaPlus" style="width:50px" type="number"><br><br>
+                  <input name="svCharismaPlus" id="svCharismaPlus" type="checkbox">CHARISMA<br>
+                  <input name="svCharisma" id="svCharisma" style="width:50px" type="number"><br><br>
                 </div>
                 <!-- division -->
 
@@ -217,48 +165,48 @@ include ("../php/config.php");
                 <hr>
 
                 <div class="col-md-4">
-                  <input name="acrobatics" id="acrobatics" type="checkbox">ACROBATICS (Dex) <br>
-                  <input name="acrobaticsPlus" id="acrobaticsPlus" style="width:50px" type="number"><br>
-                  <input name="anHandling" id="anHandling" type="checkbox">ANIMAL HANDLING (Wis)<br> 
-                  <input name="anHandlingPlus" id="anHandlingPlus" style="width:50px" type="number"><br>
-                  <input name="arcana" id="arcana" type="checkbox">ARCANA (Int)<br> 
-                  <input name="arcanaPlus" id="arcanaPlus" style="width:50px" type="number"><br>
-                  <input name="athletics" id="athletics" type="checkbox">ATHLETICS (Str)<br> 
-                  <input name="athleticsPlus" id="athleticsPlus" style="width:50px" type="number"><br>
-                  <input name="deception" id="deception" type="checkbox">DECEPTION (Cha)<br> 
-                  <input name="deception" id="deceptionPlus" style="width:50px" type="number"><br>
-                  <input name="history" id="history" type="checkbox">HISTORY (Int)<br> 
-                  <input name="historyPlus" id="historyPlus" style="width:50px" type="number"><br>
+                  <input name="acrobaticsPlus" id="acrobaticsPlus" type="checkbox">ACROBATICS (Dex) <br>
+                  <input name="acrobatics" id="acrobatics" style="width:50px" type="number"><br>
+                  <input name="anHandlingPlus" id="anHandlingPlus" type="checkbox">ANIMAL HANDLING (Wis)<br> 
+                  <input name="anHandling" id="anHandling" style="width:50px" type="number"><br>
+                  <input name="arcanaPlus" id="arcanaPlus" type="checkbox">ARCANA (Int)<br> 
+                  <input name="arcana" id="arcana" style="width:50px" type="number"><br>
+                  <input name="athleticsPlus" id="athleticsPlus" type="checkbox">ATHLETICS (Str)<br> 
+                  <input name="athletics" id="athletics" style="width:50px" type="number"><br>
+                  <input name="deceptionPlus" id="deceptionPlus" type="checkbox">DECEPTION (Cha)<br> 
+                  <input name="deception" id="deception" style="width:50px" type="number"><br>
+                  <input name="historyPlus" id="historyPlus" type="checkbox">HISTORY (Int)<br> 
+                  <input name="history" id="history" style="width:50px" type="number"><br>
                 </div>
 
                 <div class="col-md-4">
-                  <input name="insight" id="insight" type="checkbox">INSIGHT (Wis)<br> 
-                  <input name="insightPlus" id="insightPlus" style="width:50px" type="number"><br>
-                  <input name="intimidation" id="intimidation" type="checkbox">INTIMIDATION (Cha)<br> 
-                  <input name="intimidationPlus" id="intimidationPlus" style="width:50px" type="number"><br>
-                  <input name="investigation" id="investigation" type="checkbox">INVESTIGATION (Int)<br> 
-                  <input name="investigationPlus" id="investigationPlus" style="width:50px" type="number"><br>
-                  <input name="medicine" id="medicine" type="checkbox">MEDICINE (Wis)<br> 
-                  <input name="medicinePlus" id="medicinePlus" style="width:50px" type="number"><br>
-                  <input name="nature" id="nature" type="checkbox">NATURE (Int)<br> 
-                  <input name="naturePlus" id="nature " style="width:50px" type="number"><br>
-                  <input name="perception" id="perception" type="checkbox">PERCEPTION (Wis)<br> 
-                  <input name="perceptionPlus" id="perceptionPlus" style="width:50px" type="number"><br>
+                  <input name="insightPlus" id="insightPlus" type="checkbox">INSIGHT (Wis)<br> 
+                  <input name="insight" id="insight" style="width:50px" type="number"><br>
+                  <input name="intimidationPlus" id="intimidationPlus" type="checkbox">INTIMIDATION (Cha)<br> 
+                  <input name="intimidation" id="intimidation" style="width:50px" type="number"><br>
+                  <input name="investigationPlus" id="investigationPlus" type="checkbox">INVESTIGATION (Int)<br> 
+                  <input name="investigation" id="investigation" style="width:50px" type="number"><br>
+                  <input name="medicinePlus" id="medicinePlus" type="checkbox">MEDICINE (Wis)<br> 
+                  <input name="medicine" id="medicine" style="width:50px" type="number"><br>
+                  <input name="naturePlus" id="naturePlus" type="checkbox">NATURE (Int)<br> 
+                  <input name="nature" id="nature" style="width:50px" type="number"><br>
+                  <input name="perceptionPlus" id="perceptionPlus" type="checkbox">PERCEPTION (Wis)<br> 
+                  <input name="perception" id="perception" style="width:50px" type="number"><br>
                 </div>
 
                 <div class="col-md-4">
-                  <input name="performance" id="performance" type="checkbox">PERFORMANCE (Cha)<br> 
-                  <input name="performancePlus" id="performancePlus" style="width:50px" type="number"><br>
-                  <input name="persuasion" id="persuasion" type="checkbox">PERSUASION (Cha)<br> 
-                  <input name="persuasionPlus" id="persuasionPlus" style="width:50px" type="number"><br>
-                  <input name="religion" id="religion" type="checkbox">RELIGION (Int)<br> 
-                  <input name="religionPlus" id="religionPlus" style="width:50px" type="number"><br>
-                  <input name="sleightHand" id="sleightHand" type="checkbox">SLEIGHT OF HAND (Dex)<br> 
-                  <input name="sleightHandPlus" id="sleightHandPlus" style="width:50px" type="number"><br>
-                  <input name="stealth" id="stealth" type="checkbox">STEALTH (Dex)<br> 
-                  <input name="stealthPlus" id="stealthPlus" style="width:50px" type="number"><br>
-                  <input name="survival" id="survival" type="checkbox">SURVIVAL (Wis)<br> 
-                  <input name="survivalPlus" id="survivalPlus" style="width:50px" type="number"><br><br>
+                  <input name="performancePlus" id="perfomancePlus" type="checkbox">PERFORMANCE (Cha)<br> 
+                  <input name="performance" id="performance" style="width:50px" type="number"><br>
+                  <input name="persuasionPlus" id="persuasionPlus" type="checkbox">PERSUASION (Cha)<br> 
+                  <input name="persuasion" id="persuasion" style="width:50px" type="number"><br>
+                  <input name="religionPlus" id="religionPlus" type="checkbox">RELIGION (Int)<br> 
+                  <input name="religion" id="religion" style="width:50px" type="number"><br>
+                  <input name="sleightHandPlus" id="sleightHandPlus" type="checkbox">SLEIGHT OF HAND (Dex)<br> 
+                  <input name="sleightHand" id="sleightHand" style="width:50px" type="number"><br>
+                  <input name="stealthPlus" id="stealthPlus" type="checkbox">STEALTH (Dex)<br> 
+                  <input name="stealth" id="stealth" style="width:50px" type="number"><br>
+                  <input name="survivalPlus" id="survivalPlus" type="checkbox">SURVIVAL (Wis)<br> 
+                  <input name="survival" id="survival" style="width:50px" type="number"><br><br>
                 </div>
                 <!-- division -->
                 <hr>
@@ -436,12 +384,6 @@ include ("../php/config.php");
                   <input type="number" name="slot9LvSec" id="slot9LvSec" style="width:10%">
                   <textarea name="spellLv9" id="spellLv9" style="width:100%"></textarea><br><br>
                 </div>
-
-
-                <!-- poner botones de formulario comienzo de formulario y cierre, probar quecuando guarde lo mande ala bbdd-->
-                <!-- la bbdd tiene que pillar los valores de los todos los campos incluso los checkbox-->
-                <!-- asegurarse de que cuando vayas a editar llegen los campos marcados y que hagas un update a la bbdd  -->
-                <!-- el borrado deberia poder hacerse desde editar, creo que tambien deberia ser tambien desde usuario pero ok-->
 
                 <button id="Enviar" class="submitButton" type="submit">Enviar</button>
                 <button id="retorno" class="submitButton" type="button" value="volver">Volver</button>
