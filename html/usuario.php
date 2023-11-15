@@ -74,18 +74,19 @@
                                         $count = mysqli_num_rows($result);  
                                         if($count !=0){
                                         while ($row = mysqli_fetch_array($result)) {
-                                        echo "<tr class='character'>";
-                                        echo "<td>".$row['nombre']."</td>";
-                                        echo "<td>".$row['clase']."</td>";
-                                        echo "<td>".$row['raza']."</td>";
-                                        echo "<td>".$row['nivel']."</td>";
-                                        echo "<th scope='row'><a href='charEditor.php' style='cursor: pointer'>Edit</a></th>";
-                                        echo "</tr>";
-                                        }
-                                        }else{
-                                            echo "<h6 style='color:#FFFEBD' >Actualmente no tienes ningun personaje</h6>";
-                                        }
+                                        ?>
+                                        <tr class='character'>
+                                        <td><?php echo $row['nombre'];?></td>
+                                        <td><?php echo $row['clase'];?></td>
+                                        <td><?php echo $row['raza'];?></td>
+                                        <td><?php echo $row['nivel'];?></td>
+                                        <td><a href="charEditor.php?id=<?php echo $row['id']; ?>" style='cursor: pointer'>Edit</a></td>
+                                        <td style="display:none"><a href="charEditor.php?id=<?php echo $row['id']; ?>" style='cursor: pointer'>Edit</a></td>
+                                    </tr>
                                         
+                                        <?php
+                                        }
+                                    }
                                     ?>
 
                                     </tbody>
