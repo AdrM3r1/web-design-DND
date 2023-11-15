@@ -48,12 +48,12 @@
                         <div class="row justify-content-md-start">
                             <div class="col-md-12">
                                     <h4>Lista de Personajes</h4>
-                                    <a class="itemNav" href="charCreator.php"> Crear nuevo personaje</a>
+                                    <a class="itemNav" href="../php/charCreator.php"> Crear nuevo personaje</a>
 
                                     <?php 
                                         include("../php/config.php");
 
-                                        $sql = "Select * from personajes_ where asociadoa= '$_COOKIE[nick]';";
+                                        $sql = "Select * from tabla_pj where asociadoa= '$_COOKIE[nick]';";
                                         $result = mysqli_query($conn, $sql);
                                     ?>
 
@@ -64,6 +64,7 @@
                                             <th scope="col">Clase</th>
                                             <th scope="col">Raza</th>
                                             <th scope="col">Nivel</th>
+                                            <th scope="col">Doc</th>
                                             <th scope="col">Accion</th>
                                         </tr>
                                     </thead>
@@ -72,7 +73,7 @@
                                     <?php 
                                         $result = mysqli_query($conn, $sql);  
                                         $count = mysqli_num_rows($result);  
-                                        if($count !=0){
+                                        if($count != 0){
                                         while ($row = mysqli_fetch_array($result)) {
                                         ?>
                                         <tr class='character'>
@@ -80,11 +81,11 @@
                                         <td><?php echo $row['clase'];?></td>
                                         <td><?php echo $row['raza'];?></td>
                                         <td><?php echo $row['nivel'];?></td>
-                                        <td><a href="charEditor.php?id=<?php echo $row['id']; ?>" style='cursor: pointer'>Edit</a></td>
-                                        <td style="display:none"><a href="charEditor.php?id=<?php echo $row['id']; ?>" style='cursor: pointer'>Edit</a></td>
+                                        <td><?php echo $row['doc'];?></td>
+                                        <td><a href="../php/charEditor.php?id=<?php echo $row['id']; ?>" style='cursor: pointer'>Edit</a></td>
                                     </tr>
-                                        
-                                        <?php
+                                    
+                                    <?php
                                         }
                                     }
                                     ?>
