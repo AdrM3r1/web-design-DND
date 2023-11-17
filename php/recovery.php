@@ -24,7 +24,7 @@
                 title: "Hola '.$user_Name.'",
                 text:" Tu password es '. $row["pass"].'",
                 showConfirmButton: true,
-             }).then(function () {
+              }).then(function () {
                 window.location.href = "../html/principal.html";
               })
                 </script>';
@@ -41,7 +41,6 @@
               }).then(function () {
                 window.location.href = "../html/recuPass.html";
               })
-              
               </script>';
         }     
     }

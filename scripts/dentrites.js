@@ -26,7 +26,7 @@ function checkForm() {
 			showConfirmButton: false,
 			timer: 1200
 
-		}).then(function () {
+		}).then(function() {
 			window.stop();
 		})
 	}
@@ -87,7 +87,7 @@ function logOut() {
 				text: "Nos vemos pronto",
 				showConfirmButton: false,
 				timer: 1500,
-			}).then(function () {
+			}).then(function() {
 				window.location.href = "../html/principal.html";
 			})
 		}
@@ -112,7 +112,7 @@ function detectUrl(x) {
 				text: "No tiene permisos para ver esta pagina",
 				showConfirmButton: false,
 				timer: 1200,
-			}).then(function () {
+			}).then(function() {
 				window.location.href = "../html/principal.html";
 			})
 		}

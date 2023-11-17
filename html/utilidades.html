@@ -1,482 +1,447 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>
-    <| DND BUILDER |>
-  </title>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <!--Estilos dados-->
-  <link rel='stylesheet' type='text/css' media='screen' href='../styles/diceroll.css'>
-  <!--estilo y js inicio-->
-  <link rel='stylesheet' type='text/css' media='screen' href='../styles/pupils.css'>
-  <script src='../scripts/dentrites.js'></script>
-  <!--JQuery-->
-  <script src="../lib/jquery-3.4.1.min.js"></script>
-  <!--Bootstrap-->
-  <script src='../scripts/bootstrap.bundle.js'></script>
-  <link rel='stylesheet' type='text/css' media='screen' href='../styles/bootstrap.css'>
-  <!--Sweet alert-->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
-</head>
-
-
-<body id="website">
-  <div>
-    <h1 class="titulo">The Iris Of The Beholder</h1>
-  </div>
-  <div class="content">
-    <!--content start-->
-    <div class="row-cols-auto">
-      <div id="img_logo"> </div>
-      <div id="divisor">
-        <ul id="contenedorNav" role="menubar">
-          <li class="itemNav" role="menuitem"><a href="info.html"> Informacion</a></li>
-          <li class="itemNav" role="menuitem"><a href="utilidades.html">Herramientas</a></li>
-          <li class="itemNav" role="menuitem" id="reg"><a href="registro.php">Registrate</a></li>
-          <li class="itemNav" role="menuitem" id="log"><a style="cursor: pointer;" data-bs-toggle="modal"
-              data-bs-target="#loginModal">Login</a></li>
-          <li class="itemNav" role="menuitem" id="user"><a href="usuario.php">Mi cuenta</a></li>
-          <a onclick="logOut()" style="cursor: pointer;font-size: 14px; margin-left: 12px;" id="logout">Cerrar sesion</a>
-        </ul>
-
-        <div class="io">
-          <h2>HOJA PARA PERSONAJES </h2>
-
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-                <p>Hojas para imprimir</p>
-                <ul>
-                  <li>
-                    <a href="../docs/DnD-3.5_Esp.pdf" target="_blank">Hoja de personaje 3.5 (ESP)</a>
-                  </li>
-                  <br>
-                  <li>
-                    <a href="../docs/DnD-5e_Esp.pdf" target="_blank">Hoja de personaje 5e (ESP)</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <p>Hojas editables e imprimibles</p>
-                <ul>
-                  <li>
-                    <a href="../docs/DnD_3.5_CharacterSheet-Fillable.pdf" target="_blank">Hoja de personaje 3.5
-                      (ESP)</a>
-                  </li>
-                  <br>
-                  <li>
-                    <a href="../docs/DnD_5E_CharacterSheet-Fillable.pdf" target="_blank">Hoja de personaje 5e (ENG)</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div><br>
-
-          <h2>DADOS DE ROL</h2>
-          <!--dados-->
-          <div>
-            <!-- STOCK: AVAILABLE DICE -->
-            <div id="stock">
-              <div class="die-stock" data-type="4"><img src="../images/diceroll/icon-add.png" class="icon-add"
-                  alt="+" />
-              </div>
-              <div class="die-stock" data-type="6"><img src="../images/diceroll/icon-add.png" class="icon-add"
-                  alt="+" />
-              </div>
-              <div class="die-stock" data-type="8"><img src="../images/diceroll/icon-add.png" class="icon-add"
-                  alt="+" />
-              </div>
-              <div class="die-stock" data-type="10"><img src="../images/diceroll/icon-add.png" class="icon-add"
-                  alt="+" />
-              </div>
-              <div class="die-stock" data-type="12"><img src="../images/diceroll/icon-add.png" class="icon-add"
-                  alt="+" />
-              </div>
-              <div class="die-stock" data-type="20"><img src="../images/diceroll/icon-add.png" class="icon-add"
-                  alt="+" />
-              </div>
-              <div class="die-stock" data-type="100"><img src="../images/diceroll/icon-add.png" class="icon-add"
-                  alt="+" /></div>
-
-              <div id="sound-toggle"></div>
-              <div id="help-button"></div>
-            </div>
-          </div>
-          <!-- RESULT DISPLAY: result of single or multi die rolls -->
-          <div id="total">
-            <div class="rotatable" title="Click to select all dice!">
-              <div id="total-value">?</div>
-            </div>
-            <div class="die-buttons">
-              <div class="btn-roll-selected" title="Roll all (or all selected) dice!"></div>
-              <div class="btn-remove-selected" title="Remove all (or all selected) dice from table!">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+      <| DND BUILDER |>
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!--Estilos dados-->
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/diceroll.css'>
+    <!--estilo y js inicio-->
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/pupils.css'>
+    <script src='../scripts/dentrites.js'></script>
+    <!--JQuery-->
+    <script src="../lib/jquery-3.4.1.min.js"></script>
+    <!--Bootstrap-->
+    <script src='../scripts/bootstrap.bundle.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/bootstrap.css'>
+    <!--Sweet alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body id="website">
+    <div>
+      <h1 class="titulo">The Iris Of The Beholder</h1>
+    </div>
+    <div class="content">
+      <!--content start-->
+      <div class="row-cols-auto">
+        <div id="img_logo"></div>
+        <div id="divisor">
+          <ul id="contenedorNav" role="menubar">
+            <li class="itemNav" role="menuitem">
+              <a href="info.html"> Informacion</a>
+            </li>
+            <li class="itemNav" role="menuitem">
+              <a href="utilidades.html">Herramientas</a>
+            </li>
+            <li class="itemNav" role="menuitem" id="reg">
+              <a href="registro.php">Registrate</a>
+            </li>
+            <li class="itemNav" role="menuitem" id="log">
+              <a style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+            </li>
+            <li class="itemNav" role="menuitem" id="user">
+              <a href="usuario.php">Mi cuenta</a>
+            </li>
+            <a onclick="logOut()" style="cursor: pointer;font-size: 14px; margin-left: 12px;" id="logout">Cerrar sesion</a>
+          </ul>
+          <div class="io">
+            <h2>HOJA PARA PERSONAJES </h2>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <p>Hojas para imprimir</p>
+                  <ul>
+                    <li>
+                      <a href="../docs/DnD-3.5_Esp.pdf" target="_blank">Hoja de personaje 3.5 (ESP)</a>
+                    </li>
+                    <br>
+                    <li>
+                      <a href="../docs/DnD-5e_Esp.pdf" target="_blank">Hoja de personaje 5e (ESP)</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <p>Hojas editables e imprimibles</p>
+                  <ul>
+                    <li>
+                      <a href="../docs/DnD_3.5_CharacterSheet-Fillable.pdf" target="_blank">Hoja de personaje 3.5 (ESP)</a>
+                    </li>
+                    <br>
+                    <li>
+                      <a href="../docs/DnD_5E_CharacterSheet-Fillable.pdf" target="_blank">Hoja de personaje 5e (ENG)</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-
-          <!-- TABLE: DICE SELECTED FOR GAME -->
-          <div id="table"></div>
-
-          <!-- TEMPLATES -->
-          <div id="templates">
-
-            <div class="die">
-              <div class="rotatable" title="Click to select/deselect!">
-                <div class="die-image"></div>
-                <div class="die-value"></div>
+            <br>
+            <h2>DADOS DE ROL</h2>
+            <!--dados-->
+            <div>
+              <!-- STOCK: AVAILABLE DICE -->
+              <div id="stock">
+                <div class="die-stock" data-type="4">
+                  <img src="../images/diceroll/icon-add.png" class="icon-add" alt="+" />
+                </div>
+                <div class="die-stock" data-type="6">
+                  <img src="../images/diceroll/icon-add.png" class="icon-add" alt="+" />
+                </div>
+                <div class="die-stock" data-type="8">
+                  <img src="../images/diceroll/icon-add.png" class="icon-add" alt="+" />
+                </div>
+                <div class="die-stock" data-type="10">
+                  <img src="../images/diceroll/icon-add.png" class="icon-add" alt="+" />
+                </div>
+                <div class="die-stock" data-type="12">
+                  <img src="../images/diceroll/icon-add.png" class="icon-add" alt="+" />
+                </div>
+                <div class="die-stock" data-type="20">
+                  <img src="../images/diceroll/icon-add.png" class="icon-add" alt="+" />
+                </div>
+                <div class="die-stock" data-type="100">
+                  <img src="../images/diceroll/icon-add.png" class="icon-add" alt="+" />
+                </div>
+                <div id="sound-toggle"></div>
+                <div id="help-button"></div>
+              </div>
+            </div>
+            <!-- RESULT DISPLAY: result of single or multi die rolls -->
+            <div id="total">
+              <div class="rotatable" title="Click to select all dice!">
+                <div id="total-value">?</div>
               </div>
               <div class="die-buttons">
-                <div class="btn-roll" title="Roll this die! (If this die is selected: Roll all selected dice!)"></div>
-                <div class="btn-remove" title="Remove this die from table!"></div>
+                <div class="btn-roll-selected" title="Roll all (or all selected) dice!"></div>
+                <div class="btn-remove-selected" title="Remove all (or all selected) dice from table!"></div>
               </div>
             </div>
-
-          </div>
-
-          <!-- HELP MODAL -->
-          <div id="help">
+            <!-- TABLE: DICE SELECTED FOR GAME -->
+            <div id="table"></div>
+            <!-- TEMPLATES -->
+            <div id="templates">
+              <div class="die">
+                <div class="rotatable" title="Click to select/deselect!">
+                  <div class="die-image"></div>
+                  <div class="die-value"></div>
+                </div>
+                <div class="die-buttons">
+                  <div class="btn-roll" title="Roll this die! (If this die is selected: Roll all selected dice!)"></div>
+                  <div class="btn-remove" title="Remove this die from table!"></div>
+                </div>
+              </div>
+            </div>
+            <!-- HELP MODAL -->
+            <div id="help">
+              <div>
+                <img src="../images/diceroll/d20.png" alt="" />
+                <br />
+                <p>
+                  <strong>dice-or-die: </strong>Well, it's a dice rolling simulation. Add dice to the "table" by clicking the type of die you need at the top of the page. Roll a single die by hovering over it and clicking the "roll" button (circular arrow symbol). Roll multiple dice by selecting all the dice you want to roll ( <i>click on them!</i>), then roll one of them - this will roll all selected dice. See the total value in the circle above your dice.
+                </p>
+                <br />
+                <p> Visit at Github: <a href="https://github.com/bkis/dice-or-die" title="visit bkis/dice-or-die on GitHub" target="_blank" rel="noopener noreferrer"> bkis/dice-or-die </a>
+                </p>
+              </div>
+            </div>
+            <h2>COIN FLIP</h2>
             <div>
-              <img src="../images/diceroll/d20.png" alt="" />
-              <br />
-              <p><strong>dice-or-die: </strong>Well, it's a dice rolling simulation.
-                Add dice to the "table" by clicking the type of die you need
-                at the top of the page. Roll a single die by hovering over it
-                and clicking the "roll" button (circular arrow symbol). Roll
-                multiple dice by selecting all the dice you want to roll
-                (<i>click on them!</i>), then roll one of them - this will roll all
-                selected dice. See the total value in the circle above your dice.</p>
-              <br />
-              <p>
-                Visit at Github:
-                <a href="https://github.com/bkis/dice-or-die" title="visit bkis/dice-or-die on GitHub" target="_blank"
-                  rel="noopener noreferrer">
-                  bkis/dice-or-die
-                </a>
-              </p>
-            </div>
-          </div>
+              <button style="background-color: transparent;border: none;" id="flip" type="button">
+                <img src="../images/coin.png">
+                <p id="result"></p>
+              </button>
+              <script>
+                let button = document.getElementById("flip");
+                let result = document.getElementById("result");
 
-          <h2>COIN FLIP</h2>
-
-          <div>
-
-            <button style="background-color: transparent;border: none;" id="flip" type="button"><img
-                src="../images/coin.png">
-              <p id="result"></p>
-            </button>
-
-            <script>
-              let button = document.getElementById("flip");
-              let result = document.getElementById("result");
-
-              function fnClick(event) {
-                let num = Math.random();
-
-                if (num < 0.5) {
-                  result.innerHTML = "Ha salido 1";
-                } else {
-                  result.innerHTML = "Ha salido 2";
+                function fnClick(event) {
+                  let num = Math.random();
+                  if (num < 0.5) {
+                    result.innerHTML = "Ha salido 1";
+                  } else {
+                    result.innerHTML = "Ha salido 2";
+                  }
                 }
-              }
-
-              button.addEventListener("click", fnClick);
-            </script>
-          </div>
-
-          <br><br>
-
-
-          <h2>ENLACES</h2>
-
-          <div class="col-md-12">
-            <div class="accordion" id="acordeonInfoDnd">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
-                    data-bs-target="#PrimerApartado">
-                    Webs para empezar a jugar</button>
-                </h2>
-                <div id="PrimerApartado" class="accordion-collapse collapse" data-bs-parent="#acordeonInfoDnd">
-                  <div class="card-body">
-                    <!--webs prepara tu personaje-->
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-md-4">
-                          <p>Mapas y aventuras</p>
-                          <ul>
-                            <li><a
-                                href="https://www.hobbyconsolas.com/reportajes/como-comenzar-jugar-dungeons-dragons-no-morir-intento-536599"
-                                target="_blank">Empezar a jugar</a></li>
-                            <li><a href="https://www.espadayescudo.com/blog/aventuras-gratis-para-dungeons-and-dragons/"
-                                target="_blank">Aventuras gratuitas</a></li>
-                            <li><a href="https://tarrasque.io/" target="_blank">Web para jugar DnD online</a></li>
-                            <li><a href="https://rolladvantage.com/tokenstamp/" target="_blank">Creador de <span
-                                  class="tooltip-arrow" data-bs-toggle="tooltip" data-bs-placement="right"
-                                  title="Icono de tu personaje">Tokens * </span></a>
-                            <li><span class="tooltip-arrow" data-bs-toggle="tooltip" data-bs-placement="left"
-                                title="Aventuras de una tarde">Oneshots * </span>
-                              </a>
-                              <a style="display: inline;"
-                                href="https://www.mtblackgames.com/blog/top-20-free-dnd-adventures" target="_blank">(1)
-                              </a>
-                              <a style="display: inline;"
-                                href="https://www.dmsguild.com/browse.php?filters=45393_0_0_45462_0_0&keywords=Oneshot&pfrom=0&pto=0"
-                                target="_blank"> (2) </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-md-4">
-                          <p>Todo para tu PJ</p>
-                          <ul>
-                            <li><a href="https://chicken-dinner.com/5e/5e-point-buy.html" target="_blank"> Calculadora
-                                puntos</a></li>
-                            <li><a href="https://es.fantasynamegenerators.com/" target="_blank">Generador de nombre de
-                                fantasia</a></li>
-                            <li>Guia DnD <a style="display: inline;" href="http://dnd5e.wikidot.com/"
-                                target="_blank">(ENG)</a> <a style="display: inline;"
-                                href="https://forgottenrealms.fandom.com/wiki/Main_Page" target="_blank"> (ESP)</a></li>
-                            <li><a href="https://immadon.mforos.com/1384897-dungeons-dragons/" target="_blank"> Web de
-                                contenidos DnD</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-md-4">
-                          <p>Contenido adicional</p>
-                          <ul>
-                            <li><a href="https://donjon.bin.sh/5e/" target="_blank">Mega web de DnD y rol</a></li>
-                            <li><a href="https://www.forgotten-adventures.net/product-category/map-making/"
-                                target="_blank">Assets gratis para mapas</a></li>
-                            <li>Guia de DM<a style="display: inline;"
-                                href="https://blog.contemplarol.com/juegos-de-rol/consejos-dungeon-master/"
-                                target="_blank"> (ESP) </a>
-                              <a style="display: inline;"
-                                href="https://www.dndbeyond.com/forums/dungeons-dragons-discussion/dungeon-masters-only/6695-so-youre-going-to-dm-tips-for-beginners"
-                                target="_blank"> (ENG)</a>
-                            </li>
-                            <li><a href="https://deepnight.net/tools/rpg-map/" target="_blank">Software para crear mapas
-                                (FREE)</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--fin primer acordeon-->
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
-                    data-bs-target="#SegundoApartado">
-                    Webs algo mas avanzadas</button>
-                </h2>
-                <div id="SegundoApartado" class="accordion-collapse collapse" data-bs-parent="#acordeonInfoDnd">
-                  <div class="card-body">
-                    <!--webs mas detalladas-->
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-md-4">
-                          <p>Mapas y mas</p>
-                          <ul>
-                            <li><a href="https://davesmapper.com/" target="_blank">Generador aleatorio de mapas</a></li>
-                            <li><a href="https://og.myth-weavers.com/generate_dungeon.php" target="_blank">Generador
-                                aleatorio de mazmorras</a></li>
-                            <li><a href="https://www.thievesguild.cc/" target="_blank">Generador completo (ENG)</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-md-4">
-                          <p>NPCs, eventos y tiendas</p>
-                          <ul>
-                            <li><a href="https://www.dndspeak.com/random-npc-generator/" target="_blank"> Generador de
-                                NPCs (ENG)</a></li>
-                            <li><a href="https://donjon.bin.sh/5e/random/#type=npc" target="_blank">Generador de
-                                elemento aleatorio</a></li>
-                            <li><a href="https://www.thievesguild.cc/shops/" target="_blank">Tiendas de varios tipos</a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-md-4">
-                          <p>Criaturas y Bestias</p>
-                          <ul>
-                            <li>Monstruos y criaturas
-                              <a style="display: inline;" href="https://dr-eigenvalue.github.io/bestiary/"
-                                target="_blank"> (ESP)</a>
-                              <a style="display: inline;" href="https://nivel20.com/games/dnd-5/creatures"
-                                target="_blank"> (ENG)</a>
-                            </li>
-                            <li><a href="https://koboldplus.club/#/encounter-builder" target="_blank">Constructor peleas
-                                (ENG)</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--fin segundo acordeon-->
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
-                    data-bs-target="#TercerApartado">
-                    Extras</button>
-                </h2>
-                <div id="TercerApartado" class="accordion-collapse collapse" data-bs-parent="#acordeonInfoDnd">
-                  <div class="card-body">
-                    <!--contenido tiendas,dados, youtubes y eso-->
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-md-4">
-                          <p>Tutoriales sobre como jugar</p>
-                          <ul>
-                            <li><a href="https://www.youtube.com/watch?v=lkjoLmStBUI" target="_blank">Aprende DnD en 20
-                                minutos</a></li>
-                            <li><a href="https://www.youtube.com/@doble_20/playlists" target="_blank">Canal de DnD en
-                                español completo</a></li>
-                            <li><a href="https://www.youtube.com/watch?v=T4n8_PQjz_Y" target="_blank">Como ser buen
-                                jugador</a> </li>
-                            <li><a href="https://www.youtube.com/watch?v=cNO5UX7U-sk&t=90s" target="_blank"> Como ser
-                                buen DM</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-md-4">
-                          <p>Sesiones Live de DnD</p>
-                          <ul>
-                            <li><a href="https://www.youtube.com/@criticalrole/videos" target="_blank">Critical Role</a>
-                            </li>
-                            <li><a href="https://www.youtube.com/@stinkydragonpod" target="_blank">Tales from the Stinky
-                                Dragon</a></li>
-                            <li><a href="https://www.youtube.com/@LaMazmorradePacheco/videos" target="_blank"> La
-                                Mazmorra de Pacheco</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-md-4">
-                          <p>Tienda <a href="" style="cursor: pointer; display: inline-block;" data-bs-toggle="modal"
-                              data-bs-target="#RecoModal">&#10068;</a></p>
-                          <ul>
-                            <li>Dados
-                              <a style="display: inline;"
-                                href="https://www.amazon.es/Dados-Rol/s?k=Dados+De+Rol">(Amz)</a>
-                              <a style="display: inline;"
-                                href="https://es.aliexpress.com/w/wholesale-dados-de-d%26d.html?g=y&SearchText=dados+de+d%26d&sortType=total_tranpro_desc">(Aliex)</a>
-                            </li>
-                            <li>Sets,libros y/o packs<a style="display: inline;"
-                                href="https://www.amazon.es/s?k=dnd+starter+set&crid=H6QXIQEGYHVS&sprefix=%2Caps%2C131&ref=nb_sb_ss_recent_2_0_recent"
-                                target="_blank"> (Amz)</a> </li>
-                            <a style="display: inline;" href="https://www.dndbeyond.com/marketplace/bundles"
-                              target="_blank">(DnDBeyond)</a>
-                            <a style="display: inline;"
-                              href="https://marketplace.roll20.net/browse/search?sortby=popular"
-                              target="_blank">(Roll20)</a></li>
-                            <li><a href="https://www.heroforge.com/" target="_blank">Figuras personalizadas</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--fin tercer acordeon-->
-          <br> <br>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- JS'S-->
-  <script src='../scripts/diceroll.js'></script>
-
-  <!-- Modal de Recomedacion HTML -->
-  <div class="modal fade" id="RecoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="RecoModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title" id="RecoModalLabel">Atencion</h4>
-        </div>
-        <div class="modal-body" style="font-size:20px">
-          <p>
-            Antes de comprar cualquier cosa, para jugar DnD no hace falta una gran inversion.
-            Acordad un limite en el grupo para no sobrepasar vuestro presupuesto.<br><br>
-            Recordad es entretenerse con los amigos y no endeudarse en gastar por gastar.<br><br>
-            Con las pequeñas herramientas que dispone esta web podeis hacer muchas cosas y pasarlo bien.<br><br>
-            Por ejemplo si vas a jugar en persona, imprimid las hojas, usad la imaginacion y con un boton o un dedal
-            (como en monopoly)
-            ser vuestro personaje recorriendo un mapa dibujado a mano y que el DM se enrrolle y traiga unas pizzas, otro
-            paga la bebida (o todo a pachas) y todo listo para la sesion.<br><br>
-            <span style="font-size: 14px; color: rgb(222, 234, 234);">Antes de comprar por internet revisa tus tiendas
-              locales
-              (lo mismo encuentras ofertas interesantes)</span>
-          </p>
-        </div>
-        <div class="modal-footer" style="font-size:18px">
-          <p style=" color:rgb(235, 160, 86); font-size:14px;">Haz click en aceptar una vez hayas
-            leido y entendido el texto</p>
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal del Login HTML -->
-  <div id="loginModal" class="modal fade">
-    <div class="modal-dialog modal-login">
-      <div class="modal-content">
-        <div class="modal-header">
-
-          <h4 class="modal-title">Login</h4>
-          <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-        </div>
-        <div class="modal-body">
-          <form action="../php/login.php" method="post">
-            <div class="form-group">
-              <input id="nick" type="text" class="form-control" name="nick" placeholder="Nick" required="required">
+                button.addEventListener("click", fnClick);
+              </script>
             </div>
             <br>
-            <div class="form-group">
-              <input type="password" class="form-control" name="pass" placeholder="Password" required="required">
-            </div>
             <br>
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-primary btn-lg">Login</button>
+            <h2>ENLACES</h2>
+            <div class="col-md-12">
+              <div class="accordion" id="acordeonInfoDnd">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#PrimerApartado"> Webs para empezar a jugar</button>
+                  </h2>
+                  <div id="PrimerApartado" class="accordion-collapse collapse" data-bs-parent="#acordeonInfoDnd">
+                    <div class="card-body">
+                      <!--webs prepara tu personaje-->
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <p>Mapas y aventuras</p>
+                            <ul>
+                              <li>
+                                <a href="https://www.hobbyconsolas.com/reportajes/como-comenzar-jugar-dungeons-dragons-no-morir-intento-536599" target="_blank">Empezar a jugar</a>
+                              </li>
+                              <li>
+                                <a href="https://www.espadayescudo.com/blog/aventuras-gratis-para-dungeons-and-dragons/" target="_blank">Aventuras gratuitas</a>
+                              </li>
+                              <li>
+                                <a href="https://tarrasque.io/" target="_blank">Web para jugar DnD online</a>
+                              </li>
+                              <li>
+                                <a href="https://rolladvantage.com/tokenstamp/" target="_blank">Creador de <span class="tooltip-arrow" data-bs-toggle="tooltip" data-bs-placement="right" title="Icono de tu personaje">Tokens * </span>
+                                </a>
+                              <li>
+                                <span class="tooltip-arrow" data-bs-toggle="tooltip" data-bs-placement="left" title="Aventuras de una tarde">Oneshots * </span>
+                                </a>
+                                <a style="display: inline;" href="https://www.mtblackgames.com/blog/top-20-free-dnd-adventures" target="_blank">(1) </a>
+                                <a style="display: inline;" href="https://www.dmsguild.com/browse.php?filters=45393_0_0_45462_0_0&keywords=Oneshot&pfrom=0&pto=0" target="_blank"> (2) </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4">
+                            <p>Todo para tu PJ</p>
+                            <ul>
+                              <li>
+                                <a href="https://chicken-dinner.com/5e/5e-point-buy.html" target="_blank"> Calculadora puntos</a>
+                              </li>
+                              <li>
+                                <a href="https://es.fantasynamegenerators.com/" target="_blank">Generador de nombre de fantasia</a>
+                              </li>
+                              <li>Guia DnD <a style="display: inline;" href="http://dnd5e.wikidot.com/" target="_blank">(ENG)</a>
+                                <a style="display: inline;" href="https://forgottenrealms.fandom.com/wiki/Main_Page" target="_blank"> (ESP)</a>
+                              </li>
+                              <li>
+                                <a href="https://immadon.mforos.com/1384897-dungeons-dragons/" target="_blank"> Web de contenidos DnD</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4">
+                            <p>Contenido adicional</p>
+                            <ul>
+                              <li>
+                                <a href="https://donjon.bin.sh/5e/" target="_blank">Mega web de DnD y rol</a>
+                              </li>
+                              <li>
+                                <a href="https://www.forgotten-adventures.net/product-category/map-making/" target="_blank">Assets gratis para mapas</a>
+                              </li>
+                              <li>Guia de DM <a style="display: inline;" href="https://blog.contemplarol.com/juegos-de-rol/consejos-dungeon-master/" target="_blank"> (ESP) </a>
+                                <a style="display: inline;" href="https://www.dndbeyond.com/forums/dungeons-dragons-discussion/dungeon-masters-only/6695-so-youre-going-to-dm-tips-for-beginners" target="_blank"> (ENG)</a>
+                              </li>
+                              <li>
+                                <a href="https://deepnight.net/tools/rpg-map/" target="_blank">Software para crear mapas (FREE)</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--fin primer acordeon-->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#SegundoApartado"> Webs algo mas avanzadas</button>
+                  </h2>
+                  <div id="SegundoApartado" class="accordion-collapse collapse" data-bs-parent="#acordeonInfoDnd">
+                    <div class="card-body">
+                      <!--webs mas detalladas-->
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <p>Mapas y mas</p>
+                            <ul>
+                              <li>
+                                <a href="https://davesmapper.com/" target="_blank">Generador aleatorio de mapas</a>
+                              </li>
+                              <li>
+                                <a href="https://og.myth-weavers.com/generate_dungeon.php" target="_blank">Generador aleatorio de mazmorras</a>
+                              </li>
+                              <li>
+                                <a href="https://www.thievesguild.cc/" target="_blank">Generador completo (ENG)</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4">
+                            <p>NPCs, eventos y tiendas</p>
+                            <ul>
+                              <li>
+                                <a href="https://www.dndspeak.com/random-npc-generator/" target="_blank"> Generador de NPCs (ENG)</a>
+                              </li>
+                              <li>
+                                <a href="https://donjon.bin.sh/5e/random/#type=npc" target="_blank">Generador de elemento aleatorio</a>
+                              </li>
+                              <li>
+                                <a href="https://www.thievesguild.cc/shops/" target="_blank">Tiendas de varios tipos</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4">
+                            <p>Criaturas y Bestias</p>
+                            <ul>
+                              <li>Monstruos y criaturas <a style="display: inline;" href="https://dr-eigenvalue.github.io/bestiary/" target="_blank"> (ESP)</a>
+                                <a style="display: inline;" href="https://nivel20.com/games/dnd-5/creatures" target="_blank"> (ENG)</a>
+                              </li>
+                              <li>
+                                <a href="https://koboldplus.club/#/encounter-builder" target="_blank">Constructor peleas (ENG)</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--fin segundo acordeon-->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#TercerApartado"> Extras</button>
+                  </h2>
+                  <div id="TercerApartado" class="accordion-collapse collapse" data-bs-parent="#acordeonInfoDnd">
+                    <div class="card-body">
+                      <!--contenido tiendas,dados, youtubes y eso-->
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <p>Tutoriales sobre como jugar</p>
+                            <ul>
+                              <li>
+                                <a href="https://www.youtube.com/watch?v=lkjoLmStBUI" target="_blank">Aprende DnD en 20 minutos</a>
+                              </li>
+                              <li>
+                                <a href="https://www.youtube.com/@doble_20/playlists" target="_blank">Canal de DnD en español completo</a>
+                              </li>
+                              <li>
+                                <a href="https://www.youtube.com/watch?v=T4n8_PQjz_Y" target="_blank">Como ser buen jugador</a>
+                              </li>
+                              <li>
+                                <a href="https://www.youtube.com/watch?v=cNO5UX7U-sk&t=90s" target="_blank"> Como ser buen DM</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4">
+                            <p>Sesiones Live de DnD</p>
+                            <ul>
+                              <li>
+                                <a href="https://www.youtube.com/@criticalrole/videos" target="_blank">Critical Role</a>
+                              </li>
+                              <li>
+                                <a href="https://www.youtube.com/@stinkydragonpod" target="_blank">Tales from the Stinky Dragon</a>
+                              </li>
+                              <li>
+                                <a href="https://www.youtube.com/@LaMazmorradePacheco/videos" target="_blank"> La Mazmorra de Pacheco</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4">
+                            <p>Tienda <a href="" style="cursor: pointer; display: inline-block;" data-bs-toggle="modal" data-bs-target="#RecoModal">&#10068;</a>
+                            </p>
+                            <ul>
+                              <li>Dados <a style="display: inline;" href="https://www.amazon.es/Dados-Rol/s?k=Dados+De+Rol">(Amz)</a>
+                                <a style="display: inline;" href="https://es.aliexpress.com/w/wholesale-dados-de-d%26d.html?g=y&SearchText=dados+de+d%26d&sortType=total_tranpro_desc">(Aliex)</a>
+                              </li>
+                              <li>Sets,libros y/o packs <a style="display: inline;" href="https://www.amazon.es/s?k=dnd+starter+set&crid=H6QXIQEGYHVS&sprefix=%2Caps%2C131&ref=nb_sb_ss_recent_2_0_recent" target="_blank"> (Amz)</a>
+                              </li>
+                              <a style="display: inline;" href="https://www.dndbeyond.com/marketplace/bundles" target="_blank">(DnDBeyond)</a>
+                              <a style="display: inline;" href="https://marketplace.roll20.net/browse/search?sortby=popular" target="_blank">(Roll20)</a>
+                              </li>
+                              <li>
+                                <a href="https://www.heroforge.com/" target="_blank">Figuras personalizadas</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <a href="recuPass.html">¿Olvidaste la contraseña?</a>
+            <!--fin tercer acordeon-->
+            <br>
+            <br>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <!--breadcrums-->
-
-  <div>
-    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="principal.html">Home</a></li>
-        <li style="color:greenyellow" class="breadcrumb-item active" aria-current="page">Herramientas</li>
-      </ol>
-    </nav>
-  </div>
-
-  <script>
-    $(document).ready(function () {
-      $('[data-bs-toggle="tooltip"]').tooltip();
-    });
-  </script>
-
-  <script>
-    cambioLogo();
-    getCookie();
-
-  </script>
-
-</body>
-
+    <!-- JS'S-->
+    <script src='../scripts/diceroll.js'></script>
+    <!-- Modal de Recomedacion HTML -->
+    <div class="modal fade" id="RecoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="RecoModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="RecoModalLabel">Atencion</h4>
+          </div>
+          <div class="modal-body" style="font-size:20px">
+            <p> Antes de comprar cualquier cosa, para jugar DnD no hace falta una gran inversion. Acordad un limite en el grupo para no sobrepasar vuestro presupuesto. <br>
+              <br> Recordad es entretenerse con los amigos y no endeudarse en gastar por gastar. <br>
+              <br> Con las pequeñas herramientas que dispone esta web podeis hacer muchas cosas y pasarlo bien. <br>
+              <br> Por ejemplo si vas a jugar en persona, imprimid las hojas, usad la imaginacion y con un boton o un dedal (como en monopoly) ser vuestro personaje recorriendo un mapa dibujado a mano y que el DM se enrrolle y traiga unas pizzas, otro paga la bebida (o todo a pachas) y todo listo para la sesion. <br>
+              <br>
+              <span style="font-size: 14px; color: rgb(222, 234, 234);">Antes de comprar por internet revisa tus tiendas locales (lo mismo encuentras ofertas interesantes)</span>
+            </p>
+          </div>
+          <div class="modal-footer" style="font-size:18px">
+            <p style=" color:rgb(235, 160, 86); font-size:14px;">Haz click en aceptar una vez hayas leido y entendido el texto</p>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal del Login HTML -->
+    <div id="loginModal" class="modal fade">
+      <div class="modal-dialog modal-login">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form action="../php/login.php" method="post">
+              <div class="form-group">
+                <input id="nick" type="text" class="form-control" name="nick" placeholder="Nick" required="required">
+              </div>
+              <br>
+              <div class="form-group">
+                <input type="password" class="form-control" name="pass" placeholder="Password" required="required">
+              </div>
+              <br>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-lg">Login</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <a href="recuPass.html">¿Olvidaste la contraseña?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--breadcrums-->
+    <div>
+      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="principal.html">Home</a>
+          </li>
+          <li style="color:greenyellow" class="breadcrumb-item active" aria-current="page">Herramientas</li>
+        </ol>
+      </nav>
+    </div>
+    <script>
+      $(document).ready(function() {
+        $('[data-bs-toggle="tooltip"]').tooltip();
+      });
+    </script>
+    <script>
+      cambioLogo();
+      getCookie();
+    </script>
+  </body>
 </html>

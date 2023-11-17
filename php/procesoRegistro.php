@@ -3,10 +3,9 @@
 <script src='../scripts/dentrites.js'></script>
 </header>
 
-<?php 
-include ("config.php");
+<?php
+include "config.php";
 if (isset($_POST)) {
-    
     $user_Name = $_POST["nick"];
     $user_Email = $_POST["email"];
     $user_Password = $_POST["password"];
@@ -22,75 +21,73 @@ if (isset($_POST)) {
 
     $cookie_name = "nick";
     $cookie_value = $user_Name;
-    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");;
+    setcookie($cookie_name, $cookie_value, time() + 86400 * 30, "/");
 
     if ($count_user == 0 && $count_email == 0) {
         if ($user_Password == $user_Cpass) {
-            
             $sql = "INSERT INTO users_(nick, mail, pass) VALUES('$user_Name', '$user_Email','$user_Password')";
 
             $result = mysqli_query($conn, $sql);
 
-            if ($result) { 
-            echo' <script>
-            Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "Bienvenido '.$user_Name.'",
-                text:"Acceso garantizado a usuario",
-                showConfirmButton: false,
-                timer: 2000,
-              }).then(function () {
-                createCookie();
-                window.location.href = "../html/usuario.php";
-              })
-                    
-                        
-                  </script>';
-            }
-        } else {
-            echo '<script>
-            Swal.fire({
-                position: "center",
-                icon: "warning",
-                title: "Advertencia",
-                text:"Las contraseñas no coinciden",
-                showConfirmButton: false,
-                timer: 2000,
-              }).then(function () {
-                window.location.href = "../html/registro.php";
-            })
-                </script>';
-        }
-    } else {
-        if ($count_user > 0) {
-            echo '<script>
-            Swal.fire({
-                position: "center",
-                icon: "warning",
-                title: "Advertencia",
-                text:"El nombre de usuario / nick ya existe",
-                showConfirmButton: false,
-                timer: 2000,
-              }).then(function () {
-                window.location.href = "../html/registro.php";
-            })
-                </script>';
-        }
-        if ($count_email > 0) {
-            echo '<script>
-            Swal.fire({
-                position: "center",
-                icon: "warning",
-                title: "Advertencia",
-                text:"La direccion de correo ya esta registrada",
-                showConfirmButton: false,
-                timer: 2000,
-              }).then(function () {
-                window.location.href = "../html/registro.php";
-            })
-                </script>';
-        }
+            if ($result) {
+                    echo ' <script>
+                        Swal.fire({
+                            position: "center",
+                            icon: "success",
+                            title: "Bienvenido ' . $user_Name .'",
+                            text:"Acceso garantizado a usuario",
+                            showConfirmButton: false,
+                            timer: 2000,
+                        }).then(function () {
+                            createCookie();
+                            window.location.href = "../html/usuario.php";
+                        })                
+                    </script>';
+                    }
+                } else {
+                    echo '<script>
+                        Swal.fire({
+                            position: "center",
+                            icon: "warning",
+                            title: "Advertencia",
+                            text:"Las contraseñas no coinciden",
+                            showConfirmButton: false,
+                            timer: 2000,
+                        }).then(function () {
+                            window.location.href = "../html/registro.php";
+                        })
+                    </script>';
+                    }
+                } else {
+                    if ($count_user > 0) {
+                    echo '<script>
+                        Swal.fire({
+                            position: "center",
+                            icon: "warning",
+                            title: "Advertencia",
+                            text:"El nombre de usuario / nick ya existe",
+                            showConfirmButton: false,
+                            timer: 2000,
+                        }).then(function () {
+                            window.location.href = "../html/registro.php";
+                        })
+                    </script>';
+                    }
+                    if ($count_email > 0) {
+                        echo '<script>
+                        Swal.fire({
+                            position: "center",
+                            icon: "warning",
+                            title: "Advertencia",
+                            text:"La direccion de correo ya esta registrada",
+                            showConfirmButton: false,
+                            timer: 2000,
+                        }).then(function () {
+                            window.location.href = "../html/registro.php";
+                        })
+                    </script>';
+                }
     }
-} 
+}
+
 ?>

@@ -4,12 +4,11 @@
 </header>
 
 <?php
- 
 // Built-in PHP function to delete file
 unlink($_GET["name"]);
- 
+
 // Redirecting back
-echo'<script>
+echo '<script>
              Swal.fire({
                 position: "center",
                 icon: "success",
@@ -19,5 +18,5 @@ echo'<script>
               }).then(function () {
                 window.location.href = "../html/usuario.php";
               })
-              </script>';
+      </script>';
 ?>  

@@ -803,6 +803,23 @@
     
 }
 
+@media only screen and not (min-width: 720px) {
+#img_logo{
+    display: none;
+}
+
+#contenedorNav{
+    cursor: default;
+    display: table;
+    position: relative;
+    height: 20px;
+    font-family: 'Rostock';
+    font-size: 18px;
+    padding-left: 5px;
+
+}
+}
+
 .titulo{
     font-size: 30px;
     font-family: "Rostock";

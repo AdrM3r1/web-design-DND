@@ -3,20 +3,18 @@
 <script src='../scripts/dentrites.js'></script>
 </header>
 
-<?php 
-
-include ("config.php");
+<?php
+include "config.php";
 
 if (isset($_POST)) {
-    $id = $_GET['id'];
-    
-    $sql = "DELETE FROM tabla_pj WHERE id = '$id'";  
+    $id = $_GET["id"];
 
-      $result = mysqli_query($conn, $sql);
-    
+    $sql = "DELETE FROM tabla_pj WHERE id = '$id'";
 
-            if ($result) { 
-            echo' <script>
+    $result = mysqli_query($conn, $sql);
+
+    if ($result) {
+        echo ' <script>
             Swal.fire({
                 position: "center",
                 icon: "success",
@@ -27,8 +25,8 @@ if (isset($_POST)) {
                 window.location.href = "../html/usuario.php";
               })
                   </script>';
-            } else{
-              echo' <script>
+    } else {
+        echo ' <script>
               Swal.fire({
                   position: "center",
                   icon: "warning",
@@ -40,7 +38,8 @@ if (isset($_POST)) {
                   window.location.href = "../html/usuario.php";
                 })
                     </script>';
-            }
-          } 
-    
-    ?>
+    }
+}
+
+
+?>
