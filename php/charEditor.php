@@ -36,31 +36,51 @@
               de nombre</a></li>
           <li class="itemNav" role="menuitem"><a href="https://chicken-dinner.com/5e/5e-point-buy.html"
               target="_blank">Calculadora de puntos</a></li>
-          <li class="itemNav" role="menuitem"><a href="usuario.php">Volver</a></li>
+          <li class="itemNav" role="menuitem"><a href="../html/usuario.php">Volver</a></li>
         </ul>
         <div class="io">
           <h4>Edita tu personaje <a href="" style="cursor: pointer; display: inline-block;" data-bs-toggle="modal"
               data-bs-target="#RecoModal">&#10068;</a></h4>
-          <form action="charCreation.php" method="post" id="PJcreator">
+          <form action="charEdition.php" method="post" id="PJeditor">
             <div class="container col-md-12">
               <div class="row justify-content-md-start">
                 <hr>
+                  <?php 
+                    include("config.php");
+                    $id = $_GET['id'];
+
+                    $sql = "Select * from tabla_pj where id = $id and asociadoa= '$_COOKIE[nick]';";
+                    $result = mysqli_query($conn, $sql);
+                    $count = mysqli_num_rows($result);  
+                    if($count != 0){
+                    while ($row = mysqli_fetch_array($result)) {
+                  ?>
+
                 <div class="col-md-12">
-                  NAME &nbsp;<input name="nombre" id="nombre" style="width:300px" type="text">
-                  CLASS &nbsp;<input name="clase" id="clase" style="width:200px" type="text">
-                  RACE &nbsp;<input name="raza" id="raza" style="width:200px" type="text"><br><br>
-                  ARMOR CLASS &nbsp;<input name="armorClass" id="armorClass" style="width:70px" type="number">
-                  LEVEL &nbsp;<input name="nivel" id="nivel" style="width:60px" type="number">
-                  DOC &nbsp;<input name="doc" id="doc" type="file" accept=".txt,.pdf,.doc"/>
-                  <br><br>
+                  
+                  NAME &nbsp;<input name="nombre" id="nombre" style="width:300px" type="text" value=<?php echo $row['nombre'];?>>
+                  CLASS &nbsp;<input name="clase" id="clase" style="width:200px" type="text"value=<?php echo $row['clase'];?>>
+                  RACE &nbsp;<input name="raza" id="raza" style="width:200px" type="text"value=<?php echo $row['raza'];?>><br><br>
+                  ARMOR CLASS &nbsp;<input name="armorClass" id="armorClass" style="width:70px" type="number"value=<?php echo $row['armorClass'];?>>
+                  LEVEL &nbsp;<input name="nivel" id="nivel" style="width:60px" type="number"value=<?php echo $row['nivel'];?>>
+                  CURRENT HIT POINTS&nbsp;<input name="hitPoints" id="hitPoints" style="width:60px" type="number"value=<?php echo $row['hitPoints'];?>>
+                  HIT DICE&nbsp;<input name="hitDice" id="hitDice" style="width:100px" type="text"value=<?php echo $row['hitDice'];?>>
+                  SPEED&nbsp;<input name="speed" id="speed" style="width:100px" type="number"value=<?php echo $row['speed'];?>>
+                  <input style="display:none"; name="id" id="id" style="width:60px" type="number"value=<?php echo $row['id'];?>>
+
+                    
                 </div>
-                <hr>
-
-
-                <button id="Enviar" class="submitButton" type="submit">Enviar</button>
+ 
+                <br><br>
+                <br><br> 
+                <hr>                
+                <?php
+                    }
+                  }
+                  ?>
+                <button id="Enviar" name="Enviar" class="submitButton" type="submit">Enviar</button>
                 <button id="retorno" class="submitButton" type="button" value="volver">Volver</button>
 
-          </form>
         </div>
       </div>
     </div>

@@ -7,19 +7,10 @@
 
 include ("config.php");
 
-if (isset($_POST['Enviar'])) {
-    $asociadoa = $_COOKIE['nick'];
-    $nombre	= $_POST['nombre'];
-    $raza = $_POST['raza'];
-    $clase = $_POST['clase'];
-    $armorClass	= $_POST['armorClass'];
-    $nivel = $_POST['nivel'];
-    $hitPoints = $_POST['hitPoints'];
-    $hitDice = $_POST['hitDice'];
-    $speed = $_POST['speed'];
+if (isset($_POST)) {
+    $id = $_GET['id'];
     
-          $sql = "INSERT INTO tabla_pj (asociadoa,nombre,raza,clase,armorClass,nivel,hitPoints,hitDice,speed)
-           VALUES('$asociadoa','$nombre','$raza','$clase','$armorClass','$nivel','$hitPoints','$hitDice','$speed')";  
+    $sql = "DELETE FROM tabla_pj WHERE id = '$id'";  
 
       $result = mysqli_query($conn, $sql);
     
@@ -29,8 +20,7 @@ if (isset($_POST['Enviar'])) {
             Swal.fire({
                 position: "center",
                 icon: "success",
-                title: "Personaje creado",
-                text:"'.$nombre.'",
+                title: "Personaje eliminado",
                 showConfirmButton: false,
                 timer: 2000,
               }).then(function () {
@@ -43,7 +33,7 @@ if (isset($_POST['Enviar'])) {
                   position: "center",
                   icon: "warning",
                   title: "Personaje no creado",
-                  text:"No ha sido posible crear al personaje",
+                  text:"No ha sido posible eliminar al personaje",
                   showConfirmButton: false,
                   timer: 2000,
                 }).then(function () {

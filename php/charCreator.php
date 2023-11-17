@@ -36,7 +36,7 @@
               de nombre</a></li>
           <li class="itemNav" role="menuitem"><a href="https://chicken-dinner.com/5e/5e-point-buy.html"
               target="_blank">Calculadora de puntos</a></li>
-          <li class="itemNav" role="menuitem"><a href="usuario.php">Volver</a></li>
+          <li class="itemNav" role="menuitem"><a href="../html/usuario.php">Volver</a></li>
         </ul>
         <div class="io">
           <h4>Crea tu personaje <a href="" style="cursor: pointer; display: inline-block;" data-bs-toggle="modal"
@@ -51,16 +51,19 @@
                   RACE &nbsp;<input name="raza" id="raza" style="width:200px" type="text"><br><br>
                   ARMOR CLASS &nbsp;<input name="armorClass" id="armorClass" style="width:70px" type="number">
                   LEVEL &nbsp;<input name="nivel" id="nivel" style="width:60px" type="number">
-                  DOC &nbsp;<input name="doc" id="doc" type="file" accept=".txt,.pdf,.doc"/>
+                  CURRENT HIT POINTS&nbsp;<input name="hitPoints" id="hitPoints" style="width:60px" type="number">
+                  HIT DICE&nbsp;<input name="hitDice" id="hitDice" style="width:100px" type="text">
+                  SPEED&nbsp;<input name="speed" id="speed" style="width:100px" type="number">
+
                   <br><br>
                 </div>
                 <hr>
-
-
-                <button id="Enviar" class="submitButton" type="submit">Enviar</button>
+                <button id="Enviar" name="Enviar" class="submitButton" type="submit">Enviar</button>
                 <button id="retorno" class="submitButton" type="button" value="volver">Volver</button>
+                
+              </form>
 
-          </form>
+            <br><br>  
         </div>
       </div>
     </div>
