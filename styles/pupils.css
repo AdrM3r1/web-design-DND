@@ -81,8 +81,9 @@
 }
 
 #result{
+    color: #FFFEBD;
     font-family:"Rostock";
-    font-size: 20px;
+    font-size: 24px;
     float: right;
     padding: 40px;
 
@@ -177,15 +178,15 @@
      }
     
     #divisor{
-        background-color: #a51217;
+        background-color: rgba(0,0,0,0.5);
         margin-top: 5px;
-        margin-left: 8px;
         padding: 15px ;
         min-height: 550px;
         width: 90%;
     }
     
     #contenedorNav {
+        background-color: rgba(0,0,0,0.5);
         cursor: default;
         display: table;
         position: relative;
@@ -195,23 +196,8 @@
         font-size: 20px;
         text-align: center;
     }
-    
-    #itemNav {
-        display: table-cell;    
-        padding: 10px;
-        background-color:#a34c50 ;
-     }
-    
-     #itemNav:hover{
-        background-color: #4a2932 ;
-     }
      
      /*GENERICOS y VALORES DEBILES*/
-    
-    
-     #website{
-        background:#4a2932 ;
-    }
     
      a{
         color: #FFFEBD;
@@ -354,7 +340,7 @@
      }
     
     #divisor{
-        background-color: #a51217;
+        background-color: rgba(0,0,0,0.5);
         margin-top: 5px;
         padding: 15px ;
         min-height: 550px;
@@ -362,6 +348,7 @@
     }
     
     #contenedorNav {
+        background-color: rgba(0,0,0,0.5);
         cursor: default;
         display: table;
         position: relative;
@@ -370,25 +357,10 @@
         height: 20px;
         font-family: 'Rostock';
         font-size: 20px;
-        text-align: center;
     }
-    
-    #itemNav {
-        display: table-cell;    
-        padding: 10px;
-        background-color:#a34c50 ;
-     }
-    
-     #itemNav:hover{
-        background-color: #4a2932 ;
-     }
      
      /*GENERICOS y VALORES DEBILES*/
     
-    
-     #website{
-        background:#4a2932 ;
-    }
     
      a{
         color: #FFFEBD;
@@ -531,7 +503,7 @@
      }
     
     #divisor{
-        background-color: #a51217;
+        background-color: rgba(0,0,0,0.5);
         margin-top: 5px;
         padding: 15px ;
         min-height: 550px;
@@ -539,6 +511,7 @@
     }
     
     #contenedorNav {
+        background-color: rgba(0,0,0,0.5);
         cursor: default;
         display: table;
         position: relative;
@@ -550,22 +523,9 @@
         text-align: center;
     }
     
-    #itemNav {
-        display: table-cell;    
-        padding: 10px;
-        background-color:#a34c50 ;
-     }
-    
-     #itemNav:hover{
-        background-color: #4a2932 ;
-     }
      
      /*GENERICOS y VALORES DEBILES*/
-    
-    
-     #website{
-        background:#4a2932 ;
-    }
+ 
     
      a{
         color: #FFFEBD;
@@ -710,7 +670,7 @@
      }
     
     #divisor{
-        background-color: #a51217;
+        background-color: rgba(0,0,0,0.5);
         margin-top: 5px;
         padding: 15px ;
         min-height: 550px;
@@ -718,6 +678,7 @@
     }
     
     #contenedorNav {
+        background-color: rgba(0,0,0,0.5);
         cursor: default;
         display: table;
         position: relative;
@@ -729,22 +690,8 @@
         text-align: center;
     }
     
-    #itemNav {
-        display: table-cell;    
-        padding: 10px;
-        background-color:#a34c50 ;
-     }
-    
-     #itemNav:hover{
-        background-color: #4a2932 ;
-     }
-     
      /*GENERICOS y VALORES DEBILES*/
-    
-    
-     #website{
-        background:#4a2932 ;
-    }
+ 
     
      a{
         color: #FFFEBD;
@@ -809,6 +756,7 @@
 }
 
 #contenedorNav{
+    background-color: rgba(0,0,0,0.5);
     cursor: default;
     display: table;
     position: relative;
@@ -832,4 +780,12 @@ a,h1,h2,h3,h4,h5,h6 {
 
 input,label,p,span,li{
     font-family: "Rostock";
+}
+
+body{
+    background-image: url("../images/fondos/scaryBG.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
