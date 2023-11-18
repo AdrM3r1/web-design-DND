@@ -49,12 +49,22 @@
               <div class="container col-md-12">
                 <div class="row justify-content-md-start">
                   <hr>
-                  <div class="col-md-12"> NAME &nbsp; <input name="nombre" id="nombre" style="width:300px" type="text"> CLASS &nbsp; <input name="clase" id="clase" style="width:200px" type="text"> RACE &nbsp; <input name="raza" id="raza" style="width:200px" type="text">
-                    <br>
-                    <br> ARMOR CLASS &nbsp; <input name="armorClass" id="armorClass" style="width:70px" type="number"> LEVEL &nbsp; <input name="nivel" id="nivel" style="width:60px" type="number"> CURRENT HIT POINTS&nbsp; <input name="hitPoints" id="hitPoints" style="width:60px" type="number"> HIT DICE&nbsp; <input name="hitDice" id="hitDice" style="width:100px" type="text"> SPEED&nbsp; <input name="speed" id="speed" style="width:100px" type="number">
-                    <br>
-                    <br>
+                  <div class="col-md-12"> 
+                    NAME &nbsp; <input name="nombre" id="nombre" style="width:300px" type="text"> 
+                    CLASS &nbsp; <input name="clase" id="clase" style="width:200px" type="text"> 
+                    RACE &nbsp; <input name="raza" id="raza" style="width:200px" type="text"><br><br>
+                    ARMOR CLASS &nbsp; <input name="armorClass" id="armorClass" style="width:70px" type="number"> 
+                    LEVEL &nbsp; <input name="nivel" id="nivel" style="width:60px" type="number"> 
+                    CURRENT HIT POINTS&nbsp; <input name="hitPoints" id="hitPoints" style="width:60px" type="number"> 
+                    HIT DICE&nbsp; <input name="hitDice" id="hitDice" style="width:100px" type="text"> 
+                    SPEED&nbsp; <input name="speed" id="speed" style="width:100px" type="number">
+                    <hr>
                   </div>
+                  <h5>INVENTORY AND/OR EQUIPMENT</h5>
+                  <div class="col-md-12"><textarea style="width:100%" name="invent" id="invent"></textarea></div>
+                  <h5> SPELLS </h5>
+                  <div class="col-md-12"><textarea style="width:100%" name="spells" id="spells"></textarea></div>
+                  <br><br>
                   <hr>
                   <button id="Enviar" name="Enviar" class="submitButton" type="submit">Enviar</button>
                   <button id="retorno" class="submitButton" type="button" value="volver">Volver</button>
@@ -87,9 +97,12 @@
             <h4 class="modal-title" id="RecoModalLabel">Bienvenido al creador de personajes</h4>
           </div>
           <div class="modal-body" style="font-size:20px">
-            <p> En este lugar podras crear y guardar tus personajes. <br> Dentro de este espacio tendras que rellenar todos los campos que sean necesarios para tu personaje de campaña, o si estas experimentando creando otros aventureros por diversion, o simplemente quieres probar este apartado. </p>
-            <p> No olvides que en esta web en el apartado de herramientas en el primer acordeon en 'Todo para tu PJ', como en la parte superior dispones de los enlaces de la "wikipedia" de dnd, la calculadora de puntos, el generador de nombre (si no tienes uno pensado). </p>
-            <p>En la vista de tu cuenta, podras editar de vuelta tu personaje tanto si te olvidaste de algo, si estas jugando o quieres corregir algun detalle.</p>
+            <p> En este lugar podras crear y guardar tus personajes. <br> 
+            <p> No olvides que en esta web en el apartado de herramientas en el primer acordeon en 'Todo para tu PJ',
+              como en la parte superior dispones de los enlaces de la "wikipedia" de dnd, la calculadora de puntos, 
+              el generador de nombre (si no tienes uno pensado). </p>
+            <p>En la vista de tu cuenta, podras editar de vuelta tu personaje tanto si te olvidaste de algo,
+               si estas jugando o quieres corregir algun detalle.</p>
             <p> No te preocupes y tomate tu tiempo para encontrar a tu aventurero deseado. </p>
           </div>
           <div class="modal-footer" style="font-size:18px">

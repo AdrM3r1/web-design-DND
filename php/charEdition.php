@@ -17,9 +17,12 @@ if (isset($_POST["Enviar"])) {
     $hitPoints = $_POST["hitPoints"];
     $hitDice = $_POST["hitDice"];
     $speed = $_POST["speed"];
+    $spells = $_POST["spells"];
+    $invent = $_POST["invent"];
 
     $sql = "UPDATE tabla_pj SET nombre = '$nombre',clase = '$clase',raza = '$raza',
-    armorClass = '$armorClass',nivel = '$nivel', hitPoints = '$hitPoints', hitDice= '$hitDice',speed = '$speed'
+    armorClass = '$armorClass',nivel = '$nivel', hitPoints = '$hitPoints', hitDice= '$hitDice',speed = '$speed',
+    spells = '$spells' , invent = '$invent'
      WHERE id = '$id' and asociadoa = '$asociadoa'";
 
     $result = mysqli_query($conn, $sql);

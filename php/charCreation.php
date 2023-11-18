@@ -16,9 +16,11 @@ if (isset($_POST["Enviar"])) {
     $hitPoints = $_POST["hitPoints"];
     $hitDice = $_POST["hitDice"];
     $speed = $_POST["speed"];
+    $spells = $_POST["spells"];
+    $invent = $_POST["invent"];
 
-    $sql = "INSERT INTO tabla_pj (asociadoa,nombre,raza,clase,armorClass,nivel,hitPoints,hitDice,speed)
-           VALUES('$asociadoa','$nombre','$raza','$clase','$armorClass','$nivel','$hitPoints','$hitDice','$speed')";
+    $sql = "INSERT INTO tabla_pj (asociadoa,nombre,raza,clase,armorClass,nivel,hitPoints,hitDice,speed,spells,invent)
+           VALUES('$asociadoa','$nombre','$raza','$clase','$armorClass','$nivel','$hitPoints','$hitDice','$speed','$spells','$invent')";
 
     $result = mysqli_query($conn, $sql);
 

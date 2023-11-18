@@ -57,19 +57,28 @@
                     $count = mysqli_num_rows($result);  
                     if($count != 0){
                     while ($row = mysqli_fetch_array($result)) {
-                  ?> <div class="col-md-12"> NAME &nbsp; <input name="nombre" id="nombre" style="width:300px" type="text" value=<?php echo $row['nombre'];?>> CLASS &nbsp; <input name="clase" id="clase" style="width:200px" type="text" value=<?php echo $row['clase'];?>> RACE &nbsp; <input name="raza" id="raza" style="width:200px" type="text" value=<?php echo $row['raza'];?>>
+                  ?> <div class="col-md-12"> 
+                    NAME &nbsp; <input name="nombre" id="nombre" style="width:300px" type="text" value=<?php echo $row['nombre'];?>> 
+                    CLASS &nbsp; <input name="clase" id="clase" style="width:200px" type="text" value=<?php echo $row['clase'];?>> 
+                    RACE &nbsp; <input name="raza" id="raza" style="width:200px" type="text" value=<?php echo $row['raza'];?>>
                     <br>
-                    <br> ARMOR CLASS &nbsp; <input name="armorClass" id="armorClass" style="width:70px" type="number" value=<?php echo $row['armorClass'];?>> LEVEL &nbsp; <input name="nivel" id="nivel" style="width:60px" type="number" value=<?php echo $row['nivel'];?>> CURRENT HIT POINTS&nbsp; <input name="hitPoints" id="hitPoints" style="width:60px" type="number" value=<?php echo $row['hitPoints'];?>> HIT DICE&nbsp; <input name="hitDice" id="hitDice" style="width:100px" type="text" value=<?php echo $row['hitDice'];?>> SPEED&nbsp; <input name="speed" id="speed" style="width:100px" type="number" value=<?php echo $row['speed'];?>>
+                    <br> ARMOR CLASS &nbsp; <input name="armorClass" id="armorClass" style="width:70px" type="number" value=<?php echo $row['armorClass'];?>> 
+                    LEVEL &nbsp; <input name="nivel" id="nivel" style="width:60px" type="number" value=<?php echo $row['nivel'];?>> 
+                    CURRENT HIT POINTS&nbsp; <input name="hitPoints" id="hitPoints" style="width:60px" type="number" value=<?php echo $row['hitPoints'];?>> 
+                    HIT DICE&nbsp; <input name="hitDice" id="hitDice" style="width:100px" type="text" value=<?php echo $row['hitDice'];?>> 
+                    SPEED&nbsp; <input name="speed" id="speed" style="width:100px" type="number" value=<?php echo $row['speed'];?>>
                     <input style="display:none" ; name="id" id="id" style="width:60px" type="number" value=<?php echo $row['id'];?>>
+                    <hr>
+                    <h5>INVENTORY AND/OR EQUIPMENT</h5>
+                    <div class="col-md-12"><textarea style="width:100%" name="invent" id="invent"><?php echo $row['invent'];?></textarea ></div>
+                    <h5> SPELLS </h5>
+                    <div class="col-md-12"><textarea style="width:100%" name="spells" id="spells"><?php echo $row['spells'];?></textarea></div>
                   </div>
-                  <br>
-                  <br>
-                  <br>
-                  <br>
-                  <hr> <?php
+                  
+                  <?php
                     }
                   }
-                  ?> <button id="Enviar" name="Enviar" class="submitButton" type="submit">Enviar</button>
+                  ?><hr> <button id="Enviar" name="Enviar" class="submitButton" type="submit">Enviar</button>
                   <button id="retorno" class="submitButton" type="button" value="volver">Volver</button>
                 </div>
               </div>
