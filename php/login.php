@@ -6,7 +6,7 @@
     if (isset($_POST)) {
         $user_Name = $_POST["nick"];
         $user_Password = $_POST["pass"];
-        $sql = "select * from users_ where nick = '$user_Name' and pass = '$user_Password'";  
+        $sql = "SELECT * from users_ where nick = '$user_Name' and pass = '$user_Password'";  
         $result = mysqli_query($conn, $sql);  
         $count = mysqli_num_rows($result);  
         $cookie_name = "nick";
