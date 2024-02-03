@@ -24,6 +24,9 @@ if (isset($_POST["Enviar"])) {
 
     $result = mysqli_query($conn, $sql);
 
+    $sql2 = "INSERT INTO reg_uspj (asociadoa,nombre,raza,clase,nivel) VALUES('$asociadoa','$nombre','$raza','$clase','$nivel')";
+    $result2 = mysqli_query($conn, $sql2);
+
     if ($result) {
         echo '<script>
             Swal.fire({

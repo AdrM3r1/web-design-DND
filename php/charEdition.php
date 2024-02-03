@@ -27,6 +27,11 @@ if (isset($_POST["Enviar"])) {
 
     $result = mysqli_query($conn, $sql);
 
+    $sql2 = "UPDATE reg_uspj SET nombre = '$nombre',raza = '$raza',
+    clase = '$clase',nivel = '$nivel' WHERE id = '$id' and asociadoa = '$asociadoa'";
+
+    $result2 = mysqli_query($conn, $sql2);
+
     if ($result) {
         echo ' <script>
             Swal.fire({
