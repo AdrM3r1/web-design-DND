@@ -13,7 +13,20 @@
         $cookie_value = $user_Name;
         setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");;
 
-        if($count == 1){  
+        if($count == 1 && $user_Name == "root"){  
+          echo '<script>
+              Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Bienvenido administrador",
+                showConfirmButton: false,
+                timer: 2000,
+              }).then(function () {
+                  createCookie();
+                  window.location.href = "../html/superusuario.php";
+              })
+            </script>';
+        } elseif($count == 1){  
           echo '<script>
               Swal.fire({
                 position: "center",

@@ -23,31 +23,46 @@ if (isset($_POST["Enviar"])) {
     $sql = "UPDATE tabla_pj SET nombre = '$nombre',clase = '$clase',raza = '$raza',
     armorClass = '$armorClass',nivel = '$nivel', hitPoints = '$hitPoints', hitDice= '$hitDice',speed = '$speed',
     spells = '$spells' , invent = '$invent'
-     WHERE id = '$id' and asociadoa = '$asociadoa'";
+     WHERE id = '$id'";
 
     $result = mysqli_query($conn, $sql);
 
     $sql2 = "UPDATE reg_uspj SET nombre = '$nombre',raza = '$raza',
-    clase = '$clase',nivel = '$nivel' WHERE id = '$id' and asociadoa = '$asociadoa'";
+    clase = '$clase',nivel = '$nivel' WHERE id = '$id'";
 
     $result2 = mysqli_query($conn, $sql2);
 
-    if ($result) {
-        echo ' <script>
-            Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "Personaje actualizado",
-                text:"' .
-            $nombre .
-            '",
-                showConfirmButton: false,
-                timer: 2000,
-              }).then(function () {
-                window.location.href = "../html/usuario.php";
-              })
-                  </script>';
-    } else {
+    if ($result && $asociadoa == 'root') {
+      echo ' <script>
+          Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Personaje actualizado",
+              text:"' .
+          $nombre .
+          '",
+              showConfirmButton: false,
+              timer: 2000,
+            }).then(function () {
+              window.location.href = "../html/superusuario.php";
+            })
+                </script>';
+  }    elseif ($result) {
+    echo ' <script>
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Personaje actualizado",
+            text:"' .
+        $nombre .
+        '",
+            showConfirmButton: false,
+            timer: 2000,
+          }).then(function () {
+            window.location.href = "../html/usuario.php";
+          })
+              </script>';
+} else {
         echo ' <script>
               Swal.fire({
                   position: "center",

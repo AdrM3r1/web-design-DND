@@ -8,24 +8,38 @@ include "config.php";
 
 if (isset($_POST)) {
     $id = $_GET["id"];
+    $asociadoa = $_COOKIE["nick"];
 
     $sql = "DELETE FROM tabla_pj WHERE id = '$id'";
 
     $result = mysqli_query($conn, $sql);
 
-    if ($result) {
-        echo ' <script>
-            Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "Personaje eliminado",
-                showConfirmButton: false,
-                timer: 2000,
-              }).then(function () {
-                window.location.href = "../html/usuario.php";
-              })
-                  </script>';
-    } else {
+    if ($result && $asociadoa == 'root') {
+      echo ' <script>
+          Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Personaje eliminado",
+              showConfirmButton: false,
+              timer: 2000,
+            }).then(function () {
+              window.location.href = "../html/superusuario.php";
+            })
+                </script>';
+  }
+  elseif ($result) {
+      echo ' <script>
+          Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Personaje eliminado",
+              showConfirmButton: false,
+              timer: 2000,
+            }).then(function () {
+              window.location.href = "../html/usuario.php";
+            })
+                </script>';
+  } else {
         echo ' <script>
               Swal.fire({
                   position: "center",

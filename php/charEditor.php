@@ -52,7 +52,7 @@
                     include("config.php");
                     $id = $_GET['id'];
 
-                    $sql = "Select * from tabla_pj where id = $id and asociadoa= '$_COOKIE[nick]';";
+                    $sql = "Select * from tabla_pj where id = $id";
                     $result = mysqli_query($conn, $sql);
                     $count = mysqli_num_rows($result);  
                     if($count != 0){
