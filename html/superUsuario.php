@@ -97,48 +97,78 @@
                       </tr>
                     </tbody>
                   </table>
+ 
+                    <h4>Lista de Archivos almacenados por usuario</h4>
+                      <?php
+                      // Devuelve los archivos alojados en la carpeta de cada usuario
+   
+                    function dirToOptions($path = '../files', $level = 0) {
+                      $items = scandir($path);
+                      foreach($items as $item) {
+                          // ignora todos los objetos que comiencen por .
+                          if (strpos($item, '.') === 0) {
+                              continue;
+                          }
+                  
+                          $fullPath = $path . DIRECTORY_SEPARATOR . $item;
+                          // añade espacio en blanco para hacerlo similar a la estructura de archivos
+                          $item = str_repeat('&nbsp;', $level * 3) . $item;
+                          //archivo
+                          if (is_file($fullPath)) {
+                               echo "<option>$item</option>";
+                          }
+                          // carpeta
+                          else if (is_dir($fullPath)) {
+                              // cierra el grupo para evitar errores
+                              echo "<optgroup label='$item'></optgroup>";
+                              // llamada recursiva para añadir el objeto
+                              dirToOptions($fullPath, $level + 1);
+                          }
+                      }
+                  }
+                  echo "<h6>../files/</h6>";
+                  echo "<ol>";
+                  dirToOptions();
+                  echo "</ol>";
+                         ?> 
+
+    <h4>Registro de todos los personajes creados en total </h4>
+                <?php
+                  include "../php/config.php";
+
+                  $sql = "SELECT * from reg_uspj ";
+                  $result = mysqli_query($conn, $sql);
+                  ?> 
                   <table class="table table-hover">
                     <thead>
                       <tr>
-                          <th scope="col">ARCHIVOS</th>
-                          <th scope="col">Download</th>
-                          <th scope="col">Borrar</th>
-                          <h4>Lista de Archivos almacenados</h4>
-                      
-                        </tr>
+                        <th scope="col">Propietario</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Clase</th>
+                        <th scope="col">Raza</th>
+                        <th scope="col">Nivel</th>
+                        <th scope="col">fecha</th>
+                      </tr>
                     </thead>
-                    <tbody> 
-                      <?php
-                      // Devuelve los archivos alojados en la carpeta de cada usuario segun su login
-                      $target_path = "../files/$_COOKIE[nick]/";
+                    <tbody> <?php
+                    $count = mysqli_num_rows($result);
+                    if ($count != 0) {
+                        while ($row = mysqli_fetch_array($result)) { ?>
+                         <tr class='character'>
+                        <td> <?php echo $row["asociadoa"]; ?> </td>
+                        <td> <?php echo $row["nombre"]; ?> </td>
+                        <td> <?php echo $row["clase"]; ?> </td>
+                        <td> <?php echo $row["raza"]; ?> </td>
+                        <td> <?php echo $row["nivel"]; ?> </td>
+                        <td> <?php echo $row["fecha"]; ?> </td>
 
-                      if (!is_dir($target_path)) {
-                          mkdir($target_path);
-                      }
-
-                      $files = scandir("$target_path");
-
-                      for ($a = 2; $a < count($files); $a++) { ?>
-                        <tr>                       
-                          <!-- Mostramos el nombre del archivo !-->
-                            <td><?php echo $files[$a]; ?></td>  
-                              <!-- añadido el enlace de descarga !-->
-                                <td><a href= "<?php echo $target_path;echo $files[$a];?>"
-                                 download="<?php echo $files[$a]; ?>">
-                                  Download</a></td>
-                                    <!-- añadido el enlace de eliminacion -->
-                                    <td><a href="../php/delete.php?name=<?php
-                                    echo $target_path;
-                                    echo $files[$a];
-                                    ?>" style="color: red;">
-                                        Borrar
-                                    </a></td>
-                            </tr> 
-                                <?php }
-                        ?> 
-                      </tr>  
+                        <?php }
+                    }
+                    ?>
+                      </tr>
                     </tbody>
                   </table>
+
                 </div>
               </div>
             </div>
@@ -150,7 +180,7 @@
       <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="principal.html">Home</a>
+            <a >Home</a>
           </li>
           <li style="color:greenyellow" class="breadcrumb-item active" aria-current="page">Admin</li>
         </ol>
@@ -191,7 +221,5 @@
               </script>';
   }
   ?> 
-
- 
 
 </html>
