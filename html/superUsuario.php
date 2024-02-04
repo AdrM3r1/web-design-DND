@@ -30,21 +30,7 @@
         <div id="img_logo"></div>
         <div id="divisor">
           <ul id="contenedorNav" role="menubar">
-            <li class="itemNav" role="menuitem">
-              <a href="info.html"> Informacion</a>
-            </li>
-            <li class="itemNav" role="menuitem">
-              <a href="utilidades.html">Herramientas</a>
-            </li>
-            <li class="itemNav" role="menuitem" id="reg">
-              <a href="registro.php">Registrate</a>
-            </li>
-            <li class="itemNav" role="menuitem" id="log">
-              <a style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
-            </li>
-            <li class="itemNav" role="menuitem" id="user">
-              <a href="usuario.php">Mi cuenta</a>
-            </li>
+
             <a onclick="logOut()" style="cursor: pointer;font-size: 14px; margin-left: 12px;" id="logout">Cerrar sesion</a>
           </ul>
           <div class="io">
@@ -191,6 +177,36 @@
       cambioLogo();
       getCookie();
     </script>
+
+<script>
+  function logOut() {
+	let name = c_name_base + "=";
+	let ca = document.cookie.split(';');
+	let x = true;
+
+	for (let i = 0; i < ca.length; i++) {
+		let c = ca[i].trim();
+
+		if (c.includes(name) && c.substring(name.length) === "true") {
+			document.cookie = c_name_base + "=" + true + ";" + "expires=Thu, 01 Jan 1970 00:00:00 GMT" + ";path=/";
+			document.cookie = c_user + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+
+			Swal.fire({
+				position: 'center',
+				icon: 'success',
+				title: "Logout ",
+				text: "Nos vemos pronto",
+				showConfirmButton: false,
+				timer: 1500,
+			}).then(function() {
+				window.location.href = "../html/principal.html";
+			})
+		}
+	}
+}
+
+  </script>
+
   </body> 
   <?php
   include "../php/config.php";
