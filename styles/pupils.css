@@ -7,14 +7,14 @@
 }
 
 @font-face {
-    font-family: 'Vinque'; 
+    font-family: 'Vinque';
     src: url('../styles/fonts/vinque.otf');
 }
 
 @font-face {
-    font-family: 'Alice'; 
+    font-family: 'Alice';
     src: url('../styles/fonts/Alice_in_Wonderland.ttf');
-} 
+}
 
 
 /*ANIMACIONES*/
@@ -80,9 +80,9 @@
     }
 }
 
-#result{
+#result {
     color: #FFFEBD;
-    font-family:"Rostock";
+    font-family: "Rostock";
     font-size: 24px;
     float: right;
     padding: 40px;
@@ -93,13 +93,13 @@
 
 @media only screen and not (max-width: 490px) {
     body#index-bg {
-        background:  #4a2932;
+        background: #4a2932;
         background-size: 100%;
         font-family: 'Rostock';
         font-size: 20px;
         color: #FFFEBD;
     }
-    
+
     #indexcontent {
         width: 500px;
         height: 575px;
@@ -110,13 +110,13 @@
         background-color: rgba(165, 18, 23, 0.75);
         border-radius: 8% 8% 15% 15% / 8% 8% 15% 15%;
     }
-    
+
     #container {
         justify-content: center;
         display: flex;
         align-items: center;
     }
-    
+
     #intro {
         background: #830202;
         background: -webkit-linear-gradient(0deg, #830202 0%, #c20929 50%, #d77e45 100%);
@@ -124,7 +124,7 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
-    
+
     #imgIndex {
         margin: 0px;
         height: 510px;
@@ -132,7 +132,7 @@
         border-radius: 15% 15%;
         animation: fadeIn 1.5s;
     }
-    
+
     .title {
         font-size: 80px;
         width: 800px;
@@ -144,7 +144,7 @@
         font-family: 'Alice';
         text-shadow: 2px 3px grey;
     }
-    
+
     .enter {
         font-family: 'Rostock';
         font-size: 40px;
@@ -159,34 +159,34 @@
         box-shadow: 1px 1px #000000;
         transition: box-shadow 0.5s ease-in-out;
     }
-    
+
     .enter:hover {
         box-shadow: 4px 4px 10px 4px #000000;
         transition: box-shadow 0.5s ease-in-out;
     }
-    
+
     .content {
         margin-top: 50px;
         margin-left: auto;
         margin-right: auto;
         width: 490px;
     }
-    
+
     #img_logo {
         position: absolute;
         margin: 15px 20px;
-     }
-    
-    #divisor{
-        background-color: rgba(0,0,0,0.5);
+    }
+
+    #divisor {
+        background-color: rgba(0, 0, 0, 0.5);
         margin-top: 5px;
-        padding: 15px ;
+        padding: 15px;
         min-height: 550px;
         width: 90%;
     }
-    
+
     #contenedorNav {
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0, 0, 0, 0.5);
         cursor: default;
         display: table;
         position: relative;
@@ -196,35 +196,35 @@
         font-size: 20px;
         text-align: center;
     }
-     
-     /*GENERICOS y VALORES DEBILES*/
-    
-     a{
+
+    /*GENERICOS y VALORES DEBILES*/
+
+    a {
         color: #FFFEBD;
         text-decoration: none;
-        text-shadow: 2px 2px 5px gray ;
+        text-shadow: 2px 2px 5px gray;
         display: block;
     }
-    
-    .textcont{
+
+    .textcont {
         font-family: 'Rostock';
         font-size: 18px;
         color: #FFFEBD;
-     }
-    
-     .io{
-        margin-top:80px;
+    }
+
+    .io {
+        margin-top: 80px;
         width: 90%;
         margin-left: 20px;
     }
-    
-    h2{
+
+    h2 {
         font-family: 'Rostock';
         font-size: 20px;
-     }
-    
+    }
+
     /*WEB DE LOGING*/
-    
+
     .logger {
         margin: 15px 4px 20px;
         height: 30px;
@@ -233,7 +233,7 @@
         display: flex;
         font-family: 'Rostock';
     }
-    
+
     .submitButton {
         font-family: 'Rostock';
         font-size: 20px;
@@ -245,7 +245,7 @@
         width: 100px;
         height: 40px;
     }
-    
+
     #log {
         align-items: center;
         justify-content: center;
@@ -253,15 +253,16 @@
         margin-top: 100px;
     }
 }
- @media only screen and not (max-width: 720px) {
+
+@media only screen and not (max-width: 720px) {
     body#index-bg {
-        background:  #4a2932;
+        background: #4a2932;
         background-size: 100%;
         font-family: 'Rostock';
         font-size: 20px;
         color: #FFFEBD;
     }
-    
+
     #indexcontent {
         width: 500px;
         height: 575px;
@@ -272,13 +273,13 @@
         background-color: rgba(165, 18, 23, 0.75);
         border-radius: 8% 8% 15% 15% / 8% 8% 15% 15%;
     }
-    
+
     #container {
         justify-content: center;
         display: flex;
         align-items: center;
     }
-    
+
     #intro {
         background: #830202;
         background: -webkit-linear-gradient(0deg, #830202 0%, #c20929 50%, #d77e45 100%);
@@ -286,7 +287,7 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
-    
+
     #imgIndex {
         margin: 0px;
         height: 510px;
@@ -294,7 +295,7 @@
         border-radius: 15% 15%;
         animation: fadeIn 1.5s;
     }
-    
+
     .title {
         font-size: 80px;
         width: 800px;
@@ -306,7 +307,7 @@
         font-family: 'Alice';
         text-shadow: 2px 3px grey;
     }
-    
+
     .enter {
         font-family: 'Rostock';
         font-size: 40px;
@@ -321,34 +322,34 @@
         box-shadow: 1px 1px #000000;
         transition: box-shadow 0.5s ease-in-out;
     }
-    
+
     .enter:hover {
         box-shadow: 4px 4px 10px 4px #000000;
         transition: box-shadow 0.5s ease-in-out;
     }
-    
+
     .content {
         margin-top: 50px;
         margin-left: auto;
         margin-right: auto;
         width: 650px;
     }
-    
+
     #img_logo {
         position: absolute;
         margin: 15px 20px;
-     }
-    
-    #divisor{
-        background-color: rgba(0,0,0,0.5);
+    }
+
+    #divisor {
+        background-color: rgba(0, 0, 0, 0.5);
         margin-top: 5px;
-        padding: 15px ;
+        padding: 15px;
         min-height: 550px;
         width: 95%;
     }
-    
+
     #contenedorNav {
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0, 0, 0, 0.5);
         cursor: default;
         display: table;
         position: relative;
@@ -358,34 +359,34 @@
         font-family: 'Rostock';
         font-size: 20px;
     }
-     
-     /*GENERICOS y VALORES DEBILES*/
-    
-    
-     a{
+
+    /*GENERICOS y VALORES DEBILES*/
+
+
+    a {
         color: #FFFEBD;
         text-decoration: none;
-        text-shadow: 2px 2px 5px gray ;
+        text-shadow: 2px 2px 5px gray;
         display: block;
     }
-    
-    .textcont{
+
+    .textcont {
         font-family: 'Rostock';
         font-size: 20px;
         color: #FFFEBD;
-     }
-    
-     .io{
-        margin-top:80px;
+    }
+
+    .io {
+        margin-top: 80px;
         width: 85%;
         margin-left: 80px;
     }
-    
-    h2{
+
+    h2 {
         font-family: 'Rostock';
         font-size: 20px;
-     }
-    
+    }
+
     /*WEB DE LOGING*/
     .logger {
         margin: 15px 4px 20px;
@@ -395,7 +396,7 @@
         display: flex;
         font-family: 'Rostock';
     }
-    
+
     .submitButton {
         font-family: 'Rostock';
         font-size: 20px;
@@ -407,7 +408,7 @@
         width: 100px;
         height: 40px;
     }
-    
+
     #log {
         align-items: center;
         justify-content: center;
@@ -418,13 +419,13 @@
 
 @media only screen and not (max-width: 870px) {
     body#index-bg {
-        background:  #4a2932;
+        background: #4a2932;
         background-size: 100%;
         font-family: 'Rostock';
         font-size: 20px;
         color: #FFFEBD;
     }
-    
+
     #indexcontent {
         width: 500px;
         height: 575px;
@@ -435,13 +436,13 @@
         background-color: rgba(165, 18, 23, 0.75);
         border-radius: 8% 8% 15% 15% / 8% 8% 15% 15%;
     }
-    
+
     #container {
         justify-content: center;
         display: flex;
         align-items: center;
     }
-    
+
     #intro {
         background: #830202;
         background: -webkit-linear-gradient(0deg, #830202 0%, #c20929 50%, #d77e45 100%);
@@ -449,7 +450,7 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
-    
+
     #imgIndex {
         margin: 0px;
         height: 510px;
@@ -457,7 +458,7 @@
         border-radius: 15% 15%;
         animation: fadeIn 1.5s;
     }
-    
+
     .title {
         font-size: 80px;
         width: 800px;
@@ -469,7 +470,7 @@
         font-family: 'Alice';
         text-shadow: 2px 3px grey;
     }
-    
+
     .enter {
         font-family: 'Rostock';
         font-size: 40px;
@@ -484,34 +485,34 @@
         box-shadow: 1px 1px #000000;
         transition: box-shadow 0.5s ease-in-out;
     }
-    
+
     .enter:hover {
         box-shadow: 4px 4px 10px 4px #000000;
         transition: box-shadow 0.5s ease-in-out;
     }
-    
+
     .content {
         margin-top: 50px;
         margin-left: auto;
         margin-right: auto;
         width: 840px;
     }
-    
+
     #img_logo {
         position: absolute;
         margin: 15px 20px;
-     }
-    
-    #divisor{
-        background-color: rgba(0,0,0,0.5);
+    }
+
+    #divisor {
+        background-color: rgba(0, 0, 0, 0.5);
         margin-top: 5px;
-        padding: 15px ;
+        padding: 15px;
         min-height: 550px;
         width: 95%;
     }
-    
+
     #contenedorNav {
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0, 0, 0, 0.5);
         cursor: default;
         display: table;
         position: relative;
@@ -522,37 +523,37 @@
         font-size: 30px;
         text-align: center;
     }
-    
-     
-     /*GENERICOS y VALORES DEBILES*/
- 
-    
-     a{
+
+
+    /*GENERICOS y VALORES DEBILES*/
+
+
+    a {
         color: #FFFEBD;
         text-decoration: none;
-        text-shadow: 2px 2px 5px gray ;
+        text-shadow: 2px 2px 5px gray;
         display: block;
     }
-    
-    .textcont{
+
+    .textcont {
         font-family: 'Rostock';
         font-size: 20px;
         color: #FFFEBD;
-     }
-    
-     .io{
-        margin-top:80px;
+    }
+
+    .io {
+        margin-top: 80px;
         width: 85%;
         margin-left: 80px;
     }
-    
-    h2{
+
+    h2 {
         font-family: 'Rostock';
         font-size: 20px;
-     }
-    
+    }
+
     /*WEB DE LOGING*/
-    
+
     .logger {
         margin: 15px 4px 20px;
         height: 30px;
@@ -561,7 +562,7 @@
         display: flex;
         font-family: 'Rostock';
     }
-    
+
     .submitButton {
         font-family: 'Rostock';
         font-size: 20px;
@@ -573,7 +574,7 @@
         width: 100px;
         height: 40px;
     }
-    
+
     #log {
         align-items: center;
         justify-content: center;
@@ -585,13 +586,13 @@
 
 @media only screen and not (max-width: 1180px) {
     body#index-bg {
-        background:  #4a2932;
+        background: #4a2932;
         background-size: 100%;
         font-family: 'Rostock';
         font-size: 20px;
         color: #FFFEBD;
     }
-    
+
     #indexcontent {
         width: 500px;
         height: 575px;
@@ -602,13 +603,13 @@
         background-color: rgba(165, 18, 23, 0.75);
         border-radius: 8% 8% 15% 15% / 8% 8% 15% 15%;
     }
-    
+
     #container {
         justify-content: center;
         display: flex;
         align-items: center;
     }
-    
+
     #intro {
         background: #830202;
         background: -webkit-linear-gradient(0deg, #830202 0%, #c20929 50%, #d77e45 100%);
@@ -616,7 +617,7 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
-    
+
     #imgIndex {
         margin: 0px;
         height: 510px;
@@ -624,7 +625,7 @@
         border-radius: 15% 15%;
         animation: fadeIn 1.5s;
     }
-    
+
     .title {
         font-size: 80px;
         width: 800px;
@@ -636,7 +637,7 @@
         font-family: 'Alice';
         text-shadow: 2px 3px grey;
     }
-    
+
     .enter {
         font-family: 'Rostock';
         font-size: 40px;
@@ -651,34 +652,34 @@
         box-shadow: 1px 1px #000000;
         transition: box-shadow 0.5s ease-in-out;
     }
-    
+
     .enter:hover {
         box-shadow: 4px 4px 10px 4px #000000;
         transition: box-shadow 0.5s ease-in-out;
     }
-    
+
     .content {
         margin-top: 50px;
         margin-left: auto;
         margin-right: auto;
         width: 1150px;
     }
-    
+
     #img_logo {
         position: absolute;
         margin: 15px 20px;
-     }
-    
-    #divisor{
-        background-color: rgba(0,0,0,0.5);
+    }
+
+    #divisor {
+        background-color: rgba(0, 0, 0, 0.5);
         margin-top: 5px;
-        padding: 15px ;
+        padding: 15px;
         min-height: 550px;
         width: 95%;
     }
-    
+
     #contenedorNav {
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0, 0, 0, 0.5);
         cursor: default;
         display: table;
         position: relative;
@@ -689,36 +690,36 @@
         font-size: 30px;
         text-align: center;
     }
-    
-     /*GENERICOS y VALORES DEBILES*/
- 
-    
-     a{
+
+    /*GENERICOS y VALORES DEBILES*/
+
+
+    a {
         color: #FFFEBD;
         text-decoration: none;
-        text-shadow: 2px 2px 5px gray ;
+        text-shadow: 2px 2px 5px gray;
         display: block;
     }
-    
-    .textcont{
+
+    .textcont {
         font-family: 'Rostock';
         font-size: 20px;
         color: #FFFEBD;
-     }
-    
-     .io{
-        margin-top:80px;
+    }
+
+    .io {
+        margin-top: 80px;
         width: 85%;
         margin-left: 80px;
     }
-    
-    h2{
+
+    h2 {
         font-family: 'Rostock';
         font-size: 20px;
-     }
-    
+    }
+
     /*WEB DE LOGING*/
-    
+
     .logger {
         margin: 15px 4px 20px;
         height: 30px;
@@ -727,7 +728,7 @@
         display: flex;
         font-family: 'Rostock';
     }
-    
+
     .submit {
         font-family: 'Rostock';
         font-size: 24px;
@@ -739,7 +740,7 @@
         width: 100px;
         height: 50px;
     }
-    
+
     #log {
         align-items: center;
         justify-content: center;
@@ -747,42 +748,52 @@
         margin-top: 100px;
         color: #FFFEBD;
     }
-    
+
 }
 
 @media only screen and not (min-width: 720px) {
-#img_logo{
-    display: none;
+    #img_logo {
+        display: none;
+    }
+
+    #contenedorNav {
+        background-color: rgba(0, 0, 0, 0.5);
+        cursor: default;
+        display: table;
+        position: relative;
+        height: 20px;
+        font-family: 'Rostock';
+        font-size: 18px;
+        padding-left: 5px;
+
+    }
 }
 
-#contenedorNav{
-    background-color: rgba(0,0,0,0.5);
-    cursor: default;
-    display: table;
-    position: relative;
-    height: 20px;
-    font-family: 'Rostock';
-    font-size: 18px;
-    padding-left: 5px;
-
-}
-}
-
-.titulo{
+.titulo {
     font-size: 30px;
     font-family: "Rostock";
     text-align: center;
 }
 
-a,h1,h2,h3,h4,h5,h6 {
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Vinque";
 }
 
-input,label,p,span,li{
+input,
+label,
+p,
+span,
+li {
     font-family: "Rostock";
 }
 
-body{
+body {
     background-image: url("../images/fondos/scaryBG.jpg");
     background-attachment: fixed;
     background-position: center;

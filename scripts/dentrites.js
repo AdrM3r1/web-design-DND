@@ -1,8 +1,9 @@
+/* Constantes importantes */
 const c_name_base = "userIsRegistered";
 const c_user = "nick";
 const pathname = window.location.pathname;
 
-
+/* funcion de cambio de logo */
 function cambioLogo() {
 	var nav = document.getElementById('img_logo');
 	var img = document.createElement('img');
@@ -14,6 +15,7 @@ function cambioLogo() {
 	}
 }
 
+/* funcion de checkeo de formulario para no dejar ningun campo sin rellenar */
 function checkForm() {
 	var userName = document.getElementById("userName").value;
 	var userEmail = document.getElementById("userEmail").value;
@@ -26,12 +28,13 @@ function checkForm() {
 			showConfirmButton: false,
 			timer: 1200
 
-		}).then(function() {
+		}).then(function () {
 			window.stop();
 		})
 	}
 }
 
+/* funcion que crea una cookie */
 function createCookie() {
 	let cvalue = true;
 	let exdays = 1;
@@ -42,6 +45,7 @@ function createCookie() {
 
 }
 
+/* funcion de lectura de cookie */
 function getCookie() {
 	let name = c_name_base + "=";
 	let ca = document.cookie.split(';');
@@ -64,6 +68,7 @@ function getCookie() {
 	return "";
 }
 
+/* funcion para cerrar sesion */
 function logOut() {
 	let name = c_name_base + "=";
 	let ca = document.cookie.split(';');
@@ -87,7 +92,7 @@ function logOut() {
 				text: "Nos vemos pronto",
 				showConfirmButton: false,
 				timer: 1500,
-			}).then(function() {
+			}).then(function () {
 				window.location.href = "../html/principal.html";
 			})
 		}
@@ -95,7 +100,10 @@ function logOut() {
 }
 
 
-
+/* 
+funcion que detecta si el usuario entra en una url sin cookie sea expulsado
+que pueda acceder si tiene la cookie
+*/
 function detectUrl(x) {
 	let cookValue = x;
 	let name = c_user + "=";
@@ -112,7 +120,7 @@ function detectUrl(x) {
 				text: "No tiene permisos para ver esta pagina",
 				showConfirmButton: false,
 				timer: 1200,
-			}).then(function() {
+			}).then(function () {
 				window.location.href = "../html/principal.html";
 			})
 		}

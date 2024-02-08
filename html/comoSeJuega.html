@@ -43,8 +43,7 @@
                         sesion</a>
                 </ul>
                 <!-- Menu flotante  -->
-                <nav style="float:right; padding: 5px; width: 350px; z-index: 100; position: fixed; top: 120px;
-                right: 0px;">
+                <nav class="howtoplay">
                     <h3>Menu</h3>
                     <ul>
                         <li><a href="#primerPaso">Por donde empezar</a></li>
@@ -92,6 +91,40 @@
 
                         </ul>
                 </nav>
+                <!-- menu para tamaños pequeños -->
+                <nav class="sm-howtoplay">
+                    <ul>
+                        <li><a href="#primerPaso">Por donde empezar</a></li>
+                        <li><a href="#clases">Clases</a></li>
+                        <ul style="columns:2;">
+                            <li><a href="#Barbaro">Barbaro</a></li>
+                            <li><a href="#Bardo">Bardo</a></li>
+                            <li><a href="#Brujo">Brujo</a></li>
+                            <li><a href="#Clerigo">Clerigo</a></li>
+                            <li><a href="#Druida">Druida</a></li>
+                            <li><a href="#Explorador">Explorador</a></li>
+                            <li><a href="#Guerrero">Guerrero</a></li>
+                            <li><a href="#Hechicero">Hechicero</a></li>
+                            <li><a href="#Mago">Mago</a></li>
+                            <li><a href="#Monje">Monje</a></li>
+                            <li><a href="#Paladin">Paladin</a></li>
+                            <li><a href="#Picaro">Picaro</a></li>
+                        </ul>
+                        <li><a href="#razas">Razas</a></li>
+                        <ul style="columns:2;">
+                            <li><a href="#Draco">Draconido</a></li>
+                            <li><a href="#Elf">Elfo</a></li>
+                            <li><a href="#Dwarf">Enano</a></li>
+                            <li><a href="#Gnome">Gnomo</a></li>
+                            <li><a href="#Human">Humano</a></li>
+                            <li><a href="#Halfing">Mediano</a></li>
+                            <li><a href="#HalfElf">Semielfo</a></li>
+                            <li><a href="#HalfOrc">Semiorco</a></li>
+                            <li><a href="#Tief">Tiefling</a></li>
+
+                        </ul>
+                </nav>
+
                 <div class="io">
                     <div class="container">
                         <h2 id="primerPaso">Cómo comenzar a jugar a Dungeons & Dragons</h2>
@@ -753,8 +786,8 @@
                                     </ul>
                                     <p class="textcont">
                                         Origen: <a href="https://nivel20.com/games/dnd-5/rulebooks/4-reglas-basicas"
-                                            target="_blank"> Reglas Basicas <img src="../images/iconItems/link.png"></a> 
-                                             Puntos de Golpe: d8<br>
+                                            target="_blank"> Reglas Basicas <img src="../images/iconItems/link.png"></a>
+                                        Puntos de Golpe: d8<br>
                                         Requisitos para multiclase: Destreza 13<br>
                                     </p>
                                     </p>
@@ -1789,6 +1822,90 @@
             height: 15px;
             display: flex;
         }
+
+        .howtoplay {
+            float: right;
+            padding: 5px;
+            width: 300px;
+            z-index: 100;
+            position: fixed;
+            top: 150px;
+            right: 0px;
+
+        }
+
+        .sm-howtoplay {
+            display: none;
+            visibility: hidden;
+        }
+
+        @media only screen and not (min-width: 1385px) {
+            .howtoplay {
+                float: left;
+                top: 225px;
+                width: 300px;
+                padding: 5px;
+                right: 0px;
+                position: sticky;
+            }
+        }
+
+        @media only screen and not (min-width: 920px) {
+            .howtoplay {
+                float: left;
+                top: 225px;
+                width: 275px;
+                padding-top: 50px;
+                right: 0px;
+            }
+
+            li {
+                list-style: none;
+            }
+
+            ul {
+                columns: 1;
+            }
+
+        }
+
+        @media only screen and not (min-width: 915px) {
+            .howtoplay {
+                visibility: hidden;
+                display: none;
+            }
+
+            .sm-howtoplay {
+                float: left;
+                display: flex;
+                visibility: visible;
+                top: 225px;
+                position: sticky;
+
+            }
+
+            li {
+                list-style: none;
+            }
+
+            ul {
+                columns: 1;
+            }
+        }
+
+        @media only screen and not (min-width: 875px) {
+            .howtoplay {
+                visibility: hidden;
+                display: none;
+            }
+
+            .sm-howtoplay {
+                visibility: hidden;
+                display: none;
+            }
+ 
+        }
+
     </style>
     <script>
         cambioLogo();
