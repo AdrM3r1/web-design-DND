@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        <| DND BUILDER |>
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!--estilo y js inicio-->
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/pupils.css'>
+    <script src='../scripts/dentrites.js'></script>
+    <!--JQuery-->
+    <script src="../lib/jquery-3.4.1.min.js"></script>
+    <!--Bootstrap-->
+    <script src='../scripts/bootstrap.bundle.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/bootstrap.css'>
+    <!--Sweet alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body id="website">
+    <div>
+        <h1 class="titulo">The Iris Of The Beholder </h1>
+    </div>
+
+    <div class="content">
+        <!--content start-->
+        <div class="row-cols-auto">
+            <div id="img_logo"> </div>
+            <div id="divisor">
+                <ul id="contenedorNav" role="menubar">
+                    <li class="itemNav" role="menuitem"><a href="info.html"> Informacion</a></li>
+                    <li class="itemNav" role="menuitem"><a href="comoSeJuega.html">Como Jugar</a></li>
+                    <li class="itemNav" role="menuitem"><a href="utilidades.html">Herramientas</a></li>
+                    <li class="itemNav" role="menuitem" id="reg"><a href="registro.php">Registrate</a></li>
+                    <li class="itemNav" role="menuitem" id="log"><a style="cursor: pointer;" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">Login</a></li>
+                    <li class="itemNav" role="menuitem" id="user"><a href="usuario.php">Mi cuenta</a></li>
+                    <a onclick="logOut()" style="cursor: pointer;font-size: 14px; margin-left: 12px;" id="logout">Cerrar
+                        sesion</a>
+                </ul>
+                <!-- Menu flotante  -->
+                <nav style="float:right; padding: 5px; width: 320px; z-index: 100; position: fixed; top: 120px;
+                right: 0px;">
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="#primerPaso">Por donde empezar</a></li>
+                        <li><a href="#clases">Clases</a></li>
+                        <ul style="columns:2;">
+                            <li><a href="#Barbaro">Barbaro</a></li>
+                            <li><a href="#Bardo">Bardo</a></li>
+                            <li><a href="#Brujo">Brujo</a></li>
+                            <li><a href="#Clerigo">Clerigo</a></li>
+                            <li><a href="#Druida">Druida</a></li>
+                            <li><a href="#Explorador">Explorador</a></li>
+                            <li><a href="#Guerrero">Guerrero</a></li>
+                            <li><a href="#Hechicero">Hechicero</a></li>
+                            <li><a href="#Mago">Mago</a></li>
+                            <li><a href="#Monje">Monje</a></li>
+                            <li><a href="#Paladin">Paladin</a></li>
+                            <li><a href="#Picaro">Picaro</a></li>
+                        </ul>
+                        <li><a href="#razas">Razas</a></li>
+                </nav>
+                <div class="io">
+                    <div class="container">
+                        <h2 id="primerPaso">Cómo comenzar a jugar a Dungeons & Dragons</h2>
+                        <div class="row justify-content-md-start">
+                            <div class="col-md-12"> <!-- COMO JUGAR PRIMERA PARTE -->
+                                <div class="container">
+                                    <br>
+                                    <h4><img style="height:100px;" id="imgIndex" src="../images/iconItems/dragon.png"> -
+                                        Reúne a tu grupo antes de continuar </h4>
+                                    <p class="textcont">
+                                        Dungeons & Dragons es un juego para jugar en compañía, por lo que necesitaréis
+                                        como
+                                        mínimo dos personas (aunque es más divertido con más jugadores que puedan
+                                        aportar más
+                                        cosas). Una de las personas en el grupo ejerce el papel de "Master" o "Director
+                                        de
+                                        juego", y es quien crea la historia, dirige la narrativa y se encarga de
+                                        interpretar al
+                                        resto de personajes que no son los jugadores. <br><br>
+
+                                        El papel del Master es crear una
+                                        historia y conducirla para que los jugadores puedan centrarse en jugar a sus
+                                        personajes, resolver un misterio, completar la mazmorra actual, o lo que sea que
+                                        requiera la trama.
+                                        <br><br>
+                                        Cada jugador maneja un personaje, que puede haber creado él mismo o sido
+                                        proporcionado
+                                        por el Master para la partida que se va a jugar. Dentro del mundo de Dungeons &
+                                        Dragons
+                                        hay diferentes razas para elegir: elfos, enanos, humanos, goblins, dracónidos...
+                                        y
+                                        varias clases como mago, paladín o bardo, cada una con una serie de
+                                        características y
+                                        habilidades diferentes.
+                                        <br><br>
+                                        Si estáis creando vosotros mismos al personaje, elegid una combinación que os
+                                        guste y
+                                        pensad qué es lo que os apetece más jugar: un tiefling clérigo, una semielfa
+                                        barda, un
+                                        humano guerrero... Lo ideal es que el grupo esté más o menos equilibrado, pero
+                                        al final
+                                        se trata de pasárselo bien y manejar a un personaje que os invite a jugar con él
+                                        en las
+                                        aventuras que vayáis a vivir con el resto del equipo.
+                                    </p>
+                                </div>
+
+                                <div class="container">
+                                    <h4><img style="height:100px;" id="imgIndex" src="../images/iconItems/dragon.png"> -
+                                        Las
+                                        reglas
+                                        están para ayudarte</h4>
+                                    <p class="textcont">
+                                        Ahora que ya os hemos hecho la cabeza un lío hablando de razas y clases, es el
+                                        momento
+                                        de hablaros de Los Manuales. Dentro del catálogo de Dungeons & Dragons existen
+                                        varios
+                                        libros que recogen las reglas del juego, siendo los más básicos el Manual del
+                                        Jugador,
+                                        la Guía del Dungeon Master y el Manual de Monstruos. Cada uno de ellos cubre un
+                                        aspecto
+                                        diferente, pero el más básico que necesitaréis es el Manual del Jugador, ya que
+                                        cubre
+                                        todo el proceso de creación del personaje, reglas de combate, turnos y muchos
+                                        trucos
+                                        para comenzar a construir una campaña como Master.
+                                        <br><br>
+                                        Las reglas son básicas para poder jugar, pero hay ciertas veces que se vuelven
+                                        complicadas o innecesarias dependiendo del grupo y sus necesidades. No tengáis
+                                        miedo
+                                        de
+                                        cambiar las reglas, o incluso de usar reglas hechas en casa por vosotros. Si los
+                                        pasos
+                                        para lanzar hechizos son demasiado complicados, ¡pues cambiadlos hasta dar con
+                                        algo
+                                        que
+                                        sea más divertido para vosotros!. Lo importante es pasárselo bien, si una parte
+                                        del
+                                        sistema está haciendo que la partida no funcione, entonces siempre podéis
+                                        cambiarla
+                                        o
+                                        readaptarla.
+                                        <br><br>
+                                        También podéis enfocar la partida más a un tono interpretativo, de matar
+                                        monstruos o
+                                        una
+                                        mezcla, depende de lo que os apetezca. No hace falta ser un actor profesional,
+                                        pero
+                                        "interpretar" ayuda a meterse más en la partida y puede hacer el juego más
+                                        divertido,
+                                        aunque siempre se puede simplemente describir qué hacen o cómo actúan los
+                                        personajes.
+                                    </p>
+                                </div>
+                                <div class="container"> <!-- SEGUNDA PUNTO DE PRIMEROS PASOS -->
+                                    <h4><img style="height:100px;" id="imgIndex" src="../images/iconItems/dragon.png"> -
+                                        Cómo
+                                        empezar una partida</h4>
+                                    <p class="textcont">
+                                        Además de estos manuales que os comentamos, también existe una Caja de Inicio
+                                        que
+                                        contiene un manual más resumido, una primera aventura lista para jugar, varios
+                                        personajes pregenerados y un juego de dados, con lo que tendríais todo lo básico
+                                        que
+                                        necesitáis para una partida. Es una opción muy buena para darle una primera
+                                        oportunidad
+                                        aDungeons & Dragons, especialmente para pillar el truco a las reglas más
+                                        esenciales
+                                        y no
+                                        bloquearse a la hora de crear un personaje.
+                                        <br><br>
+                                        Si es la primera vez que el grupo juega, también se suele recomendar comenzar
+                                        con
+                                        una
+                                        partida corta y contenida, que solo vaya a llevar una o dos sesiones. De esta
+                                        manera
+                                        tanto los jugadores como el Master pueden adaptarse al resto del grupo, los
+                                        personajes y
+                                        su dinámica. Hay muchas historias oficiales pregeneradas, como la de la caja de
+                                        inicio,
+                                        y dentro del catálogo de Edge ya están disponibles varias historias listas para
+                                        jugar,
+                                        como La Maldición de Strahd o Waterdeep: El Golpe de los Dragones.
+                                        <br><br>
+                                        ¿Que queréis echarle imaginación y crear vuestras propias historias y mundo?
+                                        ¡Pues
+                                        adelante! No tengáis miedo de crear un mundo de D&D entre todos, o utilizar un
+                                        escenario
+                                        ya conocido como Reinos Olvidados. Las historias pregeneradas son una buena
+                                        ayuda
+                                        para
+                                        entender cómo construir una partida y personajes no-jugadores, pero no hace
+                                        falta
+                                        limitarse a ellas y también podéis empezar a jugar por todo lo alto con una
+                                        historia
+                                        original.
+                                    </p>
+                                </div>
+
+                                <div class="container"> <!-- TERCERA PARTE DE PRIMEROS PASOS  -->
+                                    <h4><img style="height:100px;" id="imgIndex" src="../images/iconItems/dragon.png"> -
+                                        El buen
+                                        rollo es fundamental</h4>
+                                    <p class="textcont">
+                                        Unas de las cosas más importantes para aprender a jugar a Dungeons and Dragons
+                                        es
+                                        procurar que haya buen rollo en el grupo. Habrá veces que se produzcan
+                                        situaciones
+                                        estresantes o más extremas durante el juego, pero es fundamental llevarse bien
+                                        con
+                                        los
+                                        otros jugadores y con el Master. Si algo no está funcionando con el juego, tened
+                                        paciencia e intentad encontrar una solución.
+                                        <br><br>
+                                        Dungeons & Dragons no es un juego de Master vs Jugadores. No se gana nada ni hay
+                                        un
+                                        jugador que gane sobre el resto, sino que, de hecho, normalmente hay que
+                                        colaborar
+                                        para
+                                        poder mover la trama y poder continuar con la partida. Si un jugador sabotea
+                                        activamente
+                                        al resto, o un personaje intenta brillar por encima del resto tratando de
+                                        conseguir
+                                        siempre el protagonismo, es mejor hablarlo y aclarar las cosas. De la misma
+                                        forma,
+                                        si no
+                                        entendéis algo, pedid ayuda. Un buen grupo explica las cosas y te da el tiempo
+                                        que
+                                        necesites para decidir tus acciones.
+                                        <br><br>
+                                        El Master normalmente dedica bastante tiempo a preparar las partidas, por lo que
+                                        también
+                                        es necesario respetarlo. No interrumpáis durante las descripciones y prestad
+                                        atención
+                                        durante la narración para enteraros de las cosas. Igualmente, si sois Master, no
+                                        os
+                                        dediquéis a torturar a vuestros jugadores para saliros siempre con la vuestra,
+                                        vuestra
+                                        labor también es hacer el juego entretenido para todos.
+                                    </p>
+                                </div>
+
+                                <div class="container">
+                                    <h4><img style="height:100px;" id="imgIndex" src="../images/iconItems/dragon.png">
+                                        - Herramientas de oficio</h4>
+                                    <p class="textcont">
+                                        Además de los manuales y la historia que vayáis a jugar, también necesitaréis
+                                        otras
+                                        cosas básicas: las fichas y dados. Las fichas contienen todas las
+                                        características
+                                        del
+                                        personaje y sus habilidades, y con los dados se pueden determinar diferentes
+                                        acciones.
+                                        Es posible que necesitéis diferentes tipos de dados, por lo que lo mejor es
+                                        hacerse
+                                        un
+                                        par de sets variados. Si jugáis "en físico", recordad también tener a mano
+                                        lápices y
+                                        una
+                                        libreta para apuntar cosas relevantes como nombres de lugares o de personajes o
+                                        resúmenes de lo que ha pasado hasta ahora.
+                                        <br><br>
+                                        También existen páginas y apps como D&D Beyond, que contiene todos los libros
+                                        oficiales
+                                        y te permite crear una hoja de personaje digital y consultar cada característica
+                                        al
+                                        momento. Si además no jugáis presencialmente, podéis jugar a través de Roll20,
+                                        que
+                                        también permite almacenar las hojas de personaje, crear mapas e incluso hacer
+                                        tiradas de
+                                        dados, por lo que si jugáis a través de videoconferencia ayuda muchísimo a que
+                                        todos
+                                        podáis ver el mismo escenario y tengáis la misma información. Con ambas webs
+                                        tenéis
+                                        parte del contenido básico de Dungeons & Dragons de manera gratuita, pero
+                                        también
+                                        podéis
+                                        pagar para acceder a ciertas expansiones, razas u otras características.
+                                        <br><br>
+                                        Youtube es vuestro amigo, y hay muchísimos canales dedicados a explicar reglas o
+                                        aportar
+                                        trucos para hacer mejor vuestra partida. Si no le tenéis miedo al inglés, el
+                                        Handbooker
+                                        Helper del equipo de Critical Role ayuda muy bien a entender algunas de las
+                                        bases
+                                        del
+                                        juego. Si queréis ser Masters, pero no sabéis muy bien cómo darle más vidilla a
+                                        vuestra
+                                        partida, los Game Master Tips de Geek & Sundry son una auténtica maravilla con
+                                        consejos
+                                        de diferentes directores de juego.
+                                        <br><br>
+                                        Todo estos son consejos si no sabéis por dónde empezar con vuestra partida de
+                                        Dungeons &
+                                        Dragons, aunque también se pueden aplicar a muchos otros juegos de rol. El
+                                        objetivo
+                                        siempre es pasar un buen rato entre amigos y construir una historia entre todos,
+                                        por
+                                        lo
+                                        que (igual que con las reglas de los manuales) veis que algo no funciona,
+                                        siempre
+                                        podéis
+                                        cambiarlo y adaptarlo.
+                                    </p>
+                                </div>
+                            </div>
+                            <h4>Video que explica como se juega </h4>
+                            <iframe style="margin-bottom:35px" width="560" height="420"
+                                src="https://www.youtube.com/embed/lkjoLmStBUI?si=0ueFg1U6iquz1D24"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+
+                            <h4>Video que enseña como rellenar la tabla de personaje de la quinta edicion</h4>
+                            <iframe style="margin-bottom:5px" width="560" height="420"
+                                src="https://www.youtube.com/embed/IlWed5Ur7bI?si=8Vwf-t1MqbQbfhs4"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+
+                            <!-- LISTA DE CLASES -->
+                            <div class="col-md-6">
+                                <div class="container"><br>
+                                    <h2 id="clases">Clases</h2>
+                                    <br>
+                                    <h6 id="Barbaro"><img style="height:65px;padding:5px;" id="imgIndex"
+                                            src="../images/iconItems/barb.png">-
+                                        BÁRBARO</h6>
+                                    <p class="textcont">Para algunos, su rabia brota de la comunión con
+                                        espíritus de animales salvajes.
+                                        Otros recurren a su hirviente reserva de ira frente a un mundo lleno de dolor.
+                                        Para
+                                        los bárbaros, la furia es un poder que no sólo les proporciona un frenesí
+                                        ciego
+                                        en la batalla, sino también extraordinarios reflejos, resistencia y proezas de
+                                        fuerza.
+                                        <br><br>
+                                        Equipo: Además del que obtengas por tu trasfondo, empiezas con el siguiente
+                                        equipo:
+
+                                    <ul class="textcont">
+                                        <li>(a) un hacha a dos manos o (b) cualquier arma cuerpo a cuerpo marcial;</li>
+                                        <li>(a) dos hachas de mano o (b) cualquier arma sencilla;
+                                            un paquete de explorador y cuatro jabalinas.</li>
+                                    </ul>
+                                    <p class="textcont">
+                                        Origen: <a href="https://nivel20.com/games/dnd-5/rulebooks/4-reglas-basicas"
+                                            target="_blank"> Reglas Basicas</a>
+                                        Puntos de Golpe: d12 <br>
+                                        Requisitos para multiclase: Fuerza 13
+                                    </p>
+                                    </p>
+
+                                    <br>
+
+                                    <h6 id="Bardo"><img style="height:65px;padding:5px;" id="imgIndex"
+                                            src="../images/iconItems/bard.png">-
+                                        BARDO</h6>
+                                    <p class="textcont">
+
+                                        Ya sea un erudito, un poeta o un canalla, un bardo teje su magia a través de sus
+                                        palabras y su música para inspirar a los aliados, desmoralizar a los enemigos,
+                                        manipular mentes, crear ilusiones e incluso sanar heridas.
+                                        <br><br>
+                                        Equipo: Además del que obtengas por tu trasfondo, empiezas con el siguiente
+                                        equipo:
+                                        <br><br>
+                                    <ul class="textcont">
+                                        <li>(a) un estoque, (b) una espada larga o (c) cualquier arma sencilla;</li>
+                                        <li>(a) un paquete de diplomático o (b) un paquete de artista;</li>
+                                        <li>(a) un laúd o (b) cualquier otro instrumento musical;
+                                            armadura de cuero y una daga.</li>
+                                    </ul>
+                                    <p class="textcont">
+                                        Origen: <a href="https://nivel20.com/games/dnd-5/rulebooks/4-reglas-basicas"
+                                            target="_blank"> Reglas Basicas</a>
+                                        Puntos de Golpe: d8
+                                        <br>
+                                        Requisitos para multiclase: Carisma 13
+                                        <br><br>
+                                        Magia
+                                        <br>
+                                        - Lanzador de conjuros: Lanzador puro<br>
+                                        - Lanzamiento de conjuros: Mediante conjuros conocidos<br>
+                                        - Nivel de conjuro máximo: Nivel 9<br>
+                                        - Puede lanzar trucos: Sí<br>
+                                        - Aptitud mágica: Carisma<br>
+                                        - Lista de conjuros: Conjuros de bardo
+                                    </p>
+                                    </p>
+
+                                    <br>
+
+                                    <h6 id="Brujo"><img style="height:65px;padding:5px;" id="imgIndex"
+                                            src="../images/iconItems/brujo.png">-
+                                        BRUJO</h6>
+                                    <p class="textcont">
+                                        Los brujos son buscadores del conocimiento que se encuentra escondido en el
+                                        multiverso. A través de pactos hechos con seres poderosos de poder sobrenatural,
+                                        los brujos desatan efectos mágicos tanto sutiles como espectaculares y
+                                        recolectan secretos arcanos para potenciar su propio poder.
+                                        <br><br>
+                                        Equipo: Además del que obtengas por tu trasfondo, empiezas con el siguiente
+                                        equipo:
+
+                                    <ul class="textcont">
+                                        <li>(a) una ballesta ligera y 20 virotes o (b) cualquier arma sencilla;
+                                        <li>(a) un saquito de componentes o (b) un canalizador arcano; </li>
+                                        <li>(a) un paquete de erudito o (b) un paquete de explorador de mazmorras;</li>
+                                        una armadura
+                                    </ul>
+                                    <p class="textcont">
+                                        Origen: <a href="https://nivel20.com/games/dnd-5/rulebooks/4-reglas-basicas"
+                                            target="_blank"> Reglas Basicas</a>
+                                        Puntos de Golpe: d8<br>
+                                        Requisitos para multiclase: Carisma 13 <br><br>
+                                        Magia
+                                        <br>
+                                        - Lanzador de conjuros: Lanzador de pacto<br>
+                                        - Lanzamiento de conjuros: Mediante conjuros conocidos<br>
+                                        - Nivel de conjuro máximo: Nivel 5<br>
+                                        - Puede lanzar trucos: Sí<br>
+                                        - Aptitud mágica: Carisma<br>
+                                        - Lista de conjuros: Conjuros de brujo<br>
+                                    </p>
+                                    </p>
+
+                                    <br>
+
+                                    <h6 id="Clerigo"><img style="height:65px;padding:5px;" id="imgIndex"
+                                            src="../images/iconItems/clerigo.png">-
+                                        CLÉRIGO</h6>
+                                    <p class="textcont">
+                                        Los clérigos son intermediarios entre el mundo mortal y los distantes planos
+                                        divinos. Tan diferentes entre ellos como los dioses a los que sirven, los
+                                        clérigos se esfuerzan por personificar las obras de sus deidades. No son
+                                        sacerdotes ordinarios, un clérigo se encuentra imbuido de magia divina.
+                                        <br><br>
+                                        Equipo: Además del que obtengas por tu trasfondo, empiezas con el siguiente
+                                        equipo:
+                                    <ul class="textcont">
+                                        <li>(a) una maza o (b) un martillo de guerra (si eres competente);</li>
+                                        <li>(a) una cota de escamas, (b) una armadura de cuero o (c) una cota de malla
+                                            (si
+                                            eres competente);</li>
+                                        <li>(a) una ballesta ligera y 20 virotes o (b) cualquier arma sencilla;</li>
+                                        <li>(a) un paquete de sacerdote o (b) un paquete de explorador;
+                                            un escudo y un símbolo sagrado.</li>
+                                    </ul>
+                                    <p class="textcont">
+                                        Origen: <a href="https://nivel20.com/games/dnd-5/rulebooks/4-reglas-basicas"
+                                            target="_blank"> Reglas Basicas</a>
+                                        Puntos de Golpe: d8
+                                        <br>
+                                        Requisitos para multiclase: Sabiduría 13
+                                        <br><br>
+                                        Magia<br>
+                                        - Lanzador de conjuros: Lanzador puro<br>
+                                        - Lanzamiento de conjuros: Mediante conjuros preparados<br>
+                                        - Nivel de conjuro máximo: Nivel 9<br>
+                                        - Puede lanzar trucos: Sí<br>
+                                        - Aptitud mágica: Sabiduría<br>
+                                        - Lista de conjuros: Conjuros de clérigo<br>
+                                    </p>
+                                    </p>
+
+                                    <br>
+
+                                    <h6 id="Druida"><img style="height:65px;padding:5px;" id="imgIndex"
+                                            src="../images/iconItems/druida.png">-
+                                        DRUIDA</h6>
+                                    <p class="textcont">
+                                        Ya sea invocando a las fuerzas elementales o emulando a las criaturas del mundo
+                                        animal, los druidas son la personificación de la resistencia, astucia y furia de
+                                        la naturaleza. Dicen no tener un dominio sobre la naturaleza. En lugar de eso,
+                                        se ven como una extensión de la voluntad indomable de la misma.
+                                        <br><br>
+                                        Equipo: Además del que obtengas por tu trasfondo, empiezas con el siguiente
+                                        equipo:
+                                    <ul class="textcont">
+                                        <li>(a) un escudo de madera o (b) cualquier arma sencilla;</li>
+                                        <li>(a) una cimitarra o (b) cualquier arma cuerpo a cuerpo sencilla;</li>
+                                        armadura de cuero, un paquete de explorador y un canalizador druídico.
+                                    </ul>
+                                    <p class="textcont">
+                                        Origen: <a href="https://nivel20.com/games/dnd-5/rulebooks/4-reglas-basicas"
+                                            target="_blank"> Reglas Basicas</a>
+                                        Puntos de Golpe: d8
+                                        <br>
+                                        Requisitos para multiclase: Sabiduría 13
+                                        <br><br>
+                                        Magia
+                                        <br>
+                                        - Lanzador de conjuros: Lanzador puro<br>
+                                        - Lanzamiento de conjuros: Mediante conjuros preparados<br>
+                                        - Nivel de conjuro máximo: Nivel 9<br>
+                                        - Puede lanzar trucos: Sí<br>
+                                        - Aptitud mágica: Sabiduría<br>
+                                        - Lista de conjuros: Conjuros de druida
+                                    </p>
+                                    </p>
+
+                                    <br>
+
+                                    <h6 id="Explorador"><img style="height:65px;padding:5px;" id="imgIndex"
+                                            src="../images/iconItems/explor.png">-
+                                        EXPLORADOR</h6>
+                                    <p class="textcont">
+                                        Lejos del bullicio de las ciudades y pueblos, más allá de las defensas que
+                                        mantienen a las granjas más lejanas protegidas de los terrores de la naturaleza,
+                                        en medio de tupidos bosques sin caminos y a través de enormes y vacías llanuras,
+                                        los exploradores mantienen su interminable guardia.
+                                        <br><br>
+                                        Equipo: Además del que obtengas por tu trasfondo, empiezas con el siguiente
+                                        equipo:
+                                    <ul class="textcont">
+                                        <li>(a) una cota de escamas o (b) una armadura de cuero;</li>
+                                        <li>(a) dos espadas cortas o (b) dos armas cuerpo a cuerpo sencillas;</li>
+                                        <li>(a) un paquete de explorador de mazmorras o (b) un paquete de explorador;
+                                            un arco largo y una aljaba con 20 flechas.</li>
+                                    </ul>
+                                    <p class="textcont">
+                                        Origen: <a href="https://nivel20.com/games/dnd-5/rulebooks/4-reglas-basicas"
+                                            target="_blank"> Reglas Basicas</a>
+                                        Puntos de Golpe: d10<br>
+                                        <br>
+                                        Requisitos para multiclase:<br> Destreza 13 y Sabiduría 13
+                                        <br><br>
+                                        Magia<br>
+                                        - Lanzador de conjuros: Lanzador medio<br>
+                                        - Lanzamiento de conjuros: Mediante conjuros conocidos<br>
+                                        - Nivel de conjuro máximo: Nivel 5<br>
+                                        - Puede lanzar trucos: No<br>
+                                        - Aptitud mágica: Sabiduría<br>
+                                        - Lista de conjuros: Conjuros de explorador>
+                                    </p>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div style="padding-top:22px" class="container">
+                                    <br><br><br>
+                                    <h6 id="Guerrero"><img style="height:65px;padding:5px;" id="imgIndex"
+                                            src="../images/iconItems/guerrero.png">-
+                                        GUERRERO</h6>
+                                    <p class="textcont">
+                                        Todos los guerreros comparten un dominio magistral de las armas y armaduras, y
+                                        un exhaustivo conocimiento de las habilidades del combate. Además, están muy
+                                        relacionados con la muerte, tanto repartiéndola como mirándola fijamente,
+                                        desafiantes.
+                                        <br><br>
+                                        Equipo: Además del que obtengas por tu trasfondo, empiezas con el siguiente
+                                        equipo:
+                                    <ul class="textcont">
+                                        <li>(a) una cota de malla o (b) una armadura de cuero, un arco largo y 20
+                                            flechas;</li>
+                                        <li>(a) un arma marcial y un escudo o (b) dos armas marciales;</li>
+                                        <li>(a) una ballesta ligera y 20 virotes o (b) dos hachas de mano;</li>
+                                        <li>(a) un paquete de explorador de mazmorras o (b) un paquete de</li>
+                                        explorador.
+                                    </ul>
+                                    <p class="textcont">
+                                        Origen: <a href="https://nivel20.com/games/dnd-5/rulebooks/4-reglas-basicas"
+                                            target="_blank"> Reglas Basicas</a>
+                                        Puntos de Golpe: d10<br>
+                                        Requisitos para multiclase: <br>Fuerza 13 o Destreza 13
+                                    </p>
+                                    </p>
+
+                                    <br>
+
+                                    <h6 id="Hechicero"><img style="height:65px;padding:5px;" id="imgIndex"
+                                            src="../images/iconItems/hechiz.png">-
+                                        HECHICERO</h6>
+                                    <p class="textcont">
+                                        Los hechiceros tienen una magia innata, conferida por una línea de sangre
+                                        exótica, una influencia de otro mundo o la exposición a fuerzas cósmicas
+                                        desconocidas. Uno no puede estudiar hechicería como quien estudia un lenguaje,
+                                        más de lo que uno puede aprender a vivir una vida legendaria. Nadie elige la
+                                        hechicería, el poder elige al hechicero.
+                                        <br><br>
+                                        Equipo: Además del que obtengas por tu trasfondo, empiezas con el siguiente
+                                        equipo:<br><br>
+                                    <ul class="textcont">
+                                        <li>(a) una ballesta ligera y 20 virotes o (b) cualquier arma sencilla;</li>
+                                        <li>(a) un saquito de componentes o (b) un canalizador arcano;</li>
+                                        <li> (a) un paquete de explorador de mazmorras o (b) un paquete de
+                                            explorador;</li>
+                                        dos dagas.
+                                    </ul>
+                                    <p class="textcont">
+                                        Origen: <a href="https://nivel20.com/games/dnd-5/rulebooks/4-reglas-basicas"
+                                            target="_blank"> Reglas Basicas</a>
+                                        Puntos de Golpe: d6<br>
+                                        Requisitos para multiclase: Carisma 13<br><br>
+                                        Magia
+                                        <br>
+                                        - Lanzador de conjuros: Lanzador puro<br>
+                                        - Lanzamiento de conjuros: Mediante conjuros conocidos<br>
+                                        - Nivel de conjuro máximo: Nivel 9<br>
+                                        - Puede lanzar trucos: Sí<br>
+                                        - Aptitud mágica: Carisma<br>
+                                        - Lista de conjuros: Conjuros de hechicero
+                                    </p>
+                                    </p>
+
+                                    <br>
+
+                                    <h6 id="Mago"><img style="height:65px;padding:5px;" id="imgIndex"
+                                            src="../images/iconItems/mago.png">-
+                                        MAGO</h6>
+                                    <p class="textcont">
+                                        Los magos son los practicantes supremos de la magia, definidos y unidos como una
+                                        clase por los hechizos que conjuran. A partir de la sutil onda de la magia que
+                                        impregna el cosmos, los magos lanzan explosivos hechizos de fuego, arcos
+                                        voltaicos, sutiles engaños y brutales formas de control mental.
+                                        <br><br>
+                                        Equipo: Además del que obtengas por tu trasfondo, empiezas con el siguiente
+                                        equipo:<br><br>
+                                    <ul class="textcont">
+                                        <li>(a) un bastón o (b) una daga; </li>
+                                        <li>(a) un saquito de componentes o (b) un canalizador arcano;</li>
+                                        <li>(a) un paquete de erudito o (b) un paquete de explorador;
+                                            un libro de conjuros.</li>
+                                    </ul>
+                                    <p class="textcont">
+                                        Origen: <a href="https://nivel20.com/games/dnd-5/rulebooks/4-reglas-basicas"
+                                            target="_blank"> Reglas Basicas</a>
+                                        Puntos de Golpe: d6<br>
+                                        Requisitos para multiclase: Inteligencia 13<br><br>
+                                        Magia<br>
+
+                                        - Lanzador de conjuros: Lanzador puro<br>
+                                        - Lanzamiento de conjuros: Mediante conjuros preparados<br>
+                                        - Nivel de conjuro máximo: Nivel 9<br>
+                                        - Puede lanzar trucos: Sí<br>
+                                        - Aptitud mágica: Inteligencia<br>
+                                        - Lista de conjuros: Conjuros de mago
+                                    </p>
+                                    </p>
+
+                                    <br>
+
+                                    <h6 id="Monje"><img style="height:65px;padding:5px;" id="imgIndex"
+                                            src="../images/iconItems/monje.png">-
+                                        MONJE</h6>
+                                    <p class="textcont">
+                                        Cualquiera que sea su disciplina, los monjes están unidos por su habilidad para
+                                        utilizar mágicamente la energía que corre por sus cuerpos. Ya sea canalizada
+                                        en una impactante demostración de proeza marcial o en el sutil enfoque en la
+                                        habilidad defensiva y la velocidad, esta energía impulsa todo lo que el monje
+                                        hace.
+                                        <br><br>
+                                        Equipo: Además del que obtengas por tu trasfondo, empiezas con el siguiente
+                                        equipo:
+                                        <br><br>
+                                    <ul class="textcont">
+                                        <li>(a) una espada corta o (b) cualquier arma sencilla;</li>
+                                        <li>(a) un paquete de explorador de mazmorras o (b) un paquete de explorador;
+                                            10 dardos.</li>
+                                    </ul>
+                                    <p class="textcont">
+                                        Origen: <a href="https://nivel20.com/games/dnd-5/rulebooks/4-reglas-basicas"
+                                            target="_blank"> Reglas Basicas</a>
+                                        Puntos de Golpe: d8<br>
+                                        Requisitos para multiclase: <br>
+                                        Destreza 13 y Sabiduría 13
+                                    </p>
+                                    </p>
+
+                                    <br>
+
+                                    <h6 id="Paladin"><img style="height:65px;padding:5px;" id="imgIndex"
+                                            src="../images/iconItems/paladin.png">-
+                                        PALADÍN</h6>
+                                    <p class="textcont">
+                                        Sean cuales sean sus orígenes y sus misiones, los paladines están unidos por sus
+                                        juramentos para luchar en contra de las fuerzas del mal. El juramento de un
+                                        paladín es un lazo muy poderoso. Es una fuente de poder que convierte a un
+                                        devoto guerrero en un campeón bendecido.
+                                        <br><br>
+                                        Equipo: Además del que obtengas por tu trasfondo, empiezas con el siguiente
+                                        equipo:
+                                        <br>
+                                    <ul class="textcont">
+                                        <li>(a) un arma marcial y un escudo o (b) dos armas marciales;</li>
+                                        <li>(a) cinco jabalinas o (b) cualquier arma cuerpo a cuerpo sencilla;</li>
+                                        <li>(a) un paquete de sacerdote o (b) un paquete de explorador;
+                                            una cota de malla y un símbolo sagrado.</li>
+                                    </ul>
+                                    <p class="textcont">
+                                        Origen: <a href="https://nivel20.com/games/dnd-5/rulebooks/4-reglas-basicas"
+                                            target="_blank"> Reglas Basicas</a>
+                                        Puntos de Golpe: d10<br>
+                                        Requisitos para multiclase: <br>Fuerza 13 y Carisma 13
+                                        <br><br>
+                                        Magia
+                                        <br>
+                                        - Lanzador de conjuros: Lanzador medio<br>
+                                        - Lanzamiento de conjuros: Mediante conjuros preparados<br>
+                                        - Nivel de conjuro máximo: Nivel 5<br>
+                                        - Puede lanzar trucos: No<br>
+                                        - Aptitud mágica: Carisma<br>
+                                        - Lista de conjuros: Conjuros de paladín<br>
+                                    </p>
+                                    </p>
+
+                                    <h6 id="Picaro"><img style="height:65px;padding:5px;" id="imgIndex"
+                                            src="../images/iconItems/picaro.png">-
+                                        PÍCARO</h6>
+                                    <p class="textcont">
+                                        Los pícaros confían sus habilidades, el sigilo y las vulnerabilidades de sus
+                                        oponentes para lograr sacar ventaja en cualquier situación. Tienen un don para
+                                        encontrar la solución a prácticamente cualquier problema, demostrando un
+                                        ingenio y versatilidad, que es la piedra angular de cualquier buen grupo de
+                                        aventureros.
+                                        <br><br>
+                                        Equipo: Además del que obtengas por tu trasfondo, empiezas con el siguiente
+                                        equipo:
+                                    <ul class="textcont">
+                                        <li>(a) un estoque o (b) una espada corta;</li>
+                                        <li>(a) un arco corto y una aljaba de 20 flechas o (b) una espada corta;</li>
+                                        <li>(a) un paquete de ladrón, (b) un paquete de explorador de mazmorras o (c) un
+                                            paquete de explorador;</li>
+                                        <li>(a) una armadura de cuero, dos dagas y herramientas de ladrón.</li>
+                                    </ul>
+                                    <p class="textcont">
+                                        Origen: <a href="https://nivel20.com/games/dnd-5/rulebooks/4-reglas-basicas"
+                                            target="_blank"> Reglas Basicas</a> Puntos de Golpe: d8<br>
+                                        Requisitos para multiclase: Destreza 13<br>
+                                    </p>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="container"><br>
+                                    <h2 id="razas">Razas</h2>
+                                    <img style="height:100px;" id="imgIndex" src="../images/iconItems/dragon.png">
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal HTML -->
+    <div id="loginModal" class="modal fade">
+        <div class="modal-dialog modal-login">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form action="../php/login.php" method="post">
+                        <div class="form-group">
+                            <input id="nick" type="text" class="logger form-control" name="nick" placeholder="Nick"
+                                required="required">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="pass" placeholder="Password"
+                                required="required">
+                        </div>
+                        <br>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="recuPass.html">¿Olvidaste la contraseña?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--breadcrums-->
+
+    <div>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="principal.html">Home</a></li>
+                <li style="color:greenyellow" class="breadcrumb-item active" aria-current="page">Como Jugar
+                </li>
+            </ol>
+        </nav>
+    </div>
+
+    <script>
+        cambioLogo();
+        getCookie();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,47 +1,47 @@
 <header>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src='../scripts/dentrites.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src='../scripts/dentrites.js'></script>
 </header>
 
 <?php
 include "config.php";
 
 if (isset($_POST["Enviar"])) {
-    $asociadoa = $_COOKIE["nick"];
-    $nombre = $_POST["nombre"];
-    $raza = $_POST["raza"];
-    $clase = $_POST["clase"];
-    $armorClass = $_POST["armorClass"];
-    $nivel = $_POST["nivel"];
-    $hitPoints = $_POST["hitPoints"];
-    $hitDice = $_POST["hitDice"];
-    $speed = $_POST["speed"];
-    $spells = $_POST["spells"];
-    $invent = $_POST["invent"];
+  $asociadoa = $_COOKIE["nick"];
+  $nombre = $_POST["nombre"];
+  $raza = $_POST["raza"];
+  $clase = $_POST["clase"];
+  $armorClass = $_POST["armorClass"];
+  $nivel = $_POST["nivel"];
+  $hitPoints = $_POST["hitPoints"];
+  $hitDice = $_POST["hitDice"];
+  $speed = $_POST["speed"];
+  $spells = $_POST["spells"];
+  $invent = $_POST["invent"];
 
-    $sql = "INSERT INTO tabla_pj (asociadoa,nombre,raza,clase,armorClass,nivel,hitPoints,hitDice,speed,spells,invent)
+  $sql = "INSERT INTO tabla_pj (asociadoa,nombre,raza,clase,armorClass,nivel,hitPoints,hitDice,speed,spells,invent)
            VALUES('$asociadoa','$nombre','$raza','$clase','$armorClass','$nivel','$hitPoints','$hitDice','$speed','$spells','$invent')";
 
-    $result = mysqli_query($conn, $sql);
+  $result = mysqli_query($conn, $sql);
 
-    $sql2 = "INSERT INTO reg_uspj (asociadoa,nombre,raza,clase,nivel) VALUES('$asociadoa','$nombre','$raza','$clase','$nivel')";
-    $result2 = mysqli_query($conn, $sql2);
+  $sql2 = "INSERT INTO reg_uspj (asociadoa,nombre,raza,clase,nivel) VALUES('$asociadoa','$nombre','$raza','$clase','$nivel')";
+  $result2 = mysqli_query($conn, $sql2);
 
-    if ($result) {
-        echo '<script>
+  if ($result) {
+    echo '<script>
             Swal.fire({
                 position: "center",
                 icon: "success",
                 title: "Personaje creado",
-                text:"'.$nombre.'",
+                text:"' . $nombre . '",
                 showConfirmButton: false,
                 timer: 2000,
               }).then(function () {
                 window.location.href = "../html/usuario.php";
               })
               </script>';
-      } else {
-        echo ' <script>
+  } else {
+    echo ' <script>
                 Swal.fire({
                   position: "center",
                   icon: "warning",
@@ -53,7 +53,7 @@ if (isset($_POST["Enviar"])) {
                   window.location.href = "../html/usuario.php";
                 })
                     </script>';
-    }
+  }
 }
 
 

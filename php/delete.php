@@ -1,6 +1,6 @@
 <header>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src='../scripts/dentrites.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src='../scripts/dentrites.js'></script>
 </header>
 
 <?php
@@ -19,4 +19,4 @@ echo '<script>
                 window.location.href = "../html/usuario.php";
               })
       </script>';
-?>  
+?>

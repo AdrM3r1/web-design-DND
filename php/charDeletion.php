@@ -1,21 +1,21 @@
 <header>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src='../scripts/dentrites.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src='../scripts/dentrites.js'></script>
 </header>
 
 <?php
 include "config.php";
 
 if (isset($_POST)) {
-    $id = $_GET["id"];
-    $asociadoa = $_COOKIE["nick"];
+  $id = $_GET["id"];
+  $asociadoa = $_COOKIE["nick"];
 
-    $sql = "DELETE FROM tabla_pj WHERE id = '$id'";
+  $sql = "DELETE FROM tabla_pj WHERE id = '$id'";
 
-    $result = mysqli_query($conn, $sql);
+  $result = mysqli_query($conn, $sql);
 
-    if ($result && $asociadoa == 'root') {
-      echo ' <script>
+  if ($result && $asociadoa == 'root') {
+    echo ' <script>
           Swal.fire({
               position: "center",
               icon: "success",
@@ -26,9 +26,8 @@ if (isset($_POST)) {
               window.location.href = "../html/superusuario.php";
             })
                 </script>';
-  }
-  elseif ($result) {
-      echo ' <script>
+  } elseif ($result) {
+    echo ' <script>
           Swal.fire({
               position: "center",
               icon: "success",
@@ -40,7 +39,7 @@ if (isset($_POST)) {
             })
                 </script>';
   } else {
-        echo ' <script>
+    echo ' <script>
               Swal.fire({
                   position: "center",
                   icon: "warning",
@@ -52,7 +51,7 @@ if (isset($_POST)) {
                   window.location.href = "../html/usuario.php";
                 })
                     </script>';
-    }
+  }
 }
 
 

@@ -1,6 +1,6 @@
-<?php 
-    include("../php/config.php");
-    ?>
+<?php
+include("../php/config.php");
+?>
 
 <!DOCTYPE html>
 <html>
@@ -68,19 +68,19 @@
           <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
         <div class="modal-body">
-        <form action="../php/login.php" method="post">
-              <div class="form-group">
-                <input type="text" class="form-control" name="nick" placeholder="Nick" required="required">
-              </div>
-              <br>
-              <div class="form-group">
-                <input type="password" class="form-control" name="pass" placeholder="Password" required="required">
-              </div>
-              <br>
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Login</button>
-              </div>
-            </form>
+          <form action="../php/login.php" method="post">
+            <div class="form-group">
+              <input type="text" class="form-control" name="nick" placeholder="Nick" required="required">
+            </div>
+            <br>
+            <div class="form-group">
+              <input type="password" class="form-control" name="pass" placeholder="Password" required="required">
+            </div>
+            <br>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Login</button>
+            </div>
+          </form>
         </div>
         <div class="modal-footer">
           <a href="recuPass.html">¿Olvidaste la contraseña?</a>
@@ -133,7 +133,7 @@
     name.addEventListener('input', check)
     email.addEventListener('input', check)
     pass.addEventListener('input', check)
-    CPass.addEventListener('input',check)
+    CPass.addEventListener('input', check)
 
   }
 
