@@ -57,7 +57,7 @@
           <div class="container">
             <div class="row justify-content-md-start">
               <div class="col-md-12">
-                <h4>Lista de Personajes</h4>
+                <h3>Lista de Personajes</h3>
                 <a class="itemNav" href="../php/charCreator.php"> Crear nuevo personaje</a>
                 <?php
                 include "../php/config.php";

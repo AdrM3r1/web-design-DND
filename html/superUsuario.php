@@ -39,7 +39,7 @@
                <div class="container">
                   <div class="row justify-content-md-start">
                      <div class="col-md-12">
-                        <h4>Lista de Personajes almacenados por usuario</h4>
+                        <h3>Lista de Personajes almacenados por usuario</h3>
                         <?php
                         include "../php/config.php";
 
@@ -96,7 +96,7 @@
                               </tr>
                            </tbody>
                         </table>
-                        <h4>Archivos almacenados por usuario</h4>
+                        <h3>Archivos almacenados por usuario</h3>
                         <?php
                         // Devuelve los archivos alojados en la carpeta de cada usuario
                         
@@ -137,7 +137,7 @@
                         dirToOptions();
                         echo "</ol>";
                         ?>
-                        <h4>Registro de todos los personajes creados en total </h4>
+                        <h3>Registro de todos los personajes creados en total </h3>
                         <?php
                         include "../php/config.php";
 
@@ -188,7 +188,7 @@
                      </div>
                   </div>
                   <div class="col-md-12">
-                     <h4>Usuarios registrados</h4>
+                     <h3>Usuarios registrados</h3>
                      <?php
                      include "../php/config.php";
 
