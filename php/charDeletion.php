@@ -9,11 +9,11 @@ include "config.php";
 if (isset($_POST)) {
   $id = $_GET["id"];
   $asociadoa = $_COOKIE["nick"];
-
+  /* sql para eliminar de la tabla de personajes por id a la hora de hacer clic en borrar desde el html */
   $sql = "DELETE FROM tabla_pj WHERE id = '$id'";
 
   $result = mysqli_query($conn, $sql);
-
+  /* tres respuestas con sweetalert, si eres root y existe el user, si es el usuario elimina el pj y si no se puede eliminar */
   if ($result && $asociadoa == 'root') {
     echo ' <script>
           Swal.fire({

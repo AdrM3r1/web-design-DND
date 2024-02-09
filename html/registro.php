@@ -22,18 +22,17 @@ include("../php/config.php");
   <!--Sweet alert-->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-
 </head>
 
 <body id="index-bg">
   <div id="container">
     <div id="indexcontent">
-      <div id="log">
+      <div id="log"><!-- ventana del formulario -->
         <h3 style="color:black;margin: 0px 55px 10px;text-decoration: underline;text-decoration-thickness:2px;">Registro
           <span class="tooltip-arrow" data-bs-toggle="tooltip" data-bs-placement="right"
             title="Enviar se desbloqueara cuando los campos esten rellenos">*</span>
         </h3>
-
+        <!-- inicio de formulario -->
         <form action="../php/procesoRegistro.php" method="post" id="registro">
           <label style="margin-left:85px ;" class="labInput">
             <center>Nick</center>
@@ -50,7 +49,8 @@ include("../php/config.php");
 
           <button id="retorno" class="submitButton" type="button" value="volver">Volver</button>
         </form>
-
+        <!-- fin formulario -->
+        <!-- boton para hacer inicio en el caso de que estes registrado -->
         <div style="margin:10px 12px;font-size: 16px;font-family: 'Dalelands'"><br>
           <a style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#loginModal">¿Ya estas registrado?</a>
         </div>
@@ -91,10 +91,11 @@ include("../php/config.php");
 </body>
 
 <script>
+  /* activador de tooltip */
   $(document).ready(function () {
     $('[data-bs-toggle="tooltip"]').tooltip();
   });
-
+  /* Jquery para el boton de regreso con sweetalert */
   $('#retorno').click(function () {
     Swal.fire({
       position: 'top-end',
@@ -106,7 +107,7 @@ include("../php/config.php");
       window.location.href = "../html/principal.html";
     })
   })
-
+  /* se desbloquea el envio de formulario si todos los campos estan rellenos */
   {
     const btn = document.getElementById("Enviar");
     const name = document.getElementById("userName");
@@ -115,6 +116,7 @@ include("../php/config.php");
     const CPass = document.getElementById("userCpass");
     deactivate()
 
+    /* activador desactivador del boton de enviar */
     function activate() {
       btn.disabled = false;
     }
@@ -122,7 +124,7 @@ include("../php/config.php");
     function deactivate() {
       btn.disabled = true;
     }
-
+    /* Comprobador de campos de formulario, si estan vacios el boton se bloquea si no lo estan se desbloquea */
     function check() {
       if (name.value != '' && email.value != '' && pass.value != '') {
         activate()

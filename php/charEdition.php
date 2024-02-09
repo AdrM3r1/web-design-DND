@@ -19,19 +19,20 @@ if (isset($_POST["Enviar"])) {
   $speed = $_POST["speed"];
   $spells = $_POST["spells"];
   $invent = $_POST["invent"];
-
+  /* sql actualiza la bbdd de la tabla de personaje tras haber editado y guardado al personaje */
   $sql = "UPDATE tabla_pj SET nombre = '$nombre',clase = '$clase',raza = '$raza',
     armorClass = '$armorClass',nivel = '$nivel', hitPoints = '$hitPoints', hitDice= '$hitDice',speed = '$speed',
     spells = '$spells' , invent = '$invent'
      WHERE id = '$id'";
 
   $result = mysqli_query($conn, $sql);
-
+  /* sql actualiza la bbdd de la tabla de historial de personaje tras haber editado y guardado al personaje */
   $sql2 = "UPDATE reg_uspj SET nombre = '$nombre',raza = '$raza',
     clase = '$clase',nivel = '$nivel' WHERE id = '$id'";
 
   $result2 = mysqli_query($conn, $sql2);
-
+  /* mensaje con sweetalert gestionado para cuando el usuario 
+  es el superuser o un usuario que salga un mensaje dependiendo el resultado*/
   if ($result && $asociadoa == 'root') {
     echo ' <script>
           Swal.fire({
@@ -77,6 +78,5 @@ if (isset($_POST["Enviar"])) {
                     </script>';
   }
 }
-
 
 ?>

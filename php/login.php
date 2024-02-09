@@ -7,14 +7,15 @@ include("config.php");
 if (isset($_POST)) {
   $user_Name = $_POST["nick"];
   $user_Password = $_POST["pass"];
+  /* sql para poder hacer login en la aplicacion a traves de comprobar el nombre y el password en la bbdd */
   $sql = "SELECT * from users_ where nick = '$user_Name' and pass = '$user_Password'";
   $result = mysqli_query($conn, $sql);
   $count = mysqli_num_rows($result);
   $cookie_name = "nick";
   $cookie_value = $user_Name;
   setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
-  ;
-
+  /* mensaje con sweetalert gestionado para cuando el usuario 
+  es el superuser o un usuario que salga un mensaje dependiendo el resultado*/
   if ($count == 1 && $user_Name == "root") {
     echo '<script>
               Swal.fire({
@@ -81,7 +82,7 @@ if (isset($_POST)) {
     <div id="indexcontent">
       <div id="log">
         <h3 style="color:black;margin: 0px 55px 10px;text-decoration: underline;text-decoration-thickness:2px;">login
-        </h3>
+        </h3><!-- Formulario de login  -->
         <form action="login.php" method="post">
           <div class="form-group">
             <input id="nick" type="text" class="form-control" name="nick" placeholder="Nick" required="required">
@@ -93,15 +94,16 @@ if (isset($_POST)) {
           <br>
           <button id="Enviar" class="submitButton" type="submit">Enviar</button>
           <button id="retorno" class="submitButton" type="button" value="volver">Volver</button>
-        </form>
+        </form><!-- fin del Formulario -->
         <div class="form-group">
-          <a href="../html/recuPass.html">¿Olvidaste la contraseña?</a>
+          <a href="../html/recuPass.html">¿Olvidaste la contraseña?</a><!-- enlace de recuperacion de contraseña -->
         </div>
       </div>
     </div>
   </div>
 </body>
 <script>
+  /* Jquery para retornar a principal */
   $('#retorno').click(function () {
     Swal.fire({
       position: 'top-end',

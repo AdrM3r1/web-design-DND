@@ -1,5 +1,5 @@
 <?php
-
+/* php para permitir la conexion con la tabla de mysql con el proyecto */
 $servername = "localhost";
 $username = "root";
 $password = "";

@@ -4,10 +4,10 @@
 </header>
 
 <?php
-// Built-in PHP function to delete file
+// funcion para destruir el archivo
 unlink($_GET["name"]);
 
-// Redirecting back
+// Redireccion a la vista de usuario
 echo '<script>
              Swal.fire({
                 position: "center",

@@ -30,7 +30,7 @@
     <!--content start-->
     <div class="row-cols-auto">
       <div id="divisor">
-        <ul>
+        <ul><!-- menu de ayuda -->
           <li class="itemNav" role="menuitem">
             <a href="http://dnd5e.wikidot.com/" target="_blank"> Wiki DnD</a>
           </li>
@@ -50,7 +50,7 @@
         <div class="io">
           <h4>Crea tu personaje <a href="" style="cursor: pointer; display: inline-block;" data-bs-toggle="modal"
               data-bs-target="#RecoModal">&#10068;</a>
-          </h4>
+          </h4><!-- formulario de creacion de personaje -->
           <form action="charCreation.php" method="post" id="PJcreator">
             <div class="container col-md-12">
               <div class="row justify-content-md-start">
@@ -74,7 +74,7 @@
                 <hr>
                 <button id="Enviar" name="Enviar" class="submitButton" type="submit">Enviar</button>
                 <button id="retorno" class="submitButton" type="button" value="volver">Volver</button>
-          </form>
+          </form><!-- fin de formulario -->
           <br>
           <br>
         </div>
@@ -87,7 +87,7 @@
   </div>
   <div>
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-      <ol class="breadcrumb">
+      <ol class="breadcrumb"> <!-- breadcrums pequeña guia decorativa en que punto de la web nos encontramos -->
         <li class="breadcrumb-item">
           <a href="../html/usuario.php">Usuario</a>
         </li>

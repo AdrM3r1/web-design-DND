@@ -30,7 +30,7 @@
     <!--content start-->
     <div class="row-cols-auto">
       <div id="img_logo"></div>
-      <div id="divisor">
+      <div id="divisor"><!-- menu navegacion -->
         <ul id="contenedorNav" role="menubar">
           <li class="itemNav" role="menuitem">
             <a href="info.html"> Informacion</a>
@@ -52,7 +52,7 @@
           </li>
           <a onclick="logOut()" style="cursor: pointer;font-size: 14px; margin-left: 12px;" id="logout">Cerrar
             sesion</a>
-        </ul>
+        </ul><!-- fin menu navegacion -->
         <div class="io">
           <div class="container">
             <div class="row justify-content-md-start">
@@ -61,7 +61,7 @@
                 <a class="itemNav" href="../php/charCreator.php"> Crear nuevo personaje</a>
                 <?php
                 include "../php/config.php";
-
+                /* muestra la tabla de los personajes que tenga el usuario que haya hecho login en el momento */
                 $sql = "SELECT * from tabla_pj where asociadoa= '$_COOKIE[nick]';";
                 $result = mysqli_query($conn, $sql);
                 ?>
@@ -74,7 +74,6 @@
                       <th scope="col">Nivel</th>
                       <th scope="col">Editar</th>
                       <th scope="col">Borrar</th>
-
                     </tr>
                   </thead>
                   <tbody>
@@ -112,7 +111,7 @@
                   </tbody>
                 </table>
                 <table class="table table-hover">
-                  <thead>
+                  <thead><!-- tabla de los archivos subidos por el usuario -->
                     <tr>
                       <th scope="col">ARCHIVOS</th>
                       <th scope="col">Download</th>
@@ -165,7 +164,7 @@
   </div>
   <div>
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-      <ol class="breadcrumb">
+      <ol class="breadcrumb"> <!-- breadcrums pequeña guia decorativa en que punto de la web nos encontramos -->
         <li class="breadcrumb-item">
           <a href="principal.html">Home</a>
         </li>

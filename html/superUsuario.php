@@ -30,11 +30,11 @@
       <!--content start-->
       <div class="row-cols-auto">
          <div id="img_logo"></div>
-         <div id="divisor">
+         <div id="divisor"><!-- menu navegacion -->
             <ul id="contenedorNav" role="menubar">
                <a onclick="logOut()" style="cursor: pointer;font-size: 14px; margin-left: 12px;" id="logout">Cerrar
                   sesion</a>
-            </ul>
+            </ul><!-- fin menu navegacion -->
             <div class="io">
                <div class="container">
                   <div class="row justify-content-md-start">
@@ -45,7 +45,7 @@
 
                         $sql = "SELECT * from tabla_pj ";
                         $result = mysqli_query($conn, $sql);
-                        ?>
+                        ?><!-- tabla de los personajes, en este caso de todos los users -->
                         <table class="table table-hover">
                            <thead>
                               <tr>
@@ -58,7 +58,7 @@
                                  <th scope="col">Borrar</th>
                               </tr>
                            </thead>
-                           <tbody>
+                           <tbody><!-- columnas de los personajes -->
                               <?php
                               $count = mysqli_num_rows($result);
                               if ($count != 0) {
@@ -138,7 +138,7 @@
                         echo "</ol>";
                         ?>
                         <h3>Registro de todos los personajes creados en total </h3>
-                        <?php
+                        <?php /* muestra la tercera tabla de todos los pj creados por los usuario */
                         include "../php/config.php";
 
                         $sql = "SELECT * from reg_uspj ";
@@ -184,14 +184,14 @@
                               ?>
                               </tr>
                            </tbody>
-                        </table>
+                        </table><!-- fin de tabla de historial de personajes -->
                      </div>
                   </div>
                   <div class="col-md-12">
                      <h3>Usuarios registrados</h3>
                      <?php
                      include "../php/config.php";
-
+                     /* tabla de los usuarios registrados, botones de eliminar usuarios */
                      $sql = "SELECT * FROM `users_` WHERE NOT nick = 'root';";
                      $result = mysqli_query($conn, $sql);
                      ?>
@@ -225,6 +225,7 @@
          </div>
          <script>
             function logOut() {
+               /* funcion para cerrar sesion */
                let name = c_name_base + "=";
                let ca = document.cookie.split(';');
                let x = true;

@@ -24,7 +24,7 @@
     <div id="indexcontent">
       <div id="log">
         <h3 style="color:black;text-decoration: underline;text-decoration-thickness:2px;">Recupera tu password </h3>
-        <br>
+        <br><!-- formulario de recuperacion de contraseñas -->
         <form action="../php/recovery.php" method="post">
           <div class="form-group">
             <input type="text" class="form-control" name="nick" placeholder="Nick" required="required">
@@ -36,12 +36,13 @@
           <br>
           <button id="Enviar" class="submitButton" type="submit">Enviar</button>
           <button id="retorno" class="submitButton" type="button" value="volver">Volver</button>
-        </form>
+        </form><!-- fin formulario recuperacion -->
       </div>
     </div>
   </div>
 </body>
 <script>
+  /* Jquery boton de regreso */
   $('#retorno').click(function () {
     Swal.fire({
       position: 'top-end',
