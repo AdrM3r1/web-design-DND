@@ -152,7 +152,7 @@
                                  <th scope="col">Clase</th>
                                  <th scope="col">Raza</th>
                                  <th scope="col">Nivel</th>
-                                 <th scope="col">fecha</th>
+                                 <th scope="col">Creado / Modificado</th>
                               </tr>
                            </thead>
                            <tbody>
