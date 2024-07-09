@@ -62,7 +62,7 @@
                 <?php
                 include "../php/config.php";
                 /* muestra la tabla de los personajes que tenga el usuario que haya hecho login en el momento */
-                $sql = "SELECT * from tabla_pj where asociadoa= '$_COOKIE[nick]';";
+                $sql = "SELECT * from tabla_pj where asociadoa = '$_COOKIE[nick]'";
                 $result = mysqli_query($conn, $sql);
                 ?>
                 <table class="table table-hover">
@@ -110,8 +110,11 @@
                     </tr>
                   </tbody>
                 </table>
-                <table class="table table-hover">
-                  <thead><!-- tabla de los archivos subidos por el usuario -->
+                                        
+                           <!-- GESTIONAR CON LA WEB LOS FICHEROS -->
+
+                <!-- <table class="table table-hover">
+                  <thead>tabla de los archivos subidos por el usuario 
                     <tr>
                       <th scope="col">ARCHIVOS</th>
                       <th scope="col">Download</th>
@@ -121,9 +124,9 @@
 
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody>-->
                     <?php
-                    // Devuelve los archivos alojados en la carpeta de cada usuario segun su login
+                   /* // Devuelve los archivos alojados en la carpeta de cada usuario segun su login
                     $target_path = "../files/$_COOKIE[nick]/";
 
                     if (!is_dir($target_path)) {
@@ -150,7 +153,7 @@
                             Borrar
                           </a></td>
                       </tr>
-                    <?php }
+                    <?php }*/
                     ?>
                     </tr>
                   </tbody>
@@ -172,7 +175,7 @@
       </ol>
     </nav>
   </div>
-  <!--modal de envia archivos -->
+  <!--modal de envia archivos 
   <div id="uploadModal" class="modal fade">
     <div class="modal-dialog modal-login">
       <div class="modal-content">
@@ -187,7 +190,7 @@
         <div class=modal-footer>*Admite todo tipo de archivo </div>
       </div>
     </div>
-  </div>
+  </div>-->
   <script>
     cambioLogo();
     getCookie();

@@ -96,10 +96,13 @@
                               </tr>
                            </tbody>
                         </table>
-                        <h3>Archivos almacenados por usuario</h3>
-                        <?php
-                        // Devuelve los archivos alojados en la carpeta de cada usuario
                         
+                           <!-- GESTIONAR CON LA WEB LOS FICHEROS -->
+
+                        <!-- <h3>Archivos almacenados por usuario</h3>-->
+                         <?php
+                        // Devuelve los archivos alojados en la carpeta de cada usuario
+                        /*
                         function dirToOptions($path = '../files', $level = 0)
                         {
                            $items = scandir($path);
@@ -116,7 +119,7 @@
                               if (is_file($fullPath)) {
                                  echo "
                         <option>$item</option>";
-                              }
+                                            }
                               // carpeta
                               else if (is_dir($fullPath)) {
                                  // cierra el grupo para evitar errores
@@ -136,9 +139,11 @@
                         <ol>";
                         dirToOptions();
                         echo "</ol>";
-                        ?>
+                        */?>
+                        
                         <h3>Registro de todos los personajes creados en total </h3>
-                        <?php /* muestra la tercera tabla de todos los pj creados por los usuario */
+                        <?php   
+                        //muestra la tercera tabla de todos los pj creados por los usuario 
                         include "../php/config.php";
 
                         $sql = "SELECT * from reg_uspj ";
