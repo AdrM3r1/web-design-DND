@@ -23,7 +23,7 @@ if (isset($_POST)) {
               showConfirmButton: false,
               timer: 2000,
             }).then(function () {
-              window.location.href = "../html/superusuario.php";
+              window.location.href = "../html/superUsuario.php";
             })
                 </script>';
   } elseif ($result) {

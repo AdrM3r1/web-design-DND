@@ -32,7 +32,7 @@
          <div id="img_logo"></div>
          <div id="divisor"><!-- menu navegacion -->
             <ul id="contenedorNav" role="menubar">
-               <a onclick="logOut()" style="cursor: pointer;font-size: 14px; margin-left: 12px;" id="logout">Cerrar
+               <a onclick="logOutSuper()" style="cursor: pointer;font-size: 14px; margin-left: 12px;" id="logout">Cerrar
                   sesion</a>
             </ul><!-- fin menu navegacion -->
             <div class="io">
@@ -224,7 +224,7 @@
             </div>
          </div>
          <script>
-            function logOut() {
+            function logOutSuper() {
                /* funcion para cerrar sesion */
                let name = c_name_base + "=";
                let ca = document.cookie.split(';');
